@@ -2,41 +2,52 @@ using UnityEngine;
 
 /// <summary>
 /// [Tile]
-/// - Calculates the actual Z-length of this tile so that TileManager
-///   can place tiles correctly in a continuous loop.
-/// - Automatically detects the size from all Renderers inside the prefab,
-///   so even if the scale or mesh changes, the tile length stays accurate.
+/// - Holds reference points for accurate tile length and alignment.
+/// - startPoint: where the tile begins (front edge).
+/// - endPoint: where the tile ends   (back edge).
 /// </summary>
 public class Tile : MonoBehaviour
 {
-    [Tooltip("Actual Z-length of this tile (auto-calculated)")]
-    public float tileLength = 10f;
+    [Header("Tile End Points")]
+    [Tooltip("Front/start point of this tile (Z-min or Z-max depending on design).")]
+    public Transform startPoint;
 
-    private void Awake()
-    {
-        // Find all Renderers under this object (including children)
-        var renderers = GetComponentsInChildren<Renderer>();
-        if (renderers.Length > 0)
-        {
-            // Start with the first renderer bounds
-            Bounds bounds = renderers[0].bounds;
-
-            // Combine bounds of all child renderers
-            for (int i = 1; i < renderers.Length; i++)
-            {
-                bounds.Encapsulate(renderers[i].bounds);
-            }
-
-            // Final Z size becomes the tile length
-            tileLength = bounds.size.z;
-        }
-    }
+    [Tooltip("Back/end point of this tile (opposite side from StartPoint).")]
+    public Transform endPoint;
 
     /// <summary>
-    /// Returns the calculated Z-length of this tile.
+    /// Returns the absolute Z-length of this tile, based on startPoint and endPoint.
     /// </summary>
     public float GetLength()
     {
-        return tileLength;
+        if (startPoint == null || endPoint == null)
+        {
+            Debug.LogWarning($"{name}: StartPoint or EndPoint is not assigned. Using default length 10.");
+            return 10f;
+        }
+
+        return Mathf.Abs(endPoint.position.z - startPoint.position.z);
+    }
+
+    /// <summary>
+    /// Returns the world-space Z position of the start point.
+    /// </summary>
+    public float GetStartZ()
+    {
+        if (startPoint == null)
+            return transform.position.z;
+
+        return startPoint.position.z;
+    }
+
+    /// <summary>
+    /// Returns the world-space Z position of the end point.
+    /// </summary>
+    public float GetEndZ()
+    {
+        if (endPoint == null)
+            return transform.position.z;
+
+        return endPoint.position.z;
     }
 }
