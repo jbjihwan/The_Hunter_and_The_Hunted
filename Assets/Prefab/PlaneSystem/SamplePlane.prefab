@@ -228,7 +228,11 @@ MonoBehaviour:
   - {fileID: 6635112703265646327}
   - {fileID: 1334793408155929649}
   - {fileID: 5403255976155197060}
-  obstacles: []
+  obstacles:
+  - obstaclePrefab: {fileID: 0}
+    spawnProb: 0
+    spawnIndex: 0
+    heightIndex: 0
   speed: 5
   obstacleHeight: 1
 --- !u!114 &3078217299259863293
