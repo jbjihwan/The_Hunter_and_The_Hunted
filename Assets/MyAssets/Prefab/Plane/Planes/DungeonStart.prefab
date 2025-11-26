@@ -1936,7 +1936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2119794393620455995}
   m_Layer: 0
-  m_Name: Dungeon start
+  m_Name: DungeonStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -8219,7 +8219,7 @@ GameObject:
   - component: {fileID: 6881203176932943748}
   - component: {fileID: 8920500216259945360}
   m_Layer: 0
-  m_Name: Dungeon sample2
+  m_Name: DungeonSample2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

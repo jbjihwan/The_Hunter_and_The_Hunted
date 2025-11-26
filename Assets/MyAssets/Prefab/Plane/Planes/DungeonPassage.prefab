@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3685580838926737313}
   m_Layer: 0
-  m_Name: Dungeon Passage
+  m_Name: DungeonPassage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
