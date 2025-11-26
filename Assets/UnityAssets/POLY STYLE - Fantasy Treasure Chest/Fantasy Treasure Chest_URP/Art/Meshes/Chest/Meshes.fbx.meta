@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: 08e51b23346827c44b016cb3d26fbbcc
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coins_1
+    second: {fileID: 2100000, guid: 9a8856d5fe5ba2744bfa0599b6a3942b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coins_2
+    second: {fileID: 2100000, guid: 89a51571414879b43ab9c80460f4f28c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gem_1
+    second: {fileID: 2100000, guid: 11e4cd284e404c94da38dad9f7133ec4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gem_2
+    second: {fileID: 2100000, guid: 91b6a46b6114c3f46a9bbd586c781a24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gem_3
+    second: {fileID: 2100000, guid: 6724d458b7297e94b9cbbde94a44defb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest
+    second: {fileID: 2100000, guid: b3983a4b16228e74f87bf58f1ccea446, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_1_1
+    second: {fileID: 2100000, guid: 46a32cda757f20149bf12e9ca51cfbb2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_1_2
+    second: {fileID: 2100000, guid: 28c1d315d235bed4cb55d60c34796221, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_1_3
+    second: {fileID: 2100000, guid: 045cf2b3e47d6fd448854552c89a9917, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_1_4
+    second: {fileID: 2100000, guid: 99db74b129011a546a25bc30433010a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_2_1
+    second: {fileID: 2100000, guid: baee22647928c7b46aba1baa64df55be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_2_2
+    second: {fileID: 2100000, guid: 5838bc34ca5dc0643a092941693e5ea7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_2_3
+    second: {fileID: 2100000, guid: 3993c8edfded0fe40a05a6e267203f9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_2_4
+    second: {fileID: 2100000, guid: d5376b505f9c09b409633d1e8af20bbb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_3_1
+    second: {fileID: 2100000, guid: 78c6981d17edc2c43abaac5f512419d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_3_2
+    second: {fileID: 2100000, guid: 7d583cb3a63015441a516b612b69b8e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_3_3
+    second: {fileID: 2100000, guid: 665894e14a45295428b2d253fa81ed5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_3_4
+    second: {fileID: 2100000, guid: 7d132b3dfd53cb3409b94971fc69bc79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_4_1
+    second: {fileID: 2100000, guid: ce6cf67dce6dd9247b19a8ca01d027df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_4_2
+    second: {fileID: 2100000, guid: 5baefc1d9506f3c4baded98c43884d0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_4_3
+    second: {fileID: 2100000, guid: 2e168758f2e461d43bb947334ffa0ce3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_4_4
+    second: {fileID: 2100000, guid: 09c9e31516ca54749b5523526afe1081, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_5_1
+    second: {fileID: 2100000, guid: bfdcb9cfe97f7ae47b6b0094830c6d07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_5_2
+    second: {fileID: 2100000, guid: 2799dfc2ffc4c154497171da4796017c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_5_3
+    second: {fileID: 2100000, guid: c61b2c24544b0744d8e979472877c0ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Treasure Chest_5_4
+    second: {fileID: 2100000, guid: 08bc96c63c146bd4fb8f00c6844c53b4, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 0
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 280107
+  packageName: POLY STYLE - Fantasy Treasure Chest
+  packageVersion: 1.15
+  assetPath: Assets/POLY STYLE - Fantasy Treasure Chest/Fantasy Treasure Chest_URP/Art/Meshes/Chest/Meshes.fbx
+  uploadId: 651570
