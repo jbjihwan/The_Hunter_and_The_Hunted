@@ -10,11 +10,13 @@ public class Plane : MonoBehaviour
         public GameObject obstaclePrefab;
         public float spawnProb;
         public int spawnIndex;
+        public int heightIndex;
     }
 
     public Transform[] spawnPoints;
     public Obstacle[] obstacles;
     public float speed;
+    public float obstacleHeight;
 
     void Start()
     {
@@ -22,7 +24,10 @@ public class Plane : MonoBehaviour
         {
             if (obstacle.spawnProb > Random.Range(0f, 1f))
             {
-                Instantiate(obstacle.obstaclePrefab, spawnPoints[obstacle.spawnIndex].position, Quaternion.identity, transform);
+                Instantiate(obstacle.obstaclePrefab, 
+                    spawnPoints[obstacle.spawnIndex].position + 
+                    Vector3.up * obstacle.heightIndex * obstacleHeight, 
+                    Quaternion.identity, transform);
             }
         }
     }
@@ -30,5 +35,13 @@ public class Plane : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.back * speed * Time.deltaTime);
+
+        if (transform.position.z < PlaneSpawner.Instance.destroyPosZ)
+        {
+            PlaneSpawner.Instance.SpawnPlane(transform.position + 
+                Vector3.forward * PlaneSpawner.Instance.planeCount * PlaneSpawner.Instance.planeLength);
+
+            Destroy(gameObject);
+        }
     }
 }
