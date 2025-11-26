@@ -47,8 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planes:
   - {fileID: 1798646651917201561, guid: 94258535188b6d94b8abe71fb0db3792, type: 3}
+  endQuad: {fileID: 2331164372942886261, guid: 3c39464a208fb1e4ebdfc3103ea29b30, type: 3}
   planeLength: 20
-  planeCount: 4
+  endQuadHeight: 10
+  planeCount: 10
 --- !u!1 &2611832918594480239
 GameObject:
   m_ObjectHideFlags: 0

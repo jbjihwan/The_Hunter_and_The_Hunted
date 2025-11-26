@@ -39,7 +39,7 @@ public class Plane : MonoBehaviour
         if (transform.position.z < PlaneSpawner.Instance.destroyPosZ)
         {
             PlaneSpawner.Instance.SpawnPlane(transform.position + 
-                Vector3.forward * PlaneSpawner.Instance.planeCount * PlaneSpawner.Instance.planeLength);
+                Vector3.forward * (PlaneSpawner.Instance.planeCount + 1) * PlaneSpawner.Instance.planeLength);
 
             Destroy(gameObject);
         }

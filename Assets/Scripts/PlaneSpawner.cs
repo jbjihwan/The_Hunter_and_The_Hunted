@@ -5,8 +5,10 @@ public class PlaneSpawner : MonoBehaviour
 {
     public static PlaneSpawner Instance;
     public GameObject[] planes;
+    public GameObject endQuad;
     public float destroyPosZ { get; private set; }
     public float planeLength;
+    public float endQuadHeight;
     public int planeCount;
     //public int startPlaneCount;
 
@@ -38,6 +40,11 @@ public class PlaneSpawner : MonoBehaviour
 
             SpawnPlane(transform.position + Vector3.forward * i * planeLength);
         }
+
+        Instantiate(endQuad, transform.position +
+            Vector3.forward * (planeCount * planeLength - planeLength / 2) +
+            Vector3.up * endQuadHeight / 2,
+            Quaternion.identity);
     }
 
     public void SpawnPlane(Vector3 spawnPos)
