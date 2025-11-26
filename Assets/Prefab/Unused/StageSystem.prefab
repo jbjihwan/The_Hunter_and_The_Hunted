@@ -116,8 +116,8 @@ MonoBehaviour:
   - {fileID: 1525852436763122644}
   - {fileID: 5989019924239450308}
   stageDurations:
-  - 90
-  - 120
+  - 1
+  - 1
   - 120
   onGameClear:
     m_PersistentCalls:
@@ -168,13 +168,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   tilePrefabs:
-  - {fileID: 8105829683789062481, guid: 52a54ed14861b6a408f992cd7a50c8bc, type: 3}
-  - {fileID: 357449955945756288, guid: d8902ee0c32a5e143a74524e30ede1e8, type: 3}
-  - {fileID: 951938606513008158, guid: 60ca558b1d888de4fb9663d2bb44586b, type: 3}
-  - {fileID: 6636374792559515395, guid: bbf0e9dba892a434ba0615bbf5a66770, type: 3}
-  startTileCount: 4
+  - {fileID: 5986250981129531775, guid: 7f18d2927bf99164788b5530f310812c, type: 3}
+  - {fileID: 5721401871967065550, guid: 30b6da0aaaa490a4bab2e2c1dd16413d, type: 3}
+  - {fileID: 5721401871967065550, guid: 30b6da0aaaa490a4bab2e2c1dd16413d, type: 3}
+  - {fileID: 5721401871967065550, guid: 30b6da0aaaa490a4bab2e2c1dd16413d, type: 3}
+  - {fileID: 5721401871967065550, guid: 30b6da0aaaa490a4bab2e2c1dd16413d, type: 3}
+  - {fileID: 5721401871967065550, guid: 30b6da0aaaa490a4bab2e2c1dd16413d, type: 3}
+  - {fileID: 5721401871967065550, guid: 30b6da0aaaa490a4bab2e2c1dd16413d, type: 3}
+  - {fileID: 5721401871967065550, guid: 30b6da0aaaa490a4bab2e2c1dd16413d, type: 3}
+  - {fileID: 5721401871967065550, guid: 30b6da0aaaa490a4bab2e2c1dd16413d, type: 3}
+  - {fileID: 5721401871967065550, guid: 30b6da0aaaa490a4bab2e2c1dd16413d, type: 3}
+  startTileCount: 10
   moveSpeed: 10
-  recycleDistance: 100
+  recycleDistance: 15
 --- !u!1 &3135824654262608375
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,10 +227,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   tilePrefabs:
-  - {fileID: 3694393951785220017, guid: eb21b5e6ba19eac419baab19a7a03b96, type: 3}
-  - {fileID: 8105829683789062481, guid: 7b10440049865754aae38a62b0c120a3, type: 3}
-  - {fileID: 951938606513008158, guid: 7940cc7a079a8034b8fa18d51d542295, type: 3}
-  - {fileID: 6636374792559515395, guid: 5de62cf5ce05a8346ba8613e0543f522, type: 3}
+  - {fileID: 695248438474649488, guid: a814c5b3240e9b0489a780e1138d6971, type: 3}
+  - {fileID: 695248438474649488, guid: a814c5b3240e9b0489a780e1138d6971, type: 3}
+  - {fileID: 695248438474649488, guid: a814c5b3240e9b0489a780e1138d6971, type: 3}
+  - {fileID: 695248438474649488, guid: a814c5b3240e9b0489a780e1138d6971, type: 3}
   startTileCount: 4
   moveSpeed: 10
   recycleDistance: 100
@@ -306,10 +312,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   tilePrefabs:
-  - {fileID: 357449955945756288, guid: 8256f0c1131a4cb49a365a854949cca4, type: 3}
-  - {fileID: 8105829683789062481, guid: e40567c69eb8bd848a67020fbf5a4880, type: 3}
-  - {fileID: 951938606513008158, guid: 0faeb9a8973cf104788e64aaeb4509d8, type: 3}
-  - {fileID: 6636374792559515395, guid: 279ab9f535afd0946a3d6b3febce15d9, type: 3}
+  - {fileID: 695248438474649488, guid: a814c5b3240e9b0489a780e1138d6971, type: 3}
+  - {fileID: 695248438474649488, guid: a814c5b3240e9b0489a780e1138d6971, type: 3}
+  - {fileID: 695248438474649488, guid: a814c5b3240e9b0489a780e1138d6971, type: 3}
+  - {fileID: 695248438474649488, guid: a814c5b3240e9b0489a780e1138d6971, type: 3}
   startTileCount: 4
   moveSpeed: 10
   recycleDistance: 100
