@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 
@@ -39,10 +39,20 @@ public class UIManager : MonoBehaviour
 
     public void OnHowToUI()
     {
-
+        OffMainMenuUI();
     }
 
     public void OffHowToUI()
+    {
+        OnMainMenuUI();
+    }
+
+    public void OnPauseUI()
+    {
+
+    }
+
+    public void OffPauseUI()
     {
 
     }
