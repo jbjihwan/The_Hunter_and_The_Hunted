@@ -9,11 +9,13 @@ public class DrawLane : MonoBehaviour
     {
         Gizmos.color = Color.red;
 
-        Gizmos.DrawLine(transform.position + new Vector3(-laneInterval, 0f, -laneLength / 2f),
-            transform.position + new Vector3(-laneInterval, 0f, laneLength / 2f));
-        Gizmos.DrawLine(transform.position + new Vector3(0f, 0f, -laneLength / 2f),
-            transform.position + new Vector3(0f, 0f, laneLength / 2f));
-        Gizmos.DrawLine(transform.position + new Vector3(laneInterval, 0f, -laneLength / 2f),
-            transform.position + new Vector3(laneInterval, 0f, laneLength / 2f));
+        Gizmos.DrawLine(transform.position + transform.right * -laneInterval + transform.forward * -laneLength / 2,
+            transform.position + transform.right * -laneInterval + transform.forward * laneLength / 2);
+
+        Gizmos.DrawLine(transform.position + transform.forward * -laneLength / 2,
+            transform.position + transform.forward * laneLength / 2);
+
+        Gizmos.DrawLine(transform.position + transform.right * laneInterval + transform.forward * -laneLength / 2,
+            transform.position + transform.right * laneInterval + transform.forward * laneLength / 2);
     }
 }

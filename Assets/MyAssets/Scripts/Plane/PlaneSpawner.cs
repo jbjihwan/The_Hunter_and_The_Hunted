@@ -1,59 +1,72 @@
-// 시작 타일이 너무 길면 주석 부분 수정 필요
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlaneSpawner : MonoBehaviour
 {
-    public static PlaneSpawner Instance;
-    public GameObject[] planes;
+    [System.Serializable]
+    public class PlaneCycle
+    {
+        public GameObject[] planeCycle;
+    }
+
+    public PlaneCycle[] planeCycles;
     public GameObject endQuad;
-    public float destroyPosZ { get; private set; }
     public float planeLength;
     public float endQuadHeight;
     public int planeCount;
-    //public int startPlaneCount;
 
+    private Queue<GameObject> childPlanes;
+    private int cycleIndex;
     private int planeIndex;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(this);
-        }
-    }
 
     void Start()
     {
-        destroyPosZ = transform.position.z - planeLength;
+        childPlanes = new Queue<GameObject>();
+        cycleIndex = 0;
         planeIndex = 0;
 
         for (int i = 0; i <= planeCount; i++)
         {
-            //if (i >= startPlaneCount)
-            //{
-            //    ChangeIndex(Random.Range(0, planes.Length));
-            //}
-
-            SpawnPlane(transform.position + Vector3.forward * i * planeLength);
+            SpawnPlane(transform.position + transform.forward * i * planeLength);
         }
 
         Instantiate(endQuad, transform.position +
-            Vector3.forward * (planeCount * planeLength - planeLength / 2) +
-            Vector3.up * endQuadHeight / 2,
-            Quaternion.identity);
+            transform.forward * (planeCount * planeLength - planeLength / 2) +
+            transform.up * endQuadHeight / 2,
+            transform.rotation);
+    }
+
+    void LateUpdate()
+    {
+        DestroyPlane();
+    }
+
+    public void DestroyPlane()
+    {
+        if (childPlanes.Count == 0)
+        {
+            return;
+        }
+
+        if (transform.InverseTransformPoint(childPlanes.Peek().transform.position).z < -planeLength)
+        {
+            GameObject prev = childPlanes.Dequeue();
+
+            SpawnPlane(prev.transform.position + prev.transform.forward * (planeCount + 1) * planeLength);
+            Destroy(prev);
+        }
     }
 
     public void SpawnPlane(Vector3 spawnPos)
     {
-        Instantiate(planes[planeIndex], spawnPos, Quaternion.identity);
+        childPlanes.Enqueue(Instantiate(planeCycles[cycleIndex].planeCycle[planeIndex], spawnPos, transform.rotation, transform));
+
+        planeIndex = (planeIndex + 1) % planeCycles[cycleIndex].planeCycle.Length;
     }
 
-    public void ChangeIndex(int index)
+    public void ChangeCycle(int index)
     {
-        planeIndex = index;
+        cycleIndex = index;
+        planeIndex = 0;
     }
 }
