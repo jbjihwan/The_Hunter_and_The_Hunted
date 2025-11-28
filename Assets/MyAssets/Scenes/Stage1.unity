@@ -1049,7 +1049,12 @@ PrefabInstance:
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
       propertyPath: planeCount
-      value: 4
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
+      propertyPath: endQuadHeight
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
