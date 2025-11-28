@@ -13,13 +13,16 @@ public class GameManager : MonoBehaviour
         Playing,
         Paused,
         GameOver,
-        CutScene
+        CutScene,
+        Ending
     }
 
     public static GameManager Instance;
     public PlaneSpawner planeSpawner;
+    public PlaneSpawner obstacleSpawner;
     public float stage1PlayTime;
     public float stage2PlayTime;
+    public float stage3SafeTime;
     public float stage3PlayTime;
 
     private GameState gameState;
@@ -39,14 +42,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        InitGame();
-    }
-
     void Update()
     {
-        if (IsPlaying() && Input.GetKeyDown(KeyCode.Escape))
+        if ((IsPlaying() || gameState == GameState.CutScene) && Input.GetKeyDown(KeyCode.Escape))
         {
             GamePause();
         }
@@ -64,6 +62,12 @@ public class GameManager : MonoBehaviour
         if (stage == 2 && IsPlaying() && playTime > stage2PlayTime)
         {
             PlayCutScene();
+        }
+
+        if(stage == 3 && IsPlaying() && playTime > stage3SafeTime)
+        {
+            planeSpawner.ChangeCycle(1);
+            obstacleSpawner.ChangeCycle(1);
         }
 
         if (stage == 3 && IsPlaying() && playTime > stage3PlayTime)
@@ -109,16 +113,9 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("GameOver");
     }
 
-    public void GameEnding()
-    {
-        SceneManager.LoadScene("Ending");
-    }
-
     public void GameRestart()
     {
         SceneManager.LoadScene("Stage1");
-
-        InitGame();
     }
 
     // ∞‘¿” »Â∏ß
@@ -149,7 +146,15 @@ public class GameManager : MonoBehaviour
     public void Stage3()
     {
         gameState = GameState.Playing;
+        stage = 3;
 
         SceneManager.LoadScene("Stage3");
+    }
+
+    public void GameEnding()
+    {
+        gameState = GameState.Ending;
+
+        SceneManager.LoadScene("Ending");
     }
 }

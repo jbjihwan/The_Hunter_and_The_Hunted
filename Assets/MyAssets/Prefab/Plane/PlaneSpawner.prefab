@@ -47,7 +47,11 @@ MonoBehaviour:
   planeCycles:
   - planeCycle:
     - {fileID: 1798646651917201561, guid: 94258535188b6d94b8abe71fb0db3792, type: 3}
+  - planeCycle:
+    - {fileID: 2083783774245012969, guid: c0875f6f9d015894b87fb00018a97db5, type: 3}
+  - planeCycle:
+    - {fileID: 1798646651917201561, guid: 94258535188b6d94b8abe71fb0db3792, type: 3}
   endQuad: {fileID: 2331164372942886261, guid: 3c39464a208fb1e4ebdfc3103ea29b30, type: 3}
   planeLength: 20
-  endQuadHeight: 10
+  endQuadHeight: 20
   planeCount: 10
