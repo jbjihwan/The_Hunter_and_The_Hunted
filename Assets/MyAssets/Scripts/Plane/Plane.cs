@@ -45,9 +45,11 @@ public class Plane : MonoBehaviour
         {
             if (Random.Range(0f, 1f) <= obstacleSet[i].spawnProb)
             {
-                Instantiate(obstacleSet[i].obstaclePrefab,
+                GameObject obstacle = Instantiate(obstacleSet[i].obstaclePrefab,
                     spawnPoints[i].position + Vector3.up * obstacleHeight * obstacleSet[i].heightIndex,
-                    spawnPoints[i].rotation, transform);
+                    spawnPoints[i].rotation);
+
+                obstacle.transform.SetParent(transform, true);
             }
         }
     }
