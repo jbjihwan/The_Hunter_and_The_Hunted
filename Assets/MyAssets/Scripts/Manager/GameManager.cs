@@ -17,9 +17,14 @@ public class GameManager : MonoBehaviour
     }
 
     public static GameManager Instance;
+    public PlaneSpawner planeSpawner;
+    public float stage1PlayTime;
+    public float stage2PlayTime;
+    public float stage3PlayTime;
 
     private GameState gameState;
     private float playTime;
+    private int stage;
 
     private void Awake()
     {
@@ -39,20 +44,46 @@ public class GameManager : MonoBehaviour
         InitGame();
     }
 
+    void Update()
+    {
+        if (IsPlaying() && Input.GetKeyDown(KeyCode.Escape))
+        {
+            GamePause();
+        }
+
+        if (IsPlaying())
+        {
+            playTime += Time.deltaTime;
+        }
+
+        if (stage == 1 && IsPlaying() && playTime > stage1PlayTime)
+        {
+            Stage2();
+        }
+
+        if (stage == 2 && IsPlaying() && playTime > stage2PlayTime)
+        {
+            PlayCutScene();
+        }
+
+        if (stage == 3 && IsPlaying() && playTime > stage3PlayTime)
+        {
+            GameEnding();
+        }
+    }
+
+    public bool IsPlaying()
+    {
+        return gameState == GameState.Playing;
+    }
+
     public void InitGame()
     {
         gameState = GameState.Ready;
         playTime = 0f;
-        Time.timeScale = 1f;
+        stage = 0;
 
         UIManager.Instance.OnMainMenuUI();
-    }
-
-    public void GameStart()
-    {
-        gameState = GameState.Playing;
-
-        UIManager.Instance.OffMainMenuUI();
     }
 
     public void GamePause()
@@ -75,32 +106,50 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.GameOver;
 
-        // SceneManager.LoadScene("GameOverScene");
+        SceneManager.LoadScene("GameOver");
+    }
+
+    public void GameEnding()
+    {
+        SceneManager.LoadScene("Ending");
     }
 
     public void GameRestart()
     {
-        // SceneManager.LoadScene("Stage1");
+        SceneManager.LoadScene("Stage1");
 
         InitGame();
+    }
+
+    // ∞‘¿” »Â∏ß
+
+    public void Stage1()
+    {
+        gameState = GameState.Playing;
+        stage = 1;
+
+        UIManager.Instance.OffMainMenuUI();
+        planeSpawner.ChangeCycle(1);
+    }
+
+    public void Stage2()
+    {
+        stage = 2;
+
+        planeSpawner.ChangeCycle(2);
     }
 
     public void PlayCutScene()
     {
         gameState = GameState.CutScene;
 
-        // SceneManager.LoadScene("CutScene");
+        SceneManager.LoadScene("CutScene");
     }
 
-    public void Stage2()
+    public void Stage3()
     {
         gameState = GameState.Playing;
 
-        // SceneManager.LoadScene("Stage2");
-    }
-
-    public bool IsPlaying()
-    {
-        return gameState == GameState.Playing;
+        SceneManager.LoadScene("Stage3");
     }
 }
