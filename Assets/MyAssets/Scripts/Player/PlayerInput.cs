@@ -17,6 +17,11 @@ public class PlayerInput : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager.Instance.IsPlaying())
+        {
+            return;
+        }
+
         // Windows Input
         moveLeft = Input.GetKeyDown(KeyCode.LeftArrow);
         moveRight = Input.GetKeyDown(KeyCode.RightArrow);
