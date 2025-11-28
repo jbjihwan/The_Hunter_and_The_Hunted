@@ -2844,7 +2844,7 @@ GameObject:
   - component: {fileID: 7110869759784117486}
   - component: {fileID: 4249201825909294686}
   m_Layer: 0
-  m_Name: DungeonSample1
+  m_Name: Dungeonplane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2960,11 +2960,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194a8cf15ca26424e9f45bbc0be984c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frontSpawnPoints: []
-  backSpawnPoints: []
-  frontObstacleSets: []
-  backObstacleSets: []
-  speed: 5
+  spawnPoints:
+  - {fileID: 3332956950597617680}
+  - {fileID: 3769728420076601428}
+  - {fileID: 367986918477394992}
+  - {fileID: 4688350514576774549}
+  - {fileID: 5518044715295940244}
+  - {fileID: 2875200753700762252}
+  obstacles: []
+  speed: 10
   obstacleHeight: 1
 --- !u!114 &4249201825909294686
 MonoBehaviour:
