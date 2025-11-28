@@ -77,6 +77,6 @@ public class PlayerEvent : MonoBehaviour
         Debug.Log("[PlayerEvent] Player died!");
 
         // TODO: death animation, disable input, show game over UI, etc.
-        // GameManager.instance.GameOver();
+        GameManager.Instance.GameOver();
     }
 }
