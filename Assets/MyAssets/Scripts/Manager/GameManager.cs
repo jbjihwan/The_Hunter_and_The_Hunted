@@ -1,40 +1,160 @@
 // GameManager의 역할
 // 1. 게임의 흐름 제어 (일시 정지, 진행)
+// 2. 씬 관리
+using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
-    public bool isGameStart { get; private set; }
-    public bool isGameOver { get; private set; }
-    public bool isGamePaused { get; private set; }
+    public enum GameState
+    {
+        Ready,
+        Playing,
+        Paused,
+        GameOver,
+        CutScene,
+        Ending
+    }
 
+    public static GameManager Instance;
+    public PlaneSpawner planeSpawner;
+    public PlaneSpawner obstacleSpawner;
+    public float stage1PlayTime;
+    public float stage2PlayTime;
+    public float stage3SafeTime;
+    public float stage3PlayTime;
+
+    private GameState gameState;
     private float playTime;
+    private int stage;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(Instance);
         }
         else
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 
-    void Start()
+    void Update()
     {
-        isGameStart = false;
-        isGameOver = false;
-        isGamePaused = false;
-        playTime = Time.time;
+        if ((IsPlaying() || gameState == GameState.CutScene) && Input.GetKeyDown(KeyCode.Escape))
+        {
+            GamePause();
+        }
+
+        if (IsPlaying())
+        {
+            playTime += Time.deltaTime;
+        }
+
+        if (stage == 1 && IsPlaying() && playTime > stage1PlayTime)
+        {
+            Stage2();
+        }
+
+        if (stage == 2 && IsPlaying() && playTime > stage2PlayTime)
+        {
+            PlayCutScene();
+        }
+
+        if(stage == 3 && IsPlaying() && playTime > stage3SafeTime)
+        {
+            planeSpawner.ChangeCycle(1);
+            obstacleSpawner.ChangeCycle(1);
+        }
+
+        if (stage == 3 && IsPlaying() && playTime > stage3PlayTime)
+        {
+            GameEnding();
+        }
     }
 
-    public void GameStart()
+    public bool IsPlaying()
     {
-        isGameStart = true;
+        return gameState == GameState.Playing;
+    }
 
-        PlaneSpawner.Instance.ChangeIndex(1);
+    public void InitGame()
+    {
+        gameState = GameState.Ready;
+        playTime = 0f;
+        stage = 0;
+
+        UIManager.Instance.OnMainMenuUI();
+    }
+
+    public void GamePause()
+    {
+        gameState = GameState.Paused;
+        Time.timeScale = 0f;
+
+        UIManager.Instance.OnPauseUI();
+    }
+
+    public void GameResume()
+    {
+        gameState = GameState.Playing;
+        Time.timeScale = 1f;
+
+        UIManager.Instance.OffPauseUI();
+    }
+
+    public void GameOver()
+    {
+        gameState = GameState.GameOver;
+
+        SceneManager.LoadScene("GameOver");
+    }
+
+    public void GameRestart()
+    {
+        SceneManager.LoadScene("Stage1");
+    }
+
+    // 게임 흐름
+
+    public void Stage1()
+    {
+        gameState = GameState.Playing;
+        stage = 1;
+
+        UIManager.Instance.OffMainMenuUI();
+        planeSpawner.ChangeCycle(1);
+    }
+
+    public void Stage2()
+    {
+        stage = 2;
+
+        planeSpawner.ChangeCycle(2);
+    }
+
+    public void PlayCutScene()
+    {
+        gameState = GameState.CutScene;
+
+        SceneManager.LoadScene("CutScene");
+    }
+
+    public void Stage3()
+    {
+        gameState = GameState.Playing;
+        stage = 3;
+
+        SceneManager.LoadScene("Stage3");
+    }
+
+    public void GameEnding()
+    {
+        gameState = GameState.Ending;
+
+        SceneManager.LoadScene("Ending");
     }
 }

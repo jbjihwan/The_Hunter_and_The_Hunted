@@ -8,26 +8,48 @@ public class Plane : MonoBehaviour
     public class Obstacle
     {
         public GameObject obstaclePrefab;
-        public float spawnProb;
-        public int spawnIndex;
+        [Range(0f, 1f)] public float spawnProb;
         public int heightIndex;
     }
 
-    public Transform[] spawnPoints;
-    public Obstacle[] obstacles;
+    [System.Serializable]
+    public class ObstacleSet
+    {
+        public Obstacle[] obstacles;
+    }
+
+    public Transform[] frontSpawnPoints;
+    public Transform[] backSpawnPoints;
+    public ObstacleSet[] frontObstacleSets;
+    public ObstacleSet[] backObstacleSets;
     public float speed;
     public float obstacleHeight;
 
     void Start()
     {
-        foreach (Obstacle obstacle in obstacles)
+        ImplantObstacle(frontSpawnPoints, frontObstacleSets);
+        ImplantObstacle(backSpawnPoints, backObstacleSets);
+    }
+
+    void ImplantObstacle(Transform[] spawnPoints, ObstacleSet[] obstacleSets)
+    {
+        if (spawnPoints.Length != 3 || obstacleSets.Length == 0)
         {
-            if (obstacle.spawnProb > Random.Range(0f, 1f))
+            return;
+        }
+
+        Helper.Shuffle(spawnPoints);
+        Obstacle[] obstacleSet = obstacleSets[Random.Range(0, obstacleSets.Length)].obstacles;
+
+        for (int i = 0; i < Mathf.Min(obstacleSet.Length, 3); i++)
+        {
+            if (Random.Range(0f, 1f) <= obstacleSet[i].spawnProb)
             {
-                Instantiate(obstacle.obstaclePrefab, 
-                    spawnPoints[obstacle.spawnIndex].position + 
-                    Vector3.up * obstacle.heightIndex * obstacleHeight, 
-                    Quaternion.identity, transform);
+                GameObject obstacle = Instantiate(obstacleSet[i].obstaclePrefab,
+                    spawnPoints[i].position + Vector3.up * obstacleHeight * obstacleSet[i].heightIndex,
+                    spawnPoints[i].rotation);
+
+                obstacle.transform.SetParent(transform, true);
             }
         }
     }
@@ -35,13 +57,5 @@ public class Plane : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.back * speed * Time.deltaTime);
-
-        if (transform.position.z < PlaneSpawner.Instance.destroyPosZ)
-        {
-            PlaneSpawner.Instance.SpawnPlane(transform.position + 
-                Vector3.forward * (PlaneSpawner.Instance.planeCount + 1) * PlaneSpawner.Instance.planeLength);
-
-            Destroy(gameObject);
-        }
     }
 }
