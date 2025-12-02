@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public PlaneSpawner planeSpawner;
     public PlaneSpawner obstacleSpawner;
     public float stage1PlayTime;
+    public float stage2SafeTime;
     public float stage2PlayTime;
     public float stage3SafeTime;
     public float stage3PlayTime;
@@ -42,6 +43,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        stage2SafeTime = stage1PlayTime + stage2SafeTime;
+        stage2PlayTime = stage1PlayTime + stage2PlayTime;
+        stage3SafeTime = stage2PlayTime + stage3SafeTime;
+        stage3PlayTime = stage2PlayTime + stage3PlayTime;
+    }
+
     void Update()
     {
         if ((IsPlaying() || gameState == GameState.CutScene) && Input.GetKeyDown(KeyCode.Escape))
@@ -57,6 +66,11 @@ public class GameManager : MonoBehaviour
         if (stage == 1 && IsPlaying() && playTime > stage1PlayTime)
         {
             Stage2();
+        }
+
+        if (stage == 2 && IsPlaying() && playTime > stage2SafeTime)
+        {
+            planeSpawner.ChangeCycle(3);
         }
 
         if (stage == 2 && IsPlaying() && playTime > stage2PlayTime)
