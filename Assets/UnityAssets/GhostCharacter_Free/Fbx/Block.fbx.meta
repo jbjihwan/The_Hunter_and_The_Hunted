@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: e30db1c1f4eca42539a70cc31514d62f
+guid: 7b428264a8f157f40a013045ab067699
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material_Block
-    second: {fileID: 2100000, guid: 1a81d04651d154b569e181ca417e5d6e, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -21,8 +16,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -112,10 +105,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 267003
-  packageName: Ghost character Free
-  packageVersion: 1.0
-  assetPath: Assets/GhostCharacter_Free/Fbx/Block.fbx
-  uploadId: 617687

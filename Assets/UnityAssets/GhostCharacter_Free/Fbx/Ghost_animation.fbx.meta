@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 8242d247159ec462794ba075ca8c938e
+guid: 8ff076f5908b63f47845eb268dc955cb
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material_Ghost
-    second: {fileID: 2100000, guid: d11e6205c7cc9470aacd9fde3100bfe2, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -21,8 +16,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -112,10 +105,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 267003
-  packageName: Ghost character Free
-  packageVersion: 1.0
-  assetPath: Assets/GhostCharacter_Free/Fbx/Ghost_animation.fbx
-  uploadId: 617687
