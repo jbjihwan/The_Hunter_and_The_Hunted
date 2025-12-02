@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
         if (IsPlaying())
         {
             playTime += Time.deltaTime;
+            UIManager.Instance.UpdateTimer(playTime);
         }
 
         if (stage == 1 && IsPlaying() && playTime > stage1PlayTime)
@@ -140,6 +141,7 @@ public class GameManager : MonoBehaviour
         stage = 1;
 
         UIManager.Instance.OffMainMenuUI();
+        UIManager.Instance.OnTimerUI();
         planeSpawner.ChangeCycle(1);
     }
 
