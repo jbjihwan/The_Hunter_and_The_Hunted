@@ -140,13 +140,25 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.CutScene;
 
-        SceneManager.LoadScene("CutScene");
+        // 블링킷 효과와 함께 CutScene으로 전환
+        if (BlinkEffect.Instance != null)
+        {
+            BlinkEffect.Instance.PlayBlinkWithSceneTransition(0.5f, 0.5f, () =>
+            {
+                SceneManager.LoadScene("CutScene");
+            });
+        }
+        else
+        {
+            SceneManager.LoadScene("CutScene");
+        }
     }
 
     public void Stage3()
     {
         gameState = GameState.Playing;
         stage = 3;
+        playTime = 0f; // Stage3 시작 시 타이머 리셋
 
         SceneManager.LoadScene("Stage3");
     }
