@@ -908,7 +908,6 @@ GameObject:
   - component: {fileID: 2175120476075384660}
   - component: {fileID: 8769562765434348558}
   - component: {fileID: 6907849820913742848}
-  - component: {fileID: 8497788578793827223}
   m_Layer: 0
   m_Name: PasturePlane3
   m_TagString: Untagged
@@ -925,7 +924,7 @@ Transform:
   m_GameObject: {fileID: 746485868572163047}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.440892e-16, z: 49.7}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1029,7 +1028,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c366b37a51cda0d43a799bfd9466095f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1085,34 +1084,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194a8cf15ca26424e9f45bbc0be984c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints:
+  frontSpawnPoints:
   - {fileID: 3506229977051727879}
   - {fileID: 8789659967979988131}
   - {fileID: 8630993510726082233}
+  backSpawnPoints:
   - {fileID: 3943690104711540601}
   - {fileID: 5999748821241407733}
   - {fileID: 4232076271226954576}
-  obstacles:
-  - obstaclePrefab: {fileID: 0}
-    spawnProb: 0
-    spawnIndex: 0
-    heightIndex: 0
+  frontObstacleSets: []
+  backObstacleSets: []
   speed: 10
   obstacleHeight: 1
---- !u!114 &8497788578793827223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746485868572163047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 059dba8b97fde354587bb4c9ba551176, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laneInterval: 2
-  laneLength: 20
 --- !u!1 &892476339539334635
 GameObject:
   m_ObjectHideFlags: 0

@@ -199,7 +199,6 @@ GameObject:
   - component: {fileID: 5862367456520094162}
   - component: {fileID: 6904316327431591802}
   - component: {fileID: 769250225740583895}
-  - component: {fileID: 7482241650882453028}
   m_Layer: 0
   m_Name: PasturePlane4
   m_TagString: Untagged
@@ -216,10 +215,16 @@ Transform:
   m_GameObject: {fileID: 4225741344113701013}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.661338e-16, z: 69.7}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4095670824329277296}
+  - {fileID: 984359161546879963}
+  - {fileID: 5639813856779812650}
+  - {fileID: 6069946680039144218}
+  - {fileID: 2905487458226364616}
+  - {fileID: 5354528878387518212}
   - {fileID: 1328041092670606987}
   - {fileID: 1617527448367660391}
   - {fileID: 3337830645802154169}
@@ -235,12 +240,6 @@ Transform:
   - {fileID: 3957168399460548140}
   - {fileID: 2303048865670873497}
   - {fileID: 5333617181079714588}
-  - {fileID: 4095670824329277296}
-  - {fileID: 984359161546879963}
-  - {fileID: 5639813856779812650}
-  - {fileID: 6069946680039144218}
-  - {fileID: 2905487458226364616}
-  - {fileID: 5354528878387518212}
   - {fileID: 5324827058345538567}
   - {fileID: 6803346462505767695}
   - {fileID: 7703449173465091987}
@@ -315,7 +314,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c366b37a51cda0d43a799bfd9466095f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -371,34 +370,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194a8cf15ca26424e9f45bbc0be984c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints:
+  frontSpawnPoints:
   - {fileID: 4095670824329277296}
   - {fileID: 984359161546879963}
   - {fileID: 5639813856779812650}
+  backSpawnPoints:
   - {fileID: 6069946680039144218}
   - {fileID: 2905487458226364616}
   - {fileID: 5354528878387518212}
-  obstacles:
-  - obstaclePrefab: {fileID: 0}
-    spawnProb: 0
-    spawnIndex: 0
-    heightIndex: 0
+  frontObstacleSets: []
+  backObstacleSets: []
   speed: 10
   obstacleHeight: 1
---- !u!114 &7482241650882453028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4225741344113701013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 059dba8b97fde354587bb4c9ba551176, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laneInterval: 2
-  laneLength: 20
 --- !u!1001 &219226917974103852
 PrefabInstance:
   m_ObjectHideFlags: 0

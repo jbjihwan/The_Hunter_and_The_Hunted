@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planeSpawner: {fileID: 0}
-  stage1PlayTime: 5
-  stage2PlayTime: 10
-  stage3PlayTime: 15
+  obstacleSpawner: {fileID: 0}
+  stage1PlayTime: 0
+  stage2PlayTime: 0
+  stage3SafeTime: 0
+  stage3PlayTime: 0
