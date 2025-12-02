@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -7,6 +9,7 @@ public class UIManager : MonoBehaviour
     public GameObject mainMenuUI;
     public GameObject howToUI;
     public GameObject pauseUI;
+    public TextMeshProUGUI timerUI;
 
     private void Awake()
     {
@@ -23,17 +26,17 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        
+
     }
 
     public void OnMainMenuUI()
     {
-        mainMenuUI.SetActive(true);   
+        mainMenuUI.SetActive(true);
     }
 
     public void OffMainMenuUI()
@@ -61,5 +64,31 @@ public class UIManager : MonoBehaviour
     public void OffPauseUI()
     {
         pauseUI.SetActive(false);
+    }
+
+    public void OnTimerUI()
+    {
+        timerUI.gameObject.SetActive(true);
+    }
+
+    public void OffTimerUI()
+    {
+        timerUI.gameObject.SetActive(false);
+    }
+
+    public void UpdateTimer(float timer)
+    {
+        if (timerUI != null)
+        {
+            timerUI.text = TimerFormating(timer);
+        }
+    }
+
+    public string TimerFormating(float timer)
+    {
+        TimeSpan ts = TimeSpan.FromSeconds(timer);
+        string timerString = string.Format("{0:00}:{1:00}:{2:000}", ts.Minutes, ts.Seconds, ts.Milliseconds);
+
+        return timerString;
     }
 }

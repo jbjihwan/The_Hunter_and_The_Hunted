@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class HelperManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class HelperManager : MonoBehaviour
     public GameObject mainMenuUI;
     public GameObject howToUI;
     public GameObject pauseUI;
+    public TextMeshProUGUI timerUI;
 
     private void Start()
     {
@@ -34,6 +36,11 @@ public class HelperManager : MonoBehaviour
         if (pauseUI != null)
         {
             UIManager.Instance.pauseUI = pauseUI;
+        }
+
+        if (timerUI != null)
+        {
+            UIManager.Instance.timerUI = timerUI;
         }
 
         if (SceneManager.GetActiveScene().name == "Stage1")
