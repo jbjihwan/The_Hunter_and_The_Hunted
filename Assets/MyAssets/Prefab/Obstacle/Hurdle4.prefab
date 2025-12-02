@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2183480473736281063}
   - component: {fileID: 8836536205742192852}
   - component: {fileID: 45708467624796715}
+  - component: {fileID: 1225649551672165098}
   m_Layer: 0
   m_Name: Hurdle4
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 4.21}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 0.7, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -130,3 +131,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.9480748, y: 2.674276, z: 0.7967}
   m_Center: {x: 0.073776424, y: 1.3329498, z: 0.13507468}
+--- !u!114 &1225649551672165098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5910244420947955869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b3c2424c31d6247b01813c4b0460ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contactDamage: 1

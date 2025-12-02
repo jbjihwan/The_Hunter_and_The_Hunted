@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3044263981482169235}
   - component: {fileID: 5244833328528486673}
   - component: {fileID: 7804777258708249538}
+  - component: {fileID: 7740981893740939376}
   m_Layer: 0
   m_Name: Hurdle1
   m_TagString: Untagged
@@ -130,3 +131,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.9480786, y: 1.9905487, z: 0.7964845}
   m_Center: {x: -0.0021837354, y: 0.99527436, z: 0.1351831}
+--- !u!114 &7740981893740939376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070425697244103328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b3c2424c31d6247b01813c4b0460ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contactDamage: 1

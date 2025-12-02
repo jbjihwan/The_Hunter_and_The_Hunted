@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 4192822363814599646}
   - component: {fileID: 5869335879413755757}
   m_Layer: 0
-  m_Name: PasturePlane1
+  m_Name: PasturePlane1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -406,7 +406,7 @@ MonoBehaviour:
   - {fileID: 2959439022139757649}
   frontObstacleSets:
   - obstacles:
-    - obstaclePrefab: {fileID: 1070425697244103328, guid: 4b0222bfbaeaa484aaf546b28c227318,
+    - obstaclePrefab: {fileID: 5098620759399183519, guid: 1308df283cd6b194aae2d4a83e443694,
         type: 3}
       spawnProb: 1
       heightIndex: 0
@@ -414,8 +414,37 @@ MonoBehaviour:
         type: 3}
       spawnProb: 1
       heightIndex: 0
+    - obstaclePrefab: {fileID: 5098620759399183519, guid: 1308df283cd6b194aae2d4a83e443694,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 0
+  - obstacles:
+    - obstaclePrefab: {fileID: 5391146154218462074, guid: 3790730fe851320458d2239877aef97c,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 0
+    - obstaclePrefab: {fileID: 7913449848553558586, guid: f24f6d67973a61c49a85c8e6109f2ccc,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 0
+    - obstaclePrefab: {fileID: 7913449848553558586, guid: f24f6d67973a61c49a85c8e6109f2ccc,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 0
   backObstacleSets:
-  - obstacles: []
+  - obstacles:
+    - obstaclePrefab: {fileID: 4000883586250945439, guid: 8a3eac824ebbc5e4ca3fe15122266b40,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 0
+    - obstaclePrefab: {fileID: 4000883586250945439, guid: 8a3eac824ebbc5e4ca3fe15122266b40,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 0
+    - obstaclePrefab: {fileID: 4000883586250945439, guid: 8a3eac824ebbc5e4ca3fe15122266b40,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 0
   speed: 10
   obstacleHeight: 1
 --- !u!1001 &316967162548711750
