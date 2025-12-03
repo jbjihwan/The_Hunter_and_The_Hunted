@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 
 public class HelperManager : MonoBehaviour
@@ -10,7 +11,9 @@ public class HelperManager : MonoBehaviour
     public GameObject howToUI;
     public GameObject pauseUI;
     public TextMeshProUGUI timerUI;
-
+    public Slider runSlider;   // RunBar 슬라이더
+    public Slider hpSlider;    // HPBar 슬라이더
+    
     private void Start()
     {
         if (planeSpawner != null)
@@ -37,16 +40,28 @@ public class HelperManager : MonoBehaviour
         {
             UIManager.Instance.pauseUI = pauseUI;
         }
-
+       
         if (timerUI != null)
         {
             UIManager.Instance.timerUI = timerUI;
+        }
+        // ★ 슬라이더 연결
+        if (runSlider != null)
+        {
+            UIManager.Instance.runSlider = runSlider;
+        }
+
+        if (hpSlider != null)
+        {
+            UIManager.Instance.hpSlider = hpSlider;
         }
 
         if (SceneManager.GetActiveScene().name == "Stage1")
         {
             GameManager.Instance.InitGame();
         }
+        
+
     }
 
     public void Stage1()

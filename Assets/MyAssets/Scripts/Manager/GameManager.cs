@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
         gameState = GameState.Ready;
         playTime = 0f;
         stage = 0;
-
+        
         UIManager.Instance.OnMainMenuUI();
     }
 
@@ -141,8 +141,14 @@ public class GameManager : MonoBehaviour
         stage = 1;
 
         UIManager.Instance.OffMainMenuUI();
-        UIManager.Instance.OnTimerUI();
+        //  진행도/체력 슬라이더 켜기
+        UIManager.Instance.OnRunSlider();
+        UIManager.Instance.OnHpSlider();
+        // 타이머 UI는 게임 내에서 항상 숨김 처리
+        if (UIManager.Instance.timerUI != null)
+            UIManager.Instance.timerUI.gameObject.SetActive(false);
         planeSpawner.ChangeCycle(1);
+
     }
 
     public void Stage2()
@@ -173,4 +179,7 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene("Ending");
     }
+    // RunBar에서 거리 계산에 사용
+    public float PlayTime => playTime;
+    public int CurrentStage => stage;
 }
