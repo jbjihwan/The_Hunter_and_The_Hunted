@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public float stage2PlayTime;
     public float stage3SafeTime;
     public float stage3PlayTime;
+    public int safePlaneCount;
 
     private GameState gameState;
     private float playTime;
@@ -71,7 +72,7 @@ public class GameManager : MonoBehaviour
 
         if (stage == 2 && IsPlaying() && playTime > stage2SafeTime)
         {
-            planeSpawner.ChangeCycle(3);
+            planeSpawner.ChangeCycle(2);
         }
 
         if (stage == 2 && IsPlaying() && playTime > stage2PlayTime)
@@ -79,14 +80,13 @@ public class GameManager : MonoBehaviour
             PlayCutScene();
         }
 
-        if(stage == 3 && IsPlaying() && playTime > stage3SafeTime)
+        if (stage == 3 && IsPlaying() && playTime > stage3SafeTime)
         {
             obstacleSpawner.ChangeCycle(1);
         }
 
         if (stage == 3 && IsPlaying() && playTime > stage3PlayTime)
         {
-            planeSpawner.ChangeCycle(1);
             GameEnding();
         }
     }
@@ -101,7 +101,8 @@ public class GameManager : MonoBehaviour
         gameState = GameState.Ready;
         playTime = 0f;
         stage = 0;
-        
+
+        planeSpawner.Init();
         UIManager.Instance.OnMainMenuUI();
     }
 
@@ -111,6 +112,8 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
 
         UIManager.Instance.OnPauseUI();
+        UIManager.Instance.OffHpSlider();
+        UIManager.Instance.OffRunSlider();
     }
 
     public void GameResume()
@@ -119,6 +122,8 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
 
         UIManager.Instance.OffPauseUI();
+        UIManager.Instance.OnHpSlider();
+        UIManager.Instance.OnRunSlider();
     }
 
     public void GameOver()
@@ -143,15 +148,16 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.OffMainMenuUI();
         UIManager.Instance.OnRunSlider();
         UIManager.Instance.OnHpSlider();
-        planeSpawner.ChangeCycle(1);
 
+        obstacleSpawner.Init(safePlaneCount);
     }
 
     public void Stage2()
     {
         stage = 2;
 
-        planeSpawner.ChangeCycle(2);
+        planeSpawner.ChangeCycle(1);
+        obstacleSpawner.ChangeCycle(0);
     }
 
     public void PlayCutScene()
@@ -174,6 +180,15 @@ public class GameManager : MonoBehaviour
         gameState = GameState.Ending;
 
         SceneManager.LoadScene("Ending");
+    }
+
+    public void Triggered(int code)
+    {
+        // Stage 1 -> Stage 2 전환 시그널
+        if(code == 1)
+        {
+            planeSpawner.ChangeCycle(2);
+        }
     }
 
     // RunBar에서 거리 계산에 사용

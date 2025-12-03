@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,15 +26,40 @@ public class PlaneSpawner : MonoBehaviour
         cycleIndex = 0;
         planeIndex = 0;
 
-        for (int i = 0; i <= planeCount; i++)
-        {
-            SpawnPlane(transform.position + transform.forward * i * planeLength);
-        }
-
         Instantiate(endQuad, transform.position +
             transform.forward * (planeCount * planeLength - planeLength / 2) +
             transform.up * endQuadHeight / 2,
             transform.rotation);
+    }
+
+    public void Init()
+    {
+        Init(-1);
+    }
+
+    public void Init(int safe)
+    {
+        if (planeCycles.Length == 0)
+        {
+            return;
+        }
+
+        safe = Mathf.Min(safe, planeCount + 1);
+
+        for (int i = 0; i < safe; i++)
+        {
+            SpawnPlane(transform.position + transform.forward * i * planeLength);
+        }
+
+        if (safe != -1 && planeCycles.Length > 1)
+        {
+            ChangeCycle(1);
+        }
+
+        for (int i = safe; i <= planeCount; i++)
+        {
+            SpawnPlane(transform.position + transform.forward * i * planeLength);
+        }
     }
 
     void LateUpdate()

@@ -47,3 +47,6 @@ MonoBehaviour:
   mainMenuUI: {fileID: 0}
   howToUI: {fileID: 0}
   pauseUI: {fileID: 0}
+  timerUI: {fileID: 0}
+  runSlider: {fileID: 0}
+  hpSlider: {fileID: 0}

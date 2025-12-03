@@ -60,8 +60,6 @@ public class HelperManager : MonoBehaviour
         {
             GameManager.Instance.InitGame();
         }
-        
-
     }
 
     public void Stage1()
