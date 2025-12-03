@@ -515,6 +515,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7100673218941825776, guid: 052d5e3436c154844a699bda46a09a17,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 098f46abb50759c44a4eb5de8d193735, type: 2}
     - target: {fileID: 8417520537079166052, guid: 052d5e3436c154844a699bda46a09a17,
         type: 3}
       propertyPath: m_Name
@@ -740,7 +745,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planeSpawner: {fileID: 726891039}
   obstacleSpawner: {fileID: 970201751}
+  mainMenuUI: {fileID: 0}
+  howToUI: {fileID: 0}
   pauseUI: {fileID: 0}
+  timerUI: {fileID: 0}
 --- !u!4 &1588418541
 Transform:
   m_ObjectHideFlags: 0
