@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
         if (IsPlaying())
         {
             playTime += Time.deltaTime;
-            UIManager.Instance.UpdateTimer(playTime);
+            // UIManager.Instance.UpdateTimer(playTime);
         }
 
         if (stage == 1 && IsPlaying() && playTime > stage1PlayTime)
@@ -81,12 +81,12 @@ public class GameManager : MonoBehaviour
 
         if(stage == 3 && IsPlaying() && playTime > stage3SafeTime)
         {
-            planeSpawner.ChangeCycle(1);
             obstacleSpawner.ChangeCycle(1);
         }
 
         if (stage == 3 && IsPlaying() && playTime > stage3PlayTime)
         {
+            planeSpawner.ChangeCycle(1);
             GameEnding();
         }
     }
@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
         gameState = GameState.Ready;
         playTime = 0f;
         stage = 0;
-
+        
         UIManager.Instance.OnMainMenuUI();
     }
 
@@ -141,8 +141,10 @@ public class GameManager : MonoBehaviour
         stage = 1;
 
         UIManager.Instance.OffMainMenuUI();
-        UIManager.Instance.OnTimerUI();
+        UIManager.Instance.OnRunSlider();
+        UIManager.Instance.OnHpSlider();
         planeSpawner.ChangeCycle(1);
+
     }
 
     public void Stage2()
@@ -185,4 +187,8 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene("Ending");
     }
+
+    // RunBar에서 거리 계산에 사용
+    public float PlayTime => playTime;
+    public int CurrentStage => stage;
 }

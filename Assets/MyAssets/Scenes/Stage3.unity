@@ -145,9 +145,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
+      propertyPath: planeCycles.Array.data[1].planeCycle.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
       propertyPath: 'planeCycles.Array.data[0].planeCycle.Array.data[0]'
       value: 
-      objectReference: {fileID: 1798646651917201561, guid: 94258535188b6d94b8abe71fb0db3792,
+      objectReference: {fileID: 1202883989294441750, guid: dfbb6184aba41e44da43c7955b857b5b,
         type: 3}
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
@@ -159,7 +164,37 @@ PrefabInstance:
         type: 3}
       propertyPath: 'planeCycles.Array.data[1].planeCycle.Array.data[0]'
       value: 
-      objectReference: {fileID: 2083783774245012969, guid: c0875f6f9d015894b87fb00018a97db5,
+      objectReference: {fileID: 3803673252938492994, guid: 12357d08034703c4dae001bb73baa1c8,
+        type: 3}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
+      propertyPath: 'planeCycles.Array.data[1].planeCycle.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8842300986864234683, guid: 7c151271413355140b1859dcec33a237,
+        type: 3}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
+      propertyPath: 'planeCycles.Array.data[1].planeCycle.Array.data[2]'
+      value: 
+      objectReference: {fileID: 4225741344113701013, guid: a1e0bdc96c3700e4d850439fc7af8aa9,
+        type: 3}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
+      propertyPath: 'planeCycles.Array.data[1].planeCycle.Array.data[3]'
+      value: 
+      objectReference: {fileID: 746485868572163047, guid: ac646f144a18e8c44bcb6de8f8bafe55,
+        type: 3}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
+      propertyPath: 'planeCycles.Array.data[1].planeCycle.Array.data[4]'
+      value: 
+      objectReference: {fileID: 5313529309589529409, guid: af3234946bff67440b043a245269e77e,
+        type: 3}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
+      propertyPath: 'planeCycles.Array.data[1].planeCycle.Array.data[5]'
+      value: 
+      objectReference: {fileID: 8157152048929392014, guid: ce4893e10be95b1448eab7328fda5175,
         type: 3}
     - target: {fileID: 1290343798965630263, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
@@ -258,15 +293,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
+      propertyPath: planeCycles.Array.data[1].planeCycle.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
       propertyPath: 'planeCycles.Array.data[0].planeCycle.Array.data[0]'
       value: 
-      objectReference: {fileID: 1798646651917201561, guid: 67e6dfb00199960448e378e79fd6610f,
+      objectReference: {fileID: 1798646651917201561, guid: 884305bc42722b34485aca5643606d23,
         type: 3}
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
       propertyPath: 'planeCycles.Array.data[1].planeCycle.Array.data[0]'
       value: 
-      objectReference: {fileID: 1798646651917201561, guid: 884305bc42722b34485aca5643606d23,
+      objectReference: {fileID: 1798646651917201561, guid: 370842fce02e53042b080a86ee8a1210,
         type: 3}
     - target: {fileID: 1290343798965630263, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
@@ -515,6 +555,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7100673218941825776, guid: 052d5e3436c154844a699bda46a09a17,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 098f46abb50759c44a4eb5de8d193735, type: 2}
     - target: {fileID: 8417520537079166052, guid: 052d5e3436c154844a699bda46a09a17,
         type: 3}
       propertyPath: m_Name
@@ -525,38 +570,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 052d5e3436c154844a699bda46a09a17, type: 3}
---- !u!1 &1477054507
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1477054508}
-  m_Layer: 0
-  m_Name: CameraSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1477054508
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1477054507}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1527327040}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1527327039
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,7 +603,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1477054508}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
 --- !u!114 &1527327041
 MonoBehaviour:
@@ -740,7 +753,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planeSpawner: {fileID: 726891039}
   obstacleSpawner: {fileID: 970201751}
+  mainMenuUI: {fileID: 0}
+  howToUI: {fileID: 0}
   pauseUI: {fileID: 0}
+  timerUI: {fileID: 0}
+  runSlider: {fileID: 0}
+  hpSlider: {fileID: 0}
 --- !u!4 &1588418541
 Transform:
   m_ObjectHideFlags: 0
@@ -761,8 +779,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1217443136}
+  - {fileID: 1527327040}
+  - {fileID: 1588418541}
   - {fileID: 726891038}
   - {fileID: 970201750}
-  - {fileID: 1477054508}
   - {fileID: 1277815337}
-  - {fileID: 1588418541}

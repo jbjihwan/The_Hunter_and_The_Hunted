@@ -16,6 +16,8 @@ public class Plane : MonoBehaviour
     public class ObstacleSet
     {
         public Obstacle[] obstacles;
+        public bool isMoving;
+        public bool isHorizontal;
     }
 
     public Transform[] frontSpawnPoints;
@@ -38,18 +40,65 @@ public class Plane : MonoBehaviour
             return;
         }
 
-        Helper.Shuffle(spawnPoints);
-        Obstacle[] obstacleSet = obstacleSets[Random.Range(0, obstacleSets.Length)].obstacles;
+        ObstacleSet obstacleSet = obstacleSets[Random.Range(0, obstacleSets.Length)];
 
-        for (int i = 0; i < Mathf.Min(obstacleSet.Length, 3); i++)
+        // 이동 장애물 코드
+        if (obstacleSet.isMoving)
         {
-            if (Random.Range(0f, 1f) <= obstacleSet[i].spawnProb)
+            if (obstacleSet.isHorizontal)
             {
-                GameObject obstacle = Instantiate(obstacleSet[i].obstaclePrefab,
-                    spawnPoints[i].position + Vector3.up * obstacleHeight * obstacleSet[i].heightIndex,
-                    spawnPoints[i].rotation);
+                if (Random.Range(0f, 1f) <= obstacleSet.obstacles[0].spawnProb)
+                {
+                    GameObject obstacle = Instantiate(obstacleSet.obstacles[0].obstaclePrefab,
+                        spawnPoints[1].position,
+                        spawnPoints[1].rotation);
 
-                obstacle.transform.SetParent(transform, true);
+                    obstacle.transform.SetParent(transform, true);
+                }
+            }
+            else
+            {
+                if (Random.Range(0f, 1f) <= obstacleSet.obstacles[0].spawnProb)
+                {
+                    GameObject obstacle = Instantiate(obstacleSet.obstacles[0].obstaclePrefab,
+                        spawnPoints[0].position,
+                        spawnPoints[0].rotation);
+
+                    obstacle.transform.SetParent(transform, true);
+                }
+            }
+        }
+        else
+        {
+            if (obstacleSet.isHorizontal)
+            {
+                for (int i = 0; i < Mathf.Min(obstacleSet.obstacles.Length, 3); i++)
+                {
+                    if (Random.Range(0f, 1f) <= obstacleSet.obstacles[i].spawnProb)
+                    {
+                        GameObject obstacle = Instantiate(obstacleSet.obstacles[i].obstaclePrefab,
+                            spawnPoints[1].position + Vector3.up * obstacleHeight * obstacleSet.obstacles[i].heightIndex,
+                            spawnPoints[1].rotation);
+
+                        obstacle.transform.SetParent(transform, true);
+                    }
+                }
+            }
+            else
+            {
+                Helper.Shuffle(spawnPoints);
+
+                for (int i = 0; i < Mathf.Min(obstacleSet.obstacles.Length, 3); i++)
+                {
+                    if (Random.Range(0f, 1f) <= obstacleSet.obstacles[i].spawnProb)
+                    {
+                        GameObject obstacle = Instantiate(obstacleSet.obstacles[i].obstaclePrefab,
+                            spawnPoints[i].position + Vector3.up * obstacleHeight * obstacleSet.obstacles[i].heightIndex,
+                            spawnPoints[i].rotation);
+
+                        obstacle.transform.SetParent(transform, true);
+                    }
+                }
             }
         }
     }

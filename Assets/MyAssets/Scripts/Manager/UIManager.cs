@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;      
 using TMPro;
 
 public class UIManager : MonoBehaviour
@@ -10,6 +11,8 @@ public class UIManager : MonoBehaviour
     public GameObject howToUI;
     public GameObject pauseUI;
     public TextMeshProUGUI timerUI;
+    public Slider runSlider;   // 진행도 바
+    public Slider hpSlider;    // 체력 바
 
     private void Awake()
     {
@@ -22,16 +25,6 @@ public class UIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
     }
 
     public void OnMainMenuUI()
@@ -65,7 +58,7 @@ public class UIManager : MonoBehaviour
     {
         pauseUI.SetActive(false);
     }
-
+    
     public void OnTimerUI()
     {
         timerUI.gameObject.SetActive(true);
@@ -91,4 +84,29 @@ public class UIManager : MonoBehaviour
 
         return timerString;
     }
+
+    public void OnRunSlider()
+    {
+        if (runSlider != null)
+            runSlider.gameObject.SetActive(true);
+    }
+
+    public void OffRunSlider()
+    {
+        if (runSlider != null)
+            runSlider.gameObject.SetActive(false);
+    }
+
+    public void OnHpSlider()
+    {
+        if (hpSlider != null)
+            hpSlider.gameObject.SetActive(true);
+    }
+
+    public void OffHpSlider()
+    {
+        if (hpSlider != null)
+            hpSlider.gameObject.SetActive(false);
+    }
+
 }

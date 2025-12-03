@@ -10,15 +10,18 @@ EditorBuildSettings:
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/MyAssets/Scenes/CutScene.unity
-    guid: 1e49bd5aae735d04dbe75f3cdec6dc9c
+    guid: ce4986e00a2bac747837a5c789cc7619
+  - enabled: 1
+    path: Assets/MyAssets/Scenes/Stage3.unity
+    guid: d1a771de7de8d5c4f8e72bc83142bf99
   - enabled: 1
     path: Assets/MyAssets/Scenes/Ending.unity
     guid: c8eb47dc3233c0a46ba5d111080ea251
   - enabled: 1
+    path: Assets/MyAssets/Scenes/EndingCutScene.unity
+    guid: 8c78b6fdd7a7861449df24d557a0867e
+  - enabled: 1
     path: Assets/MyAssets/Scenes/GameOver.unity
     guid: 77bcc3bf27b751c4580f2aed99318a78
-  - enabled: 1
-    path: Assets/MyAssets/Scenes/Stage3.unity
-    guid: d1a771de7de8d5c4f8e72bc83142bf99
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
