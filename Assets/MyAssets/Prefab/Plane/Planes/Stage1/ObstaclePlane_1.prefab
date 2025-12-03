@@ -175,7 +175,7 @@ MonoBehaviour:
       heightIndex: 0
     isMoving: 0
     isHorizontal: 0
-  speed: 10
+  speed: 5
   obstacleHeight: 1
 --- !u!1 &2993377883923532925
 GameObject:

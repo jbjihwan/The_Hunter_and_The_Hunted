@@ -1667,6 +1667,7 @@ GameObject:
   - component: {fileID: 7821039220618283017}
   - component: {fileID: 6861014199237728546}
   - component: {fileID: 5348850880432129989}
+  - component: {fileID: -1687723788442749426}
   m_Layer: 0
   m_Name: MiraTwins
   m_TagString: Monster
@@ -1725,6 +1726,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contactDamage: 1
+--- !u!114 &-1687723788442749426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4000883586250945439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 649bff6a9fa905c4b9d616c5f9143092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &4044217646527632264
 GameObject:
   m_ObjectHideFlags: 0

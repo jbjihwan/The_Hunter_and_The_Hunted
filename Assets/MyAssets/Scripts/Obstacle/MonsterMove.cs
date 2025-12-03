@@ -2,11 +2,15 @@ using UnityEngine;
 
 public class MonsterMove : MonoBehaviour
 {
-    public float speed = 5f;   // 이동 속도
+    public float speed;
 
     void Update()
     {
         // 매 프레임 -Z 방향으로 이동
-        transform.Translate(transform.forward * speed * Time.deltaTime);
+
+        if(transform.position.z < 30f)
+        {
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        }
     }
 }

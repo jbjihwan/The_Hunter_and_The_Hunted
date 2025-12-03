@@ -194,6 +194,11 @@ public class GameManager : MonoBehaviour
         {
             directionalLight.SetActive(false);
         }
+        else if(code == 3)
+        {
+            go.GetComponent<MonsterMove>().speed = 3f;
+            Debug.Log("speed Up");
+        }
     }
 
     // RunBar에서 거리 계산에 사용

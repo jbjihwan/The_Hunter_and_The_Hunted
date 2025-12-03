@@ -614,6 +614,7 @@ GameObject:
   - component: {fileID: 7055311676600159621}
   - component: {fileID: 2947822006648862720}
   - component: {fileID: 3013547077001633964}
+  - component: {fileID: -2509235597523878}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Monster
@@ -671,6 +672,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contactDamage: 1
+--- !u!114 &-2509235597523878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5802306722419414214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 649bff6a9fa905c4b9d616c5f9143092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &6233076782036925090
 GameObject:
   m_ObjectHideFlags: 0
