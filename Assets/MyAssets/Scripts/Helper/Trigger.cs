@@ -9,7 +9,7 @@ public class Trigger : MonoBehaviour
     {
         if(other.CompareTag(targetTag))
         {
-            GameManager.Instance.Triggered(trigerCode);
+            GameManager.Instance.Triggered(trigerCode, other.gameObject);
         }
     }
 }

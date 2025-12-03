@@ -1066,7 +1066,7 @@ GameObject:
   - component: {fileID: 8186984845702433721}
   - component: {fileID: 7107500180531868081}
   m_Layer: 0
-  m_Name: DungeonPassagePlane_1
+  m_Name: DungeonPassagePlane_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1192,7 +1192,7 @@ MonoBehaviour:
   - {fileID: 6515752060247600038}
   frontObstacleSets: []
   backObstacleSets: []
-  speed: 5
+  speed: 10
   obstacleHeight: 1
 --- !u!1 &1208077010655256216
 GameObject:

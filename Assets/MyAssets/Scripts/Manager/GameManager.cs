@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public PlaneSpawner planeSpawner;
     public PlaneSpawner obstacleSpawner;
+    public GameObject directionalLight;
     public float stage1PlayTime;
     public float stage2SafeTime;
     public float stage2PlayTime;
@@ -157,7 +158,7 @@ public class GameManager : MonoBehaviour
         stage = 2;
 
         planeSpawner.ChangeCycle(1);
-        obstacleSpawner.ChangeCycle(0);
+        obstacleSpawner.ChangeCycle(2);
     }
 
     public void PlayCutScene()
@@ -182,12 +183,16 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Ending");
     }
 
-    public void Triggered(int code)
+    public void Triggered(int code, GameObject go)
     {
-        // Stage 1 -> Stage 2 전환 시그널
-        if(code == 1)
+        // Monster code 1
+        if (code == 1)
         {
-            planeSpawner.ChangeCycle(2);
+            Destroy(go);
+        }
+        else if(code == 2)
+        {
+            directionalLight.SetActive(false);
         }
     }
 

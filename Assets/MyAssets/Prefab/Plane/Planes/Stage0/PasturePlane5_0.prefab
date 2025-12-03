@@ -386,7 +386,7 @@ MonoBehaviour:
   - {fileID: 7936554327996339047}
   frontObstacleSets: []
   backObstacleSets: []
-  speed: 5
+  speed: 10
   obstacleHeight: 1
 --- !u!1001 &466766120275526456
 PrefabInstance:
