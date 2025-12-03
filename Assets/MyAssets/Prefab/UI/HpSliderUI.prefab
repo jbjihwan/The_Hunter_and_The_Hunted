@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 1816349138146680810}
   - component: {fileID: 4554015007798517367}
   m_Layer: 5
-  m_Name: HpSliderUI
+  m_Name: HPSliderUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

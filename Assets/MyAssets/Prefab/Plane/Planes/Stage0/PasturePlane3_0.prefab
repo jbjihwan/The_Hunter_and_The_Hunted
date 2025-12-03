@@ -909,7 +909,7 @@ GameObject:
   - component: {fileID: 8769562765434348558}
   - component: {fileID: 6907849820913742848}
   m_Layer: 0
-  m_Name: PasturePlane3
+  m_Name: PasturePlane3_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

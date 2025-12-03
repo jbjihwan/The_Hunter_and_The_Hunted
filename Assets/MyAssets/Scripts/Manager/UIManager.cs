@@ -27,16 +27,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
-
     public void OnMainMenuUI()
     {
         mainMenuUI.SetActive(true);
@@ -95,7 +85,6 @@ public class UIManager : MonoBehaviour
         return timerString;
     }
 
-    // ===== RunSlider On/Off =====
     public void OnRunSlider()
     {
         if (runSlider != null)
@@ -108,7 +97,6 @@ public class UIManager : MonoBehaviour
             runSlider.gameObject.SetActive(false);
     }
 
-    // ===== HP Slider On/Off =====
     public void OnHpSlider()
     {
         if (hpSlider != null)
@@ -120,6 +108,5 @@ public class UIManager : MonoBehaviour
         if (hpSlider != null)
             hpSlider.gameObject.SetActive(false);
     }
-
 
 }

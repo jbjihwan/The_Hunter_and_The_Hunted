@@ -13,17 +13,18 @@ public class PlayerEvent : MonoBehaviour
 {
     [Header("HP")]
     public int maxHP = 5;
-    public int currentHP;
-    public bool isDead { get; private set; } = false;
 
     [Header("Invincible")]
     public float invincibleDuration = 3f;
     public float flickerInterval = 0.15f;
-    public bool isInvincible { get; private set; } = false;
     public Renderer[] targetRenderers;
 
     [Header("UI")]
     public Slider hpSlider;   // 인스펙터에서 안 넣어도 Start에서 UIManager에서 가져옴
+
+    public bool isInvincible { get; private set; } = false;
+    public bool isDead { get; private set; } = false;
+    public int currentHP { get; private set; }
 
     // 무적 코루틴 중복 방지
     Coroutine invincibleCoroutine;

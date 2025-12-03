@@ -265,8 +265,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1518454318825685240}
   - component: {fileID: 3144923855223417326}
+  - component: {fileID: 3044641715448847152}
+  - component: {fileID: -507903856201147903}
   m_Layer: 0
-  m_Name: LightiningHorizontal
+  m_Name: MovingLightiningHorizontal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -306,12 +308,39 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &3044641715448847152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5790767406282742731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b491e4d70e4071e42aa0265a7e7aaaf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveOffset: {x: 0, y: 2, z: 0}
+  speed: 1
+--- !u!114 &-507903856201147903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5790767406282742731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b3c2424c31d6247b01813c4b0460ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contactDamage: 1
 --- !u!1 &6785327419814326683
 GameObject:
   m_ObjectHideFlags: 0

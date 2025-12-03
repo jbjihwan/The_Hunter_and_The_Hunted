@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 8747511228407331662}
   - component: {fileID: 347454048391683784}
   m_Layer: 0
-  m_Name: Pastureplane2
+  m_Name: Pastureplane2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

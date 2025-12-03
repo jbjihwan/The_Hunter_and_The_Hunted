@@ -7,6 +7,6 @@ public class MonsterMove : MonoBehaviour
     void Update()
     {
         // 매 프레임 -Z 방향으로 이동
-        transform.Translate(Vector3.back * speed * Time.deltaTime);
+        transform.Translate(transform.forward * speed * Time.deltaTime);
     }
 }
