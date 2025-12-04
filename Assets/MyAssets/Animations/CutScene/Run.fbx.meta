@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-guid: 93048e03d4dc597468fce555d02e9274
-AssetOrigin:
-  serializedVersion: 1
-  productId: 79398
-  packageName: Evil Dragon Pack HP
-  packageVersion: 1.2
-  assetPath: Assets/FourEvilDragonsHP/Animations/DragonSoulEater/Run.fbx
-  uploadId: 422271
+guid: 3be6b15fe43e538469d1e6af34a6b757
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable:
