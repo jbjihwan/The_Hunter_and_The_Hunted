@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 2384573165981970542}
   - component: {fileID: 2069212464265560678}
   m_Layer: 0
-  m_Name: ObstaclePlane_1 2
+  m_Name: ObstaclePlane_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,108 +155,19 @@ MonoBehaviour:
   - obstacles:
     - obstaclePrefab: {fileID: 5798609256692414111, guid: afb51552960b095408570acf1d10fea5,
         type: 3}
-      spawnProb: 0.5
+      spawnProb: 1
       heightIndex: 0
-    - obstaclePrefab: {fileID: 6444220179268234586, guid: 268618a40cc6dea44befd4ab2e98fce9,
+    - obstaclePrefab: {fileID: 5798609256692414111, guid: afb51552960b095408570acf1d10fea5,
         type: 3}
       spawnProb: 1
       heightIndex: 0
     - obstaclePrefab: {fileID: 5798609256692414111, guid: afb51552960b095408570acf1d10fea5,
         type: 3}
-      spawnProb: 0.5
+      spawnProb: 1
       heightIndex: 0
     isMoving: 0
     isHorizontal: 0
-  - obstacles:
-    - obstaclePrefab: {fileID: 5098620759399183519, guid: 1308df283cd6b194aae2d4a83e443694,
-        type: 3}
-      spawnProb: 1
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 5098620759399183519, guid: 1308df283cd6b194aae2d4a83e443694,
-        type: 3}
-      spawnProb: 1
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 5098620759399183519, guid: 1308df283cd6b194aae2d4a83e443694,
-        type: 3}
-      spawnProb: 0.5
-      heightIndex: 0
-    isMoving: 0
-    isHorizontal: 0
-  - obstacles:
-    - obstaclePrefab: {fileID: 8762571167988920167, guid: d0d427c14f2244040a204cf605d8224f,
-        type: 3}
-      spawnProb: 1
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 5098620759399183519, guid: 1308df283cd6b194aae2d4a83e443694,
-        type: 3}
-      spawnProb: 0.5
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 5098620759399183519, guid: 1308df283cd6b194aae2d4a83e443694,
-        type: 3}
-      spawnProb: 0.5
-      heightIndex: 0
-    isMoving: 0
-    isHorizontal: 0
-  - obstacles:
-    - obstaclePrefab: {fileID: 8762571167988920167, guid: d0d427c14f2244040a204cf605d8224f,
-        type: 3}
-      spawnProb: 1
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 5798609256692414111, guid: afb51552960b095408570acf1d10fea5,
-        type: 3}
-      spawnProb: 0.5
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 5798609256692414111, guid: afb51552960b095408570acf1d10fea5,
-        type: 3}
-      spawnProb: 0.5
-      heightIndex: 0
-    isMoving: 0
-    isHorizontal: 0
-  - obstacles:
-    - obstaclePrefab: {fileID: 8762571167988920167, guid: d0d427c14f2244040a204cf605d8224f,
-        type: 3}
-      spawnProb: 1
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 3989286175664437836, guid: 54847763b8d41fe4b92a717541b07c84,
-        type: 3}
-      spawnProb: 0.5
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 3989286175664437836, guid: 54847763b8d41fe4b92a717541b07c84,
-        type: 3}
-      spawnProb: 0.5
-      heightIndex: 0
-    isMoving: 0
-    isHorizontal: 0
-  - obstacles:
-    - obstaclePrefab: {fileID: 4153369167366534120, guid: c64c7b4319aeef94baead192d328a018,
-        type: 3}
-      spawnProb: 1
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 3989286175664437836, guid: 54847763b8d41fe4b92a717541b07c84,
-        type: 3}
-      spawnProb: 0.5
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 3989286175664437836, guid: 54847763b8d41fe4b92a717541b07c84,
-        type: 3}
-      spawnProb: 0.5
-      heightIndex: 0
-    isMoving: 0
-    isHorizontal: 0
-  - obstacles:
-    - obstaclePrefab: {fileID: 6444220179268234586, guid: 268618a40cc6dea44befd4ab2e98fce9,
-        type: 3}
-      spawnProb: 1
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 3452934178019042881, guid: 6ca5df8d469266441b3da073cb98f8cd,
-        type: 3}
-      spawnProb: 0.5
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 3452934178019042881, guid: 6ca5df8d469266441b3da073cb98f8cd,
-        type: 3}
-      spawnProb: 0.5
-      heightIndex: 0
-    isMoving: 0
-    isHorizontal: 0
+    useFixedLaneOrder: 0
   backObstacleSets:
   - obstacles:
     - obstaclePrefab: {fileID: 2594777078550268669, guid: a9f71cd1600636f49a8eaadd22483a3b,
@@ -265,74 +176,15 @@ MonoBehaviour:
       heightIndex: 0
     - obstaclePrefab: {fileID: 2594777078550268669, guid: a9f71cd1600636f49a8eaadd22483a3b,
         type: 3}
-      spawnProb: 0.5
+      spawnProb: 1
       heightIndex: 0
     - obstaclePrefab: {fileID: 2594777078550268669, guid: a9f71cd1600636f49a8eaadd22483a3b,
         type: 3}
-      spawnProb: 0.5
-      heightIndex: 0
-    isMoving: 0
-    isHorizontal: 0
-  - obstacles:
-    - obstaclePrefab: {fileID: 3989286175664437836, guid: 54847763b8d41fe4b92a717541b07c84,
-        type: 3}
       spawnProb: 1
       heightIndex: 0
-    - obstaclePrefab: {fileID: 3989286175664437836, guid: 54847763b8d41fe4b92a717541b07c84,
-        type: 3}
-      spawnProb: 0.5
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 3989286175664437836, guid: 54847763b8d41fe4b92a717541b07c84,
-        type: 3}
-      spawnProb: 0.5
-      heightIndex: 0
     isMoving: 0
     isHorizontal: 0
-  - obstacles:
-    - obstaclePrefab: {fileID: 5798609256692414111, guid: afb51552960b095408570acf1d10fea5,
-        type: 3}
-      spawnProb: 1
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 5798609256692414111, guid: afb51552960b095408570acf1d10fea5,
-        type: 3}
-      spawnProb: 0.5
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 5798609256692414111, guid: afb51552960b095408570acf1d10fea5,
-        type: 3}
-      spawnProb: 0.5
-      heightIndex: 0
-    isMoving: 0
-    isHorizontal: 0
-  - obstacles:
-    - obstaclePrefab: {fileID: 4153369167366534120, guid: c64c7b4319aeef94baead192d328a018,
-        type: 3}
-      spawnProb: 1
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 5798609256692414111, guid: afb51552960b095408570acf1d10fea5,
-        type: 3}
-      spawnProb: 0.1
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 5798609256692414111, guid: afb51552960b095408570acf1d10fea5,
-        type: 3}
-      spawnProb: 0.1
-      heightIndex: 0
-    isMoving: 0
-    isHorizontal: 0
-  - obstacles:
-    - obstaclePrefab: {fileID: 4153369167366534120, guid: c64c7b4319aeef94baead192d328a018,
-        type: 3}
-      spawnProb: 1
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 3989286175664437836, guid: 54847763b8d41fe4b92a717541b07c84,
-        type: 3}
-      spawnProb: 0.1
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 3989286175664437836, guid: 54847763b8d41fe4b92a717541b07c84,
-        type: 3}
-      spawnProb: 0.1
-      heightIndex: 0
-    isMoving: 0
-    isHorizontal: 0
+    useFixedLaneOrder: 0
   speed: 10
   obstacleHeight: 1
 --- !u!1 &2993377883923532925

@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 2384573165981970542}
   - component: {fileID: 2069212464265560678}
   m_Layer: 0
-  m_Name: ObstaclePlane_13
+  m_Name: ObstaclePlane_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,29 +153,27 @@ MonoBehaviour:
   - {fileID: 5403255976155197060}
   frontObstacleSets:
   - obstacles:
-    - obstaclePrefab: {fileID: 5098620759399183519, guid: 1308df283cd6b194aae2d4a83e443694,
+    - obstaclePrefab: {fileID: 6444220179268234586, guid: 268618a40cc6dea44befd4ab2e98fce9,
         type: 3}
       spawnProb: 1
       heightIndex: 0
-    - obstaclePrefab: {fileID: 5098620759399183519, guid: 1308df283cd6b194aae2d4a83e443694,
+    - obstaclePrefab: {fileID: 6444220179268234586, guid: 268618a40cc6dea44befd4ab2e98fce9,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 0
+    - obstaclePrefab: {fileID: 6444220179268234586, guid: 268618a40cc6dea44befd4ab2e98fce9,
         type: 3}
       spawnProb: 1
       heightIndex: 0
     isMoving: 0
     isHorizontal: 0
+    useFixedLaneOrder: 0
   backObstacleSets:
-  - obstacles:
-    - obstaclePrefab: {fileID: 5098620759399183519, guid: 1308df283cd6b194aae2d4a83e443694,
-        type: 3}
-      spawnProb: 1
-      heightIndex: 0
-    - obstaclePrefab: {fileID: 5098620759399183519, guid: 1308df283cd6b194aae2d4a83e443694,
-        type: 3}
-      spawnProb: 1
-      heightIndex: 0
+  - obstacles: []
     isMoving: 0
     isHorizontal: 0
-  speed: 5
+    useFixedLaneOrder: 0
+  speed: 10
   obstacleHeight: 1
 --- !u!1 &2993377883923532925
 GameObject:
