@@ -880,7 +880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706673091552352839}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
@@ -888,7 +888,7 @@ Transform:
   - {fileID: 710052726902755705}
   - {fileID: 704013744981643947}
   m_Father: {fileID: 2467977875889190634}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &621485024546719237
 Animator:
   serializedVersion: 7
@@ -1144,10 +1144,10 @@ GameObject:
   - component: {fileID: 2467977875889190634}
   - component: {fileID: 1506947478536274417}
   - component: {fileID: 9104924286975400216}
-  - component: {fileID: 3117955468724023869}
+  - component: {fileID: 6907324576018286775}
   m_Layer: 0
-  m_Name: Turtle_Bottom
-  m_TagString: Untagged
+  m_Name: Turtle
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1187,8 +1187,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.4839964, y: 1.2963661, z: 1.7533419}
-  m_Center: {x: -0.032325745, y: 0.66211635, z: 0.05349052}
+  m_Size: {x: 1.5, y: 1, z: 1.5}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &9104924286975400216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1202,7 +1202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contactDamage: 1
---- !u!114 &3117955468724023869
+--- !u!114 &6907324576018286775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1214,4 +1214,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649bff6a9fa905c4b9d616c5f9143092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 10

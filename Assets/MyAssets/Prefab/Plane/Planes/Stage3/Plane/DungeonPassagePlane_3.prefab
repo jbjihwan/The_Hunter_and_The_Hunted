@@ -1066,7 +1066,7 @@ GameObject:
   - component: {fileID: 8186984845702433721}
   - component: {fileID: 7107500180531868081}
   m_Layer: 0
-  m_Name: 'DungeonPassagePlane '
+  m_Name: DungeonPassagePlane_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -10,10 +10,11 @@ public class HelperManager : MonoBehaviour
     public GameObject mainMenuUI;
     public GameObject howToUI;
     public GameObject pauseUI;
+    public GameObject directionalLight;
     public TextMeshProUGUI timerUI;
     public Slider runSlider;   // RunBar 슬라이더
     public Slider hpSlider;    // HPBar 슬라이더
-    
+
     private void Start()
     {
         if (planeSpawner != null)
@@ -24,6 +25,11 @@ public class HelperManager : MonoBehaviour
         if (obstacleSpawner != null)
         {
             GameManager.Instance.obstacleSpawner = obstacleSpawner;
+        }
+
+        if (directionalLight != null)
+        {
+            GameManager.Instance.directionalLight = directionalLight;
         }
 
         if (mainMenuUI != null)
@@ -40,7 +46,7 @@ public class HelperManager : MonoBehaviour
         {
             UIManager.Instance.pauseUI = pauseUI;
         }
-       
+
         if (timerUI != null)
         {
             UIManager.Instance.timerUI = timerUI;
@@ -60,8 +66,12 @@ public class HelperManager : MonoBehaviour
         {
             GameManager.Instance.InitGame();
         }
-        
 
+        if (SceneManager.GetActiveScene().name == "Stage3")
+        {
+            GameManager.Instance.planeSpawner.Init();
+            GameManager.Instance.obstacleSpawner.Init(GameManager.Instance.safePlaneCount);
+        }
     }
 
     public void Stage1()

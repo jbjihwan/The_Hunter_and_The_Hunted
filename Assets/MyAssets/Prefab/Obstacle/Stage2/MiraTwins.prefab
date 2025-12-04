@@ -1000,8 +1000,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3108537758081906038}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -0.464, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1011,7 +1011,7 @@ Transform:
   - {fileID: 912709237289656942}
   - {fileID: 4609552203353994256}
   m_Father: {fileID: 7821039220618283017}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2062013947806093414
 Animator:
   serializedVersion: 7
@@ -1341,8 +1341,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3584748987723663296}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.383, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1352,7 +1352,7 @@ Transform:
   - {fileID: 1600660910240141528}
   - {fileID: 2694353137998825126}
   m_Father: {fileID: 7821039220618283017}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &432792428186673872
 Animator:
   serializedVersion: 7
@@ -1667,10 +1667,10 @@ GameObject:
   - component: {fileID: 7821039220618283017}
   - component: {fileID: 6861014199237728546}
   - component: {fileID: 5348850880432129989}
-  - component: {fileID: 6502505773267692512}
+  - component: {fileID: -1687723788442749426}
   m_Layer: 0
-  m_Name: Mira_Bottom
-  m_TagString: Untagged
+  m_Name: MiraTwins
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1711,8 +1711,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.6859936, y: 1.0036752, z: 1}
-  m_Center: {x: -0.076238215, y: 0.52239263, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &5348850880432129989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1726,7 +1726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contactDamage: 1
---- !u!114 &6502505773267692512
+--- !u!114 &-1687723788442749426
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

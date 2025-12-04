@@ -67,8 +67,6 @@ public class PlayerEvent : MonoBehaviour
         int finalDamage = Mathf.Max(1, damage); // 최소 데미지 1
         currentHP -= finalDamage;
 
-        Debug.Log($"[PlayerEvent] Took {finalDamage} damage → Current HP: {currentHP}");
-
         // HP UI 업데이트
         if (hpSlider != null)
             hpSlider.value = currentHP;
