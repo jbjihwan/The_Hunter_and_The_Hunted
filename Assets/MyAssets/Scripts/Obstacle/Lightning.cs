@@ -10,6 +10,7 @@ public class Lightning : MonoBehaviour
     void Start()
     {
         previousOffset = Vector3.zero;
+        speed = Random.Range(0.5f, 2.0f) * speed;
     }
 
     void Update()

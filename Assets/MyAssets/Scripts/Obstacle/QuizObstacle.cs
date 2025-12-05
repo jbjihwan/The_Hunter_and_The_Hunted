@@ -4,14 +4,15 @@ using UnityEngine;
 public class QuizObstacle : MonoBehaviour
 {
     public QuizCube[] quizCubes;
+    public QuizManager.Quiz quiz;
 
-    private QuizManager.Quiz quiz;
     private bool triggered;
     private int answerCubeOrder;
 
     void Start()
     {
         quiz = QuizManager.Instance.GetQuiz();
+        QuizManager.Instance.PushQuiz(this);
         triggered = false;
 
         ImplantOptions();

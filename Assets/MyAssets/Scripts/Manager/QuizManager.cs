@@ -13,11 +13,13 @@ public class QuizManager : MonoBehaviour
     }
 
     public static QuizManager Instance;
+
     public Quiz[] quizzes;
     public TextMeshProUGUI quizText;
+    public float quizDist;
 
     private int quizIndex;
-    private Queue<string> quizQueue;
+    private Queue<QuizObstacle> quizQueue;
     private GameObject quizUI;
 
     private void Awake()
@@ -33,20 +35,25 @@ public class QuizManager : MonoBehaviour
         }
     }
 
-    void Start()
+    private void Start()
     {
         Helper.Shuffle(quizzes);
         quizIndex = 0;
-        quizQueue = new Queue<string>();
+        quizQueue = new Queue<QuizObstacle>();
         quizUI = quizText.transform.parent.gameObject;
+    }
+
+    private void Update()
+    {
+        UpdateQuizUI();
     }
 
     public void UpdateQuizUI()
     {
-        if (quizQueue.Count > 0)
+        if (quizQueue.Count > 0 && quizQueue.Peek().transform.position.z < quizDist)
         {
             quizUI.SetActive(true);
-            quizText.text = quizQueue.Peek();
+            quizText.text = quizQueue.Peek().quiz.quiz;
         }
         else
         {
@@ -58,16 +65,16 @@ public class QuizManager : MonoBehaviour
     {
         Quiz quiz = quizzes[quizIndex];
         quizIndex = (quizIndex + 1) % quizzes.Length;
-
-        quizQueue.Enqueue(quiz.quiz);
-        UpdateQuizUI();
-
         return quiz;
+    }
+
+    public void PushQuiz(QuizObstacle quizObstacle)
+    {
+        quizQueue.Enqueue(quizObstacle);
     }
 
     public void PopQuiz()
     {
         quizQueue.Dequeue();
-        UpdateQuizUI();
     }
 }

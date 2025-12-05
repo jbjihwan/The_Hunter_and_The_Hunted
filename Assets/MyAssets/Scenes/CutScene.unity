@@ -2674,21 +2674,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 36414894505371753, guid: d8e34bee3f8ccc342bdfcf00646aa17c,
-        type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 8c47f21bbc0882a438e177725c2bcf3d, type: 2}
-    - target: {fileID: 1107684665141959821, guid: d8e34bee3f8ccc342bdfcf00646aa17c,
-        type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 8c47f21bbc0882a438e177725c2bcf3d, type: 2}
-    - target: {fileID: 8596250791222110736, guid: d8e34bee3f8ccc342bdfcf00646aa17c,
-        type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 8c47f21bbc0882a438e177725c2bcf3d, type: 2}
     - target: {fileID: 6274221736019502000, guid: 27e21267ae6b84c48944a046fad27b11,
         type: 3}
       propertyPath: m_Name
@@ -2759,6 +2744,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 36414894505371753, guid: d8e34bee3f8ccc342bdfcf00646aa17c,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c47f21bbc0882a438e177725c2bcf3d, type: 2}
+    - target: {fileID: 1107684665141959821, guid: d8e34bee3f8ccc342bdfcf00646aa17c,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c47f21bbc0882a438e177725c2bcf3d, type: 2}
+    - target: {fileID: 8596250791222110736, guid: d8e34bee3f8ccc342bdfcf00646aa17c,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8c47f21bbc0882a438e177725c2bcf3d, type: 2}
     m_RemovedComponents:
     - {fileID: 1152021260838477109, guid: d8e34bee3f8ccc342bdfcf00646aa17c, type: 3}
     - {fileID: 4856211656536010052, guid: d8e34bee3f8ccc342bdfcf00646aa17c, type: 3}
@@ -4458,7 +4458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1226588792
 Light:
   m_ObjectHideFlags: 0
