@@ -174,27 +174,29 @@ public class PlayerEvent : MonoBehaviour
         }
     }
 
+    public void SetHP(int max, int curr)
+    {
+        maxHP = max;
+        currentHP = curr;
+        hpSlider.maxValue = max;
+        hpSlider.value = curr;
+    }
+
     public void ChangeDifficultyLevel(int level)
     {
         if (level == (int)DifficultyLevel.EASY)
         {
-            maxHP = easyHP;
-            currentHP = maxHP;
+            SetHP(easyHP, easyHP);
         }
         else if(level == (int)DifficultyLevel.NORMAL)
         {
-            maxHP = normalHP;
-            currentHP = maxHP;
+            SetHP(normalHP, normalHP);
         }
         else if (level == (int)DifficultyLevel.HARD)
         {
-            maxHP = hardHP;
-            currentHP = maxHP;
+            SetHP(hardHP, hardHP);
         }
-
-
-        hpSlider.maxValue = maxHP;
-        hpSlider.value = currentHP;
+        
         UIManager.Instance.OffDifficultyLevelUI();
     }
 
