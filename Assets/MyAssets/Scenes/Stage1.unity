@@ -141,7 +141,6 @@ GameObject:
   m_Component:
   - component: {fileID: 330585546}
   - component: {fileID: 330585545}
-  - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
   m_Layer: 0
@@ -151,14 +150,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &330585544
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
 --- !u!20 &330585545
 Camera:
   m_ObjectHideFlags: 0
@@ -2503,6 +2494,41 @@ PrefabInstance:
       propertyPath: quizText
       value: 
       objectReference: {fileID: 66086924337999175}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.data[2].quiz
+      value: "\uAD50\uC218\uB2D8\uC758 \uC131\uD568\uC740?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.data[2].answerIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.data[2].options.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[2].options.Array.data[0]'
+      value: "\uC804\uC740\uC19C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[2].options.Array.data[1]'
+      value: "\uC2E0\uC6A9\uC900"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[2].options.Array.data[2]'
+      value: "\uC774\uB3D9\uD638"
+      objectReference: {fileID: 0}
     - target: {fileID: 5831240121917615061, guid: c52fd1af002d04a4ab86dd16f596f339,
         type: 3}
       propertyPath: m_LocalPosition.x
