@@ -2987,7 +2987,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7966268567478522586, guid: 052d5e3436c154844a699bda46a09a17, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3599,9 +3600,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planeSpawner: {fileID: 0}
   obstacleSpawner: {fileID: 0}
+  playerEvent: {fileID: 0}
   mainMenuUI: {fileID: 0}
   howToUI: {fileID: 0}
   pauseUI: {fileID: 566128485}
+  difficultyLevelUI: {fileID: 0}
+  directionalLight: {fileID: 0}
+  timerUI: {fileID: 0}
+  runSlider: {fileID: 0}
+  hpSlider: {fileID: 0}
 --- !u!4 &1117615617
 Transform:
   m_ObjectHideFlags: 0
