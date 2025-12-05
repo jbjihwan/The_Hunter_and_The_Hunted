@@ -1120,7 +1120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5045488596967920101}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.432, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1128,7 +1128,7 @@ Transform:
   - {fileID: 5045488596967558599}
   - {fileID: 5045488596967558619}
   m_Father: {fileID: 7854687070438042097}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5045488596960666149
 Animator:
   serializedVersion: 7
@@ -1671,6 +1671,7 @@ GameObject:
   - component: {fileID: 7854687070438042097}
   - component: {fileID: 9200886205928555256}
   - component: {fileID: 8338091579823733501}
+  - component: {fileID: -4536986686370865987}
   m_Layer: 0
   m_Name: Virus_Bottom
   m_TagString: Monster
@@ -1713,8 +1714,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2390153, y: 1.4871397, z: 1}
-  m_Center: {x: 0.034426242, y: 1.4448938, z: 0}
+  m_Size: {x: 1.2390153, y: 1.2236063, z: 1}
+  m_Center: {x: 0.034426212, y: 1.1817168, z: 0}
 --- !u!114 &8338091579823733501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1728,3 +1729,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contactDamage: 1
+--- !u!114 &-4536986686370865987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6520462082910610938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 649bff6a9fa905c4b9d616c5f9143092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10

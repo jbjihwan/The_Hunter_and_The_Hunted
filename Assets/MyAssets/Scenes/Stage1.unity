@@ -1057,7 +1057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &820041913
 Transform:
   m_ObjectHideFlags: 0
@@ -1170,7 +1170,7 @@ PrefabInstance:
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
       propertyPath: planeCycles.Array.data[2].planeCycle.Array.size
-      value: 1
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
@@ -1282,25 +1282,55 @@ PrefabInstance:
         type: 3}
       propertyPath: 'planeCycles.Array.data[2].planeCycle.Array.data[1]'
       value: 
-      objectReference: {fileID: 1798646651917201561, guid: ce3e947e6e9686049b3cf49e7fbaa645,
+      objectReference: {fileID: 1798646651917201561, guid: 96da91e922a1c004a8db18e6b35d1da9,
         type: 3}
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
       propertyPath: 'planeCycles.Array.data[2].planeCycle.Array.data[2]'
       value: 
-      objectReference: {fileID: 1202883989294441750, guid: 30d85c9f39c0a3d40a46e2a69f4b1820,
+      objectReference: {fileID: 1798646651917201561, guid: 68b0d7c6d3b42f847b29c8df279c9f82,
         type: 3}
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
       propertyPath: 'planeCycles.Array.data[2].planeCycle.Array.data[3]'
       value: 
-      objectReference: {fileID: 2083783774245012969, guid: 68e72ad4bfb11cc42973064a3b19d9f1,
+      objectReference: {fileID: 1798646651917201561, guid: 2a29cd6213d9bd84884446edabd54d2b,
         type: 3}
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
       propertyPath: 'planeCycles.Array.data[2].planeCycle.Array.data[4]'
       value: 
-      objectReference: {fileID: 2083783774245012969, guid: 68e72ad4bfb11cc42973064a3b19d9f1,
+      objectReference: {fileID: 1798646651917201561, guid: 1383dba698e8bea4d927a85766a613a1,
+        type: 3}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
+      propertyPath: 'planeCycles.Array.data[2].planeCycle.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1798646651917201561, guid: 655a01a799d63c54ba8eeec7c45d198e,
+        type: 3}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
+      propertyPath: 'planeCycles.Array.data[2].planeCycle.Array.data[6]'
+      value: 
+      objectReference: {fileID: 1798646651917201561, guid: c73c786a0ab4118419f387ed80788785,
+        type: 3}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
+      propertyPath: 'planeCycles.Array.data[2].planeCycle.Array.data[7]'
+      value: 
+      objectReference: {fileID: 1798646651917201561, guid: d85b39ed30b0fd049892c8b393beea54,
+        type: 3}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
+      propertyPath: 'planeCycles.Array.data[2].planeCycle.Array.data[8]'
+      value: 
+      objectReference: {fileID: 1798646651917201561, guid: 0ff81dfbd4815eb4b91ae32a3661fdd5,
+        type: 3}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
+      propertyPath: 'planeCycles.Array.data[2].planeCycle.Array.data[9]'
+      value: 
+      objectReference: {fileID: 1798646651917201561, guid: 4c782aabcc76df348a88b790f857357b,
         type: 3}
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
@@ -1325,6 +1355,12 @@ PrefabInstance:
       propertyPath: 'planeCycles.Array.data[4].planeCycle.Array.data[0]'
       value: 
       objectReference: {fileID: 1798646651917201561, guid: 94258535188b6d94b8abe71fb0db3792,
+        type: 3}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
+      propertyPath: 'planeCycles.Array.data[2].planeCycle.Array.data[10]'
+      value: 
+      objectReference: {fileID: 1798646651917201561, guid: e5b5c14c0cef44843984911572ed6e6b,
         type: 3}
     - target: {fileID: 1290343798965630263, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
@@ -1593,6 +1629,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1247826761262753733, guid: 052d5e3436c154844a699bda46a09a17,
+        type: 3}
+      propertyPath: m_Height
+      value: 1.8349296
+      objectReference: {fileID: 0}
+    - target: {fileID: 1247826761262753733, guid: 052d5e3436c154844a699bda46a09a17,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.9174648
+      objectReference: {fileID: 0}
     - target: {fileID: 5868488021994642070, guid: 052d5e3436c154844a699bda46a09a17,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2252,7 +2298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1554351561
 Transform:
   m_ObjectHideFlags: 0
@@ -4387,7 +4433,7 @@ PrefabInstance:
     - target: {fileID: 4581367203106102089, guid: 35e94abfcc1833a40a4892dcfe64c2b1,
         type: 3}
       propertyPath: stage1PlayTime
-      value: 60
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4581367203106102089, guid: 35e94abfcc1833a40a4892dcfe64c2b1,
         type: 3}
