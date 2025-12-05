@@ -33,7 +33,7 @@ RectTransform:
   m_Father: {fileID: 710922955295051535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -2.5, y: 0}
   m_SizeDelta: {x: 5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 1816349138146680810}
   - component: {fileID: 4554015007798517367}
   m_Layer: 5
-  m_Name: HPSliderUI
+  m_Name: HpSliderUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

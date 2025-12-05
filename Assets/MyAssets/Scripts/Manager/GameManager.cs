@@ -22,14 +22,13 @@ public class GameManager : MonoBehaviour
     public PlaneSpawner obstacleSpawner;
     public GameObject directionalLight;
     public float stage1PlayTime;
-    public float stage2SafeTime;
     public float stage2PlayTime;
-    public float stage3SafeTime;
     public float stage3PlayTime;
     public int safePlaneCount;
-    public float MusicDelayTime;
 
     private GameState gameState;
+    private float stage2SafeTime;
+    private float stage3SafeTime;
     private float playTime;
     private int stage;
 
@@ -48,9 +47,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        stage2SafeTime = stage1PlayTime + stage2SafeTime;
+        stage2SafeTime = stage1PlayTime + 5f; // safe time -> 안정적으로 던전 입구 -> 통로로 변환하는데 필요한 시간
         stage2PlayTime = stage1PlayTime + stage2PlayTime;
-        stage3SafeTime = stage2PlayTime + stage3SafeTime;
+        stage3SafeTime = stage2PlayTime + 0f; // safe time -> 첫 전기 공격이 오지 않는 시간인데 이제 필요 없음
         stage3PlayTime = stage2PlayTime + stage3PlayTime;
     }
 
@@ -103,6 +102,7 @@ public class GameManager : MonoBehaviour
         gameState = GameState.Ready;
         playTime = 0f;
         stage = 0;
+        Time.timeScale = 1f;
         // 시작하자마자 Stage0 BGM 재생
         SoundManager.instance.PlayStageBgm(0);
         planeSpawner.Init();
@@ -145,6 +145,15 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Stage1");
     }
 
+    public void GameQuit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+    Application.Quit();
+#endif
+    }
+
     // 게임 흐름
 
     public void Stage1()
@@ -155,14 +164,13 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.OffMainMenuUI();
         UIManager.Instance.OnRunSlider();
         UIManager.Instance.OnHpSlider();
-        SoundManager.instance.ChangeBgmAfter(MusicDelayTime, 1);
         obstacleSpawner.Init(safePlaneCount);
     }
 
     public void Stage2()
     {
         stage = 2;
-       
+
         planeSpawner.ChangeCycle(1);
         obstacleSpawner.ChangeCycle(2);
     }
@@ -178,7 +186,7 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.Playing;
         stage = 3;
-        
+
         SceneManager.LoadScene("Stage3");
         // 씬 로드 후 바로 BGM 재생
         SoundManager.instance.PlayStageBgm(2);
@@ -193,19 +201,24 @@ public class GameManager : MonoBehaviour
 
     public void Triggered(int code, GameObject go)
     {
-        // Monster code 1
         if (code == 1)
         {
+            // Monster 제거 트리거
             Destroy(go);
         }
-        else if(code == 2)
+        else if (code == 2)
         {
+            // 스테이지 2 시작 트리거
             directionalLight.SetActive(false);
+            SoundManager.instance.PlayStageBgm(1);
         }
-        else if(code == 3)
+        else if (code == 3)
         {
-            go.GetComponent<MonsterMove>().speed = 3f;
-            Debug.Log("speed Up");
+            // 데미지 트리거
+            if(go.CompareTag("Player"))
+            {
+                go.GetComponent<PlayerEvent>().TakeDamage(1);
+            }
         }
     }
 

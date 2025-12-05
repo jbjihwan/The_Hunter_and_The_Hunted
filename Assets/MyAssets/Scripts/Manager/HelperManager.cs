@@ -10,6 +10,7 @@ public class HelperManager : MonoBehaviour
     public GameObject mainMenuUI;
     public GameObject howToUI;
     public GameObject pauseUI;
+    public GameObject difficultyLevelUI;
     public GameObject directionalLight;
     public TextMeshProUGUI timerUI;
     public Slider runSlider;   // RunBar 슬라이더
@@ -45,6 +46,11 @@ public class HelperManager : MonoBehaviour
         if (pauseUI != null)
         {
             UIManager.Instance.pauseUI = pauseUI;
+        }
+
+        if (difficultyLevelUI != null)
+        {
+            UIManager.Instance.difficultyLevelUI = difficultyLevelUI;
         }
 
         if (timerUI != null)
@@ -94,6 +100,16 @@ public class HelperManager : MonoBehaviour
         GameManager.Instance.GameResume();
     }
 
+    public void GameQuit()
+    {
+        GameManager.Instance.GameQuit();
+    }
+
+    public void OnMainMenuUI()
+    {
+        UIManager.Instance.OnMainMenuUI();
+    }
+
     public void OnHowToUI()
     {
         UIManager.Instance.OnHowToUI();
@@ -102,5 +118,10 @@ public class HelperManager : MonoBehaviour
     public void OffHowToUI()
     {
         UIManager.Instance.OffHowToUI();
+    }
+
+    public void OnDifficultyLevelUI()
+    {
+        UIManager.Instance.OnDifficultyLevelUI();
     }
 }
