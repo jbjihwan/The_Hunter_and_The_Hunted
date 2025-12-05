@@ -145,6 +145,15 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Stage1");
     }
 
+    public void GameQuit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+    Application.Quit();
+#endif
+    }
+
     // 게임 흐름
 
     public void Stage1()
@@ -162,7 +171,7 @@ public class GameManager : MonoBehaviour
     public void Stage2()
     {
         stage = 2;
-       
+
         planeSpawner.ChangeCycle(1);
         obstacleSpawner.ChangeCycle(2);
     }
@@ -178,7 +187,7 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.Playing;
         stage = 3;
-        
+
         SceneManager.LoadScene("Stage3");
         // 씬 로드 후 바로 BGM 재생
         SoundManager.instance.PlayStageBgm(2);
@@ -198,11 +207,11 @@ public class GameManager : MonoBehaviour
         {
             Destroy(go);
         }
-        else if(code == 2)
+        else if (code == 2)
         {
             directionalLight.SetActive(false);
         }
-        else if(code == 3)
+        else if (code == 3)
         {
             go.GetComponent<MonsterMove>().speed = 3f;
             Debug.Log("speed Up");

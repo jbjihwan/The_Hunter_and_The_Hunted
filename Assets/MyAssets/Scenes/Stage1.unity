@@ -594,6 +594,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
+      propertyPath: endQuad
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
       propertyPath: endQuadHeight
       value: 50
       objectReference: {fileID: 0}
@@ -1611,6 +1616,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8010153771330994139, guid: ea15352ae2a9e2842a18a375390cc8c7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1017606297}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1634,6 +1644,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1306159370}
+    - target: {fileID: 8476383933913155230, guid: 28e3a142454ba6d4e84f988d677fe523,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1017606297}
     - target: {fileID: 8709414008107921219, guid: 28e3a142454ba6d4e84f988d677fe523,
         type: 3}
       propertyPath: m_Pivot.x

@@ -94,6 +94,11 @@ public class HelperManager : MonoBehaviour
         GameManager.Instance.GameResume();
     }
 
+    public void GameQuit()
+    {
+        GameManager.Instance.GameQuit(); 
+    }
+
     public void OnHowToUI()
     {
         UIManager.Instance.OnHowToUI();
