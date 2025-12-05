@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     private float stage3SafeTime;
     private float playTime;
     private int stage;
+    private bool stage2BgmStopped = false;  // BGM 정지 플래그 추가
 
     private void Awake()
     {
@@ -58,7 +59,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if ((IsPlaying() || gameState == GameState.CutScene) && Input.GetKeyDown(KeyCode.Escape))
+        if ((IsPlaying() || gameState != GameState.CutScene) && gameState != GameState.Ending && Input.GetKeyDown(KeyCode.Escape))
         {
             GamePause();
         }
@@ -77,6 +78,15 @@ public class GameManager : MonoBehaviour
         if (stage == 2 && IsPlaying() && playTime > stage2SafeTime)
         {
             planeSpawner.ChangeCycle(2);
+        }
+
+        // Stage2 BGM 정지 로직 추가
+        if (stage == 2 && IsPlaying() && playTime > stage2PlayTime - 0.5f && !stage2BgmStopped)
+        {
+            // 컷씬 전환 0.5초 전에 BGM 정지 (자연스러운 전환)
+            if (SoundManager.instance != null)
+                SoundManager.instance.StopBgm();
+            stage2BgmStopped = true;
         }
 
         if (stage == 2 && IsPlaying() && playTime > stage2PlayTime)
@@ -105,6 +115,7 @@ public class GameManager : MonoBehaviour
         gameState = GameState.Ready;
         playTime = 0f;
         stage = 0;
+        stage2BgmStopped = false;
         Time.timeScale = 1f;
         // 시작하자마자 Stage0 BGM 재생
         SoundManager.instance.PlayStageBgm(0);
@@ -140,12 +151,32 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.GameOver;
 
-        SceneManager.LoadScene("GameOver");
+        if (BlinkEffect.Instance != null)
+        {
+            BlinkEffect.Instance.PlayBlinkWithSceneTransition(0.5f, 0.5f, () =>
+            {
+                SceneManager.LoadScene("GameOver");
+            });
+        }
+        else
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     public void GameRestart()
     {
-        SceneManager.LoadScene("Stage1");
+        if (BlinkEffect.Instance != null)
+        {
+            BlinkEffect.Instance.PlayBlinkWithSceneTransition(0.5f, 0.5f, () =>
+            {
+                SceneManager.LoadScene("Stage1");
+            });
+        }
+        else
+        {
+            SceneManager.LoadScene("Stage1");
+        }
     }
 
     public void GameQuit()
@@ -153,7 +184,7 @@ public class GameManager : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-    Application.Quit();
+                Application.Quit();
 #endif
     }
 
@@ -173,7 +204,7 @@ public class GameManager : MonoBehaviour
     public void Stage2()
     {
         stage = 2;
-
+        stage2BgmStopped = false;
         planeSpawner.ChangeCycle(1);
         obstacleSpawner.ChangeCycle(2);
     }
@@ -182,7 +213,17 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.CutScene;
 
-        SceneManager.LoadScene("CutScene");
+        if (BlinkEffect.Instance != null)
+        {
+            BlinkEffect.Instance.PlayBlinkWithSceneTransition(0.5f, 0.5f, () =>
+            {
+                SceneManager.LoadScene("CutScene");
+            });
+        }
+        else
+        {
+            SceneManager.LoadScene("CutScene");
+        }
     }
 
     public void Stage3()
@@ -201,7 +242,17 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.Ending;
 
-        SceneManager.LoadScene("Ending");
+        if (BlinkEffect.Instance != null)
+        {
+            BlinkEffect.Instance.PlayBlinkWithSceneTransition(0.5f, 0.5f, () =>
+            {
+                SceneManager.LoadScene("Ending");
+            });
+        }
+        else
+        {
+            SceneManager.LoadScene("Ending");
+        }
     }
 
     public void Triggered(int code, GameObject go)
@@ -220,7 +271,7 @@ public class GameManager : MonoBehaviour
         else if (code == 3)
         {
             // 데미지 트리거
-            if(go.CompareTag("Player"))
+            if (go.CompareTag("Player"))
             {
                 go.GetComponent<PlayerEvent>().OnTrapHit(1);
             }
