@@ -5,52 +5,27 @@ public class QuizObstacle : MonoBehaviour
 {
     public QuizCube[] quizCubes;
 
-    private QuizManager.Quiz quiz;
     private bool triggered;
-    private int answerCubeOrder;
 
     void Start()
     {
-        quiz = QuizManager.Instance.GetQuiz();
         triggered = false;
-
         ImplantOptions();
     }
 
     public void ImplantOptions()
     {
-        Helper.Shuffle(quizCubes);
 
-        for (int i = 0; i < 3; ++i)
-        {
-            quizCubes[i].option.text = quiz.options[i];
-
-            if (i == quiz.answerIndex)
-            {
-                answerCubeOrder = quizCubes[i].order;
-            }
-        }
     }
 
-    public void Triggered(int order, PlayerEvent player)
+    public void Triggered(int order)
     {
-        if (triggered)
+        if(triggered)
         {
             return;
         }
 
         triggered = true;
-        QuizManager.Instance.PopQuiz();
 
-        if (order == answerCubeOrder)
-        {
-            // 정답
-            return;
-        }
-        else
-        {
-            // 오답
-            player.TakeDamage(1);
-        }
     }
 }

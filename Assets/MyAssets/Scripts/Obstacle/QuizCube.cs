@@ -7,18 +7,11 @@ public class QuizCube : MonoBehaviour
     public int order;
     public TextMeshProUGUI option;
 
-    private QuizObstacle parent;
-
-    private void Start()
-    {
-        parent = transform.parent.GetComponent<QuizObstacle>();
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if(other.CompareTag("Player"))
         {
-            parent.Triggered(order, other.gameObject.GetComponent<PlayerEvent>());
+            transform.parent.GetComponent<QuizObstacle>().Triggered(order);
         }
     }
 }

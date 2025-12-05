@@ -14,20 +14,17 @@ public class GameManager : MonoBehaviour
         Paused,
         GameOver,
         CutScene,
-        Ending
+        EndingCutScene
     }
 
     public static GameManager Instance;
     public PlaneSpawner planeSpawner;
     public PlaneSpawner obstacleSpawner;
     public GameObject directionalLight;
-    public PlayerEvent playerEvent;
     public float stage1PlayTime;
     public float stage2PlayTime;
     public float stage3PlayTime;
     public int safePlaneCount;
-    public int maxHP;
-    public int currentHP;
 
     private GameState gameState;
     private float stage2SafeTime;
@@ -187,8 +184,6 @@ public class GameManager : MonoBehaviour
 
     public void Stage3()
     {
-        maxHP = playerEvent.maxHP;
-        currentHP = playerEvent.currentHP;
         gameState = GameState.Playing;
         stage = 3;
 
@@ -199,9 +194,21 @@ public class GameManager : MonoBehaviour
 
     public void GameEnding()
     {
-        gameState = GameState.Ending;
+        gameState = GameState.EndingCutScene;
 
-        SceneManager.LoadScene("Ending");
+        if (BlinkEffect.Instance != null)
+        {
+            // 블링킷 효과와 함께 EndingCutScene으로 전환
+            BlinkEffect.Instance.PlayBlinkWithSceneTransition(0.5f, 0.5f, () =>
+            {
+                SceneManager.LoadScene("EndingCutScene");
+            });
+        }
+        else
+        {
+            // BlinkEffect가 없으면 바로 EndingCutScene으로 이동
+            SceneManager.LoadScene("EndingCutScene");
+        }
     }
 
     public void Triggered(int code, GameObject go)

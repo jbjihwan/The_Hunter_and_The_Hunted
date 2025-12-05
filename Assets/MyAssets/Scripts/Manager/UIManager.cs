@@ -38,70 +38,46 @@ public class UIManager : MonoBehaviour
 
     public void OnMainMenuUI()
     {
-        if (mainMenuUI != null)
-        {
-            OffAllUI();
-            mainMenuUI.SetActive(true);
-        }
+        OffAllUI();
+        mainMenuUI.SetActive(true);
     }
 
     public void OffMainMenuUI()
     {
-        if (mainMenuUI != null)
-        {
-            mainMenuUI.SetActive(false);
-        }
+        mainMenuUI.SetActive(false);
     }
 
     public void OnHowToUI()
     {
-        if (howToUI != null)
-        {
-            OffAllUI();
-            howToUI.SetActive(true);
-        }
+        OffAllUI();
+        howToUI.SetActive(true);
     }
 
     public void OffHowToUI()
     {
-        if (howToUI != null)
-        {
-            howToUI.SetActive(false);
-        }
+        howToUI.SetActive(false);
     }
 
     public void OnPauseUI()
     {
-        if (pauseUI != null)
-        {
-            OffAllUI();
-            pauseUI.SetActive(true);
-        }
+        OffAllUI();
+        pauseUI.SetActive(true);
     }
 
     public void OffPauseUI()
     {
-        if (pauseUI != null)
-        {
-            pauseUI.SetActive(false);
-        }
+        pauseUI.SetActive(false);
     }
 
     public void OnDifficultyLevelUI()
     {
-        if (difficultyLevelUI != null)
-        {
-            OffAllUI();
-            difficultyLevelUI.SetActive(true);
-        }
+        OffAllUI();
+        difficultyLevelUI.SetActive(true);
     }
 
     public void OffDifficultyLevelUI()
     {
-        if (difficultyLevelUI != null)
-        {
-            difficultyLevelUI.SetActive(false);
-        }
+        difficultyLevelUI.SetActive(false);
     }
 
     public void OnTimerUI()
