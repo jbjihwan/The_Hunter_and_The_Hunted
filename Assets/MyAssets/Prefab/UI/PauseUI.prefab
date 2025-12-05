@@ -435,7 +435,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: HelperManager, Assembly-CSharp
         m_MethodName: GameResume
         m_Mode: 1
         m_Arguments:

@@ -2452,6 +2452,7 @@ GameObject:
   - component: {fileID: 1444262736932209491}
   - component: {fileID: 4411886708558628667}
   - component: {fileID: 6362066284845510357}
+  - component: {fileID: 7966268567478522586}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2582,6 +2583,14 @@ MonoBehaviour:
   flickerInterval: 0.15
   targetRenderers: []
   hpSlider: {fileID: 0}
+--- !u!81 &7966268567478522586
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8417520537079166052}
+  m_Enabled: 1
 --- !u!1 &8565081723350435916
 GameObject:
   m_ObjectHideFlags: 0
