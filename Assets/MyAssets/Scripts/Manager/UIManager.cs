@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;      
+using UnityEngine.UI;
 using TMPro;
 
 public class UIManager : MonoBehaviour
@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public GameObject mainMenuUI;
     public GameObject howToUI;
     public GameObject pauseUI;
+    public GameObject difficultyLevelUI;
     public TextMeshProUGUI timerUI;
     public Slider runSlider;   // 진행도 바
     public Slider hpSlider;    // 체력 바
@@ -27,8 +28,17 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void OffAllUI()
+    {
+        OffMainMenuUI();
+        OffHowToUI();
+        OffPauseUI();
+        OffDifficultyLevelUI();
+    }
+
     public void OnMainMenuUI()
     {
+        OffAllUI();
         mainMenuUI.SetActive(true);
     }
 
@@ -39,18 +49,18 @@ public class UIManager : MonoBehaviour
 
     public void OnHowToUI()
     {
-        OffMainMenuUI();
+        OffAllUI();
         howToUI.SetActive(true);
     }
 
     public void OffHowToUI()
     {
-        OnMainMenuUI();
         howToUI.SetActive(false);
     }
 
     public void OnPauseUI()
     {
+        OffAllUI();
         pauseUI.SetActive(true);
     }
 
@@ -58,7 +68,18 @@ public class UIManager : MonoBehaviour
     {
         pauseUI.SetActive(false);
     }
-    
+
+    public void OnDifficultyLevelUI()
+    {
+        OffAllUI();
+        difficultyLevelUI.SetActive(true);
+    }
+
+    public void OffDifficultyLevelUI()
+    {
+        difficultyLevelUI.SetActive(false);
+    }
+
     public void OnTimerUI()
     {
         timerUI.gameObject.SetActive(true);
@@ -108,5 +129,4 @@ public class UIManager : MonoBehaviour
         if (hpSlider != null)
             hpSlider.gameObject.SetActive(false);
     }
-
 }
