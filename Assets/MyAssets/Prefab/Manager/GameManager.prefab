@@ -50,7 +50,7 @@ MonoBehaviour:
   playerEvent: {fileID: 0}
   stage1PlayTime: 30
   stage2PlayTime: 60
-  stage3PlayTime: 60
+  stage3PlayTime: 5
   safePlaneCount: 2
   maxHP: 0
   currentHP: 0

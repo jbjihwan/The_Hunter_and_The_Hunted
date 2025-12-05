@@ -2817,7 +2817,6 @@ GameObject:
   m_Component:
   - component: {fileID: 714796964}
   - component: {fileID: 714796963}
-  - component: {fileID: 714796962}
   - component: {fileID: 714796965}
   - component: {fileID: 714796966}
   m_Layer: 0
@@ -2827,14 +2826,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &714796962
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714796961}
-  m_Enabled: 1
 --- !u!20 &714796963
 Camera:
   m_ObjectHideFlags: 0
@@ -4341,9 +4332,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planeSpawner: {fileID: 0}
   obstacleSpawner: {fileID: 0}
+  playerEvent: {fileID: 0}
   mainMenuUI: {fileID: 0}
   howToUI: {fileID: 0}
   pauseUI: {fileID: 0}
+  difficultyLevelUI: {fileID: 0}
   directionalLight: {fileID: 0}
   timerUI: {fileID: 0}
   runSlider: {fileID: 0}

@@ -49,9 +49,9 @@ MonoBehaviour:
     localVolume: 1
   - clip: {fileID: 8300000, guid: 9a70fc7492cbabf46b178cca1eccdd64, type: 3}
     localVolume: 1
-  - clip: {fileID: 8300000, guid: 1db64666ec887354d9254f8a3c91b970, type: 3}
+  - clip: {fileID: 8300000, guid: 5975c6fd2cc66e945bac9f021400b6b2, type: 3}
     localVolume: 1
-  bgmVolume: 0.7
+  bgmVolume: 1
   sfxList:
   - clip: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
     localVolume: 0.4
@@ -60,6 +60,14 @@ MonoBehaviour:
   - clip: {fileID: 8300000, guid: 555573eb2decc7e47bd4ba049226c21e, type: 3}
     localVolume: 0.4
   - clip: {fileID: 8300000, guid: 18e60dfdb5e5f6a4b850664cda06eeff, type: 3}
+    localVolume: 0.4
+  - clip: {fileID: 8300000, guid: d8c69d4c9ec31224c8a7dd4660d06d18, type: 3}
+    localVolume: 0.4
+  - clip: {fileID: 8300000, guid: d8c69d4c9ec31224c8a7dd4660d06d18, type: 3}
+    localVolume: 0.4
+  - clip: {fileID: 8300000, guid: 906efa5021097dd4a830bb93c0a79555, type: 3}
+    localVolume: 0.4
+  - clip: {fileID: 8300000, guid: cefd73b9f757da54f9a90945d406d809, type: 3}
     localVolume: 0.4
   sfxVolume: 1
   sfxChannels: 8
