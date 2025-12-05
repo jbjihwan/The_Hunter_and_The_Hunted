@@ -47,7 +47,10 @@ MonoBehaviour:
   planeSpawner: {fileID: 0}
   obstacleSpawner: {fileID: 0}
   directionalLight: {fileID: 0}
+  playerEvent: {fileID: 0}
   stage1PlayTime: 60
   stage2PlayTime: 60
   stage3PlayTime: 60
   safePlaneCount: 2
+  maxHP: 0
+  currentHP: 0

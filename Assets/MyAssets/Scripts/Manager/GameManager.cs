@@ -21,10 +21,13 @@ public class GameManager : MonoBehaviour
     public PlaneSpawner planeSpawner;
     public PlaneSpawner obstacleSpawner;
     public GameObject directionalLight;
+    public PlayerEvent playerEvent;
     public float stage1PlayTime;
     public float stage2PlayTime;
     public float stage3PlayTime;
     public int safePlaneCount;
+    public int maxHP;
+    public int currentHP;
 
     private GameState gameState;
     private float stage2SafeTime;
@@ -184,6 +187,8 @@ public class GameManager : MonoBehaviour
 
     public void Stage3()
     {
+        maxHP = playerEvent.maxHP;
+        currentHP = playerEvent.currentHP;
         gameState = GameState.Playing;
         stage = 3;
 

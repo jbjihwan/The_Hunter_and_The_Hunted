@@ -455,7 +455,7 @@ PrefabInstance:
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
       propertyPath: planeCycles.Array.data[1].planeCycle.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
@@ -468,6 +468,30 @@ PrefabInstance:
       propertyPath: 'planeCycles.Array.data[1].planeCycle.Array.data[0]'
       value: 
       objectReference: {fileID: 1798646651917201561, guid: 370842fce02e53042b080a86ee8a1210,
+        type: 3}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
+      propertyPath: 'planeCycles.Array.data[1].planeCycle.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1798646651917201561, guid: aa6e396dc34e7af4c8ebbad9940efe8e,
+        type: 3}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
+      propertyPath: 'planeCycles.Array.data[1].planeCycle.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1798646651917201561, guid: 9b7e9f6846b20c1449b124f176d482c3,
+        type: 3}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
+      propertyPath: 'planeCycles.Array.data[1].planeCycle.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1798646651917201561, guid: 270c3208bc2d278428b61dff20d3477c,
+        type: 3}
+    - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
+        type: 3}
+      propertyPath: 'planeCycles.Array.data[1].planeCycle.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1798646651917201561, guid: b6c3ed5f28d9a9041b8ebf85609cbe44,
         type: 3}
     - target: {fileID: 1290343798965630263, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
@@ -736,6 +760,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 052d5e3436c154844a699bda46a09a17, type: 3}
+--- !u!114 &1277815338 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6362066284845510357, guid: 052d5e3436c154844a699bda46a09a17,
+    type: 3}
+  m_PrefabInstance: {fileID: 1277815337}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29eb12680c78be340abaa2b299e54f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1480581172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1059,9 +1095,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planeSpawner: {fileID: 726891039}
   obstacleSpawner: {fileID: 970201751}
+  playerEvent: {fileID: 1277815338}
   mainMenuUI: {fileID: 0}
   howToUI: {fileID: 0}
   pauseUI: {fileID: 1480581174}
+  difficultyLevelUI: {fileID: 0}
   directionalLight: {fileID: 0}
   timerUI: {fileID: 0}
   runSlider: {fileID: 516855402}
