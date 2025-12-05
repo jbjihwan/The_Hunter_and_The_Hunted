@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public float stage3SafeTime;
     public float stage3PlayTime;
     public int safePlaneCount;
+    public float MusicDelayTime;
 
     private GameState gameState;
     private float playTime;
@@ -102,7 +103,8 @@ public class GameManager : MonoBehaviour
         gameState = GameState.Ready;
         playTime = 0f;
         stage = 0;
-
+        // 시작하자마자 Stage0 BGM 재생
+        SoundManager.instance.PlayStageBgm(0);
         planeSpawner.Init();
         UIManager.Instance.OnMainMenuUI();
     }
@@ -111,7 +113,9 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.Paused;
         Time.timeScale = 0f;
-
+        //  Pause BGM
+        if (SoundManager.instance != null)
+            SoundManager.instance.PauseBgm();
         UIManager.Instance.OnPauseUI();
         UIManager.Instance.OffHpSlider();
         UIManager.Instance.OffRunSlider();
@@ -121,7 +125,9 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.Playing;
         Time.timeScale = 1f;
-
+        //  Resume BGM
+        if (SoundManager.instance != null)
+            SoundManager.instance.ResumeBgm();
         UIManager.Instance.OffPauseUI();
         UIManager.Instance.OnHpSlider();
         UIManager.Instance.OnRunSlider();
@@ -149,14 +155,14 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.OffMainMenuUI();
         UIManager.Instance.OnRunSlider();
         UIManager.Instance.OnHpSlider();
-
+        SoundManager.instance.ChangeBgmAfter(MusicDelayTime, 1);
         obstacleSpawner.Init(safePlaneCount);
     }
 
     public void Stage2()
     {
         stage = 2;
-
+       
         planeSpawner.ChangeCycle(1);
         obstacleSpawner.ChangeCycle(2);
     }
@@ -165,27 +171,17 @@ public class GameManager : MonoBehaviour
     {
         gameState = GameState.CutScene;
 
-        // 블링킷 효과와 함께 CutScene으로 전환
-        if (BlinkEffect.Instance != null)
-        {
-            BlinkEffect.Instance.PlayBlinkWithSceneTransition(0.5f, 0.5f, () =>
-            {
-                SceneManager.LoadScene("CutScene");
-            });
-        }
-        else
-        {
-            SceneManager.LoadScene("CutScene");
-        }
+        SceneManager.LoadScene("CutScene");
     }
 
     public void Stage3()
     {
         gameState = GameState.Playing;
         stage = 3;
-        playTime = 0f; // Stage3 시작 시 타이머 리셋
-
+        
         SceneManager.LoadScene("Stage3");
+        // 씬 로드 후 바로 BGM 재생
+        SoundManager.instance.PlayStageBgm(2);
     }
 
     public void GameEnding()
