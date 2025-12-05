@@ -20,9 +20,13 @@ public class PlaneSpawner : MonoBehaviour
     private int cycleIndex;
     private int planeIndex;
 
-    void Start()
+    void Awake()
     {
         childPlanes = new Queue<GameObject>();
+    }
+
+    void Start()
+    {
         cycleIndex = 0;
         planeIndex = 0;
 
@@ -32,7 +36,7 @@ public class PlaneSpawner : MonoBehaviour
             transform.forward * (planeCount * planeLength - planeLength / 2) +
             transform.up * endQuadHeight / 2,
             transform.rotation);
-        }        
+        }
     }
 
     public void Init()
