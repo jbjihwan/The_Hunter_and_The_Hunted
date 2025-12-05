@@ -500,7 +500,7 @@ PrefabInstance:
     - target: {fileID: 7005686645613381059, guid: 41e9f6ffdec87594897c3ec0d207e92b,
         type: 3}
       propertyPath: bgmVolume
-      value: 0
+      value: 0.57
       objectReference: {fileID: 0}
     - target: {fileID: 7005686645613381059, guid: 41e9f6ffdec87594897c3ec0d207e92b,
         type: 3}
@@ -2404,6 +2404,11 @@ PrefabInstance:
         type: 3}
       propertyPath: stage2PlayTime
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581367203106102089, guid: 35e94abfcc1833a40a4892dcfe64c2b1,
+        type: 3}
+      propertyPath: stage3PlayTime
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4581367203106102089, guid: 35e94abfcc1833a40a4892dcfe64c2b1,
         type: 3}
