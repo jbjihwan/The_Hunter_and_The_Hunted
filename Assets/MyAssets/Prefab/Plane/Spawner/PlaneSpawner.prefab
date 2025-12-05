@@ -52,19 +52,13 @@ MonoBehaviour:
     - {fileID: 4225741344113701013, guid: a1e0bdc96c3700e4d850439fc7af8aa9, type: 3}
     - {fileID: 8842300986864234683, guid: 7c151271413355140b1859dcec33a237, type: 3}
   - planeCycle:
-    - {fileID: 8157152048929392014, guid: 498276427ec0d9a458ca2bb6c10792ac, type: 3}
-    - {fileID: 5313529309589529409, guid: e8ba96f35dfba70448fc0e6b0ac8f3e6, type: 3}
-    - {fileID: 746485868572163047, guid: db633b847f1479144bde6e38f58c8243, type: 3}
-    - {fileID: 4225741344113701013, guid: 3d905e0a741b7584786f4d6551fd3def, type: 3}
-    - {fileID: 8842300986864234683, guid: 7c151271413355140b1859dcec33a237, type: 3}
+    - {fileID: 8436049067665580846, guid: e94cc2730e0bf1e4ab22fcbcdaa1ea85, type: 3}
+    - {fileID: 1202883989294441750, guid: 30d85c9f39c0a3d40a46e2a69f4b1820, type: 3}
+    - {fileID: 1202883989294441750, guid: 30d85c9f39c0a3d40a46e2a69f4b1820, type: 3}
+    - {fileID: 1202883989294441750, guid: 30d85c9f39c0a3d40a46e2a69f4b1820, type: 3}
+    - {fileID: 1202883989294441750, guid: 30d85c9f39c0a3d40a46e2a69f4b1820, type: 3}
   - planeCycle:
-    - {fileID: 8436049067665580846, guid: e94cc2730e0bf1e4ab22fcbcdaa1ea85, type: 3}
-    - {fileID: 8436049067665580846, guid: e94cc2730e0bf1e4ab22fcbcdaa1ea85, type: 3}
-    - {fileID: 8436049067665580846, guid: e94cc2730e0bf1e4ab22fcbcdaa1ea85, type: 3}
-    - {fileID: 8436049067665580846, guid: e94cc2730e0bf1e4ab22fcbcdaa1ea85, type: 3}
-    - {fileID: 8436049067665580846, guid: e94cc2730e0bf1e4ab22fcbcdaa1ea85, type: 3}
-  - planeCycle:
-    - {fileID: 8436049067665580846, guid: e94cc2730e0bf1e4ab22fcbcdaa1ea85, type: 3}
+    - {fileID: 1202883989294441750, guid: 30d85c9f39c0a3d40a46e2a69f4b1820, type: 3}
   endQuad: {fileID: 2331164372942886261, guid: 3c39464a208fb1e4ebdfc3103ea29b30, type: 3}
   planeLength: 20
   endQuadHeight: 50

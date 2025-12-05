@@ -7,6 +7,7 @@ public class HelperManager : MonoBehaviour
 {
     public PlaneSpawner planeSpawner;
     public PlaneSpawner obstacleSpawner;
+    public PlayerEvent playerEvent;
     public GameObject mainMenuUI;
     public GameObject howToUI;
     public GameObject pauseUI;
@@ -26,6 +27,11 @@ public class HelperManager : MonoBehaviour
         if (obstacleSpawner != null)
         {
             GameManager.Instance.obstacleSpawner = obstacleSpawner;
+        }
+
+        if(playerEvent != null)
+        {
+            GameManager.Instance.playerEvent = playerEvent;
         }
 
         if (directionalLight != null)
@@ -77,6 +83,7 @@ public class HelperManager : MonoBehaviour
         {
             GameManager.Instance.planeSpawner.Init();
             GameManager.Instance.obstacleSpawner.Init(GameManager.Instance.safePlaneCount);
+            playerEvent.SetHP(GameManager.Instance.maxHP, GameManager.Instance.currentHP);
         }
     }
 
