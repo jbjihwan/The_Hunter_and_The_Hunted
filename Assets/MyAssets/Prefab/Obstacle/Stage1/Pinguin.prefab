@@ -564,7 +564,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2666687441543506386}
-  - component: {fileID: 2666687441543506382}
   - component: {fileID: 2666687441543506381}
   m_Layer: 0
   m_Name: Pinguin_001
@@ -590,32 +589,6 @@ Transform:
   - {fileID: 615113397403576830}
   m_Father: {fileID: 5804760220080074883}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!143 &2666687441543506382
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3335525434833138536}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 1.71
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!95 &2666687441543506381
 Animator:
   serializedVersion: 7
@@ -684,7 +657,7 @@ GameObject:
   - component: {fileID: 2419064494023244464}
   m_Layer: 0
   m_Name: Pinguin
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -953,7 +926,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5445728945033834532}
-  - component: {fileID: 5445728945033834552}
   - component: {fileID: 5445728945033834555}
   m_Layer: 0
   m_Name: Pinguin_001 (1)
@@ -979,32 +951,6 @@ Transform:
   - {fileID: 7357674416277106696}
   m_Father: {fileID: 5804760220080074883}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!143 &5445728945033834552
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4672710236442569374}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 1.71
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!95 &5445728945033834555
 Animator:
   serializedVersion: 7

@@ -46,7 +46,8 @@ public class PlayerMovement : MonoBehaviour
     void GroundCheck()
     {
         if (Time.time > lastGroundCheckTime + groundCheckTime &&
-            Physics.Raycast(transform.position + Vector3.up * 0.1f, Vector3.down, 0.1f + groundCheckLength))
+            Physics.Raycast(transform.position + Vector3.up * 0.1f, Vector3.down, 0.1f + groundCheckLength, 
+            Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore))
         {
             lastGroundCheckTime = Time.time;
             jumpCount = 0;

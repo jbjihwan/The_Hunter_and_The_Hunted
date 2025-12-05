@@ -202,8 +202,8 @@ GameObject:
   - component: {fileID: 5924671444722194385}
   - component: {fileID: 8523726458073493730}
   m_Layer: 0
-  m_Name: Turtle 1
-  m_TagString: Untagged
+  m_Name: TurtleTwins
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

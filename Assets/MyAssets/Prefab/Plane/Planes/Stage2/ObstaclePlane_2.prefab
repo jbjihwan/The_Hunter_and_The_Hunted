@@ -163,6 +163,7 @@ MonoBehaviour:
       heightIndex: 0
     isMoving: 0
     isHorizontal: 0
+    useFixedLaneOrder: 0
   backObstacleSets:
   - obstacles:
     - obstaclePrefab: {fileID: 5802306722419414214, guid: b55aa2f8b547f794eb3f0e210cdef049,
@@ -175,7 +176,8 @@ MonoBehaviour:
       heightIndex: 1
     isMoving: 0
     isHorizontal: 0
-  speed: 5
+    useFixedLaneOrder: 0
+  speed: 10
   obstacleHeight: 1
 --- !u!1 &2993377883923532925
 GameObject:

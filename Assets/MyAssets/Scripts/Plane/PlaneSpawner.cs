@@ -26,10 +26,13 @@ public class PlaneSpawner : MonoBehaviour
         cycleIndex = 0;
         planeIndex = 0;
 
-        Instantiate(endQuad, transform.position +
+        if (endQuad != null)
+        {
+            Instantiate(endQuad, transform.position +
             transform.forward * (planeCount * planeLength - planeLength / 2) +
             transform.up * endQuadHeight / 2,
             transform.rotation);
+        }        
     }
 
     public void Init()

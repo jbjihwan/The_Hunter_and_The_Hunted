@@ -865,14 +865,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2517040696751649358}
-  - component: {fileID: 3283498138350172669}
   - component: {fileID: 3252700965908282019}
   - component: {fileID: 2783029606092685521}
   - component: {fileID: 5498627933877578417}
   - component: {fileID: 7434956989774239377}
   m_Layer: 0
   m_Name: Deer
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -894,32 +893,6 @@ Transform:
   - {fileID: 5152481379385107568}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!143 &3283498138350172669
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6444220179268234586}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 1.71
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.88, z: 0}
 --- !u!95 &3252700965908282019
 Animator:
   serializedVersion: 7

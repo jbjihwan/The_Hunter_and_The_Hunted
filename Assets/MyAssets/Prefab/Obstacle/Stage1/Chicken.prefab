@@ -481,7 +481,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1614330171882703206}
-  - component: {fileID: 1614330171882703226}
   - component: {fileID: 1614330171882703225}
   m_Layer: 0
   m_Name: Chicken_001
@@ -507,32 +506,6 @@ Transform:
   - {fileID: 2604787447998257513}
   m_Father: {fileID: 4975606933412715474}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!143 &1614330171882703226
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102213526213088220}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 0.63
-  m_Radius: 0.26
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.31, z: 0}
 --- !u!95 &1614330171882703225
 Animator:
   serializedVersion: 7
@@ -629,7 +602,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3340935498055392554}
-  - component: {fileID: 3340935498055392566}
   - component: {fileID: 3340935498055392565}
   m_Layer: 0
   m_Name: Chicken_001 (1)
@@ -655,32 +627,6 @@ Transform:
   - {fileID: 2025551092233997605}
   m_Father: {fileID: 4975606933412715474}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!143 &3340935498055392566
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2672520855411869584}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 0.63
-  m_Radius: 0.26
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.31, z: 0}
 --- !u!95 &3340935498055392565
 Animator:
   serializedVersion: 7
@@ -1608,7 +1554,7 @@ GameObject:
   - component: {fileID: -7639426258286060246}
   m_Layer: 0
   m_Name: Chicken
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
