@@ -45,7 +45,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizzes:
-  - quiz: 
-    options: []
-    answerIndex: 0
+  - quiz: 3 x 6 = ?
+    options:
+    - 16
+    - 17
+    - 18
+    answerIndex: 2
+  - quiz: 5 x 9 = ?
+    options:
+    - 44
+    - 45
+    - 46
+    answerIndex: 1
   quizText: {fileID: 0}

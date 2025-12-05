@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planeSpawner: {fileID: 0}
   obstacleSpawner: {fileID: 0}
-  stage1PlayTime: 15
-  stage2SafeTime: 5
-  stage2PlayTime: 15
-  stage3SafeTime: 5
-  stage3PlayTime: 15
+  directionalLight: {fileID: 0}
+  stage1PlayTime: 60
+  stage2PlayTime: 60
+  stage3PlayTime: 60
+  safePlaneCount: 2
