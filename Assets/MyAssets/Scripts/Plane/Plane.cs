@@ -18,6 +18,8 @@ public class Plane : MonoBehaviour
         public Obstacle[] obstacles;
         public bool isMoving;
         public bool isHorizontal;
+        
+        public bool useFixedLaneOrder;   // true면 0,1,2 순서대로 고정 스폰
     }
 
     public Transform[] frontSpawnPoints;
@@ -86,7 +88,11 @@ public class Plane : MonoBehaviour
             }
             else
             {
-                Helper.Shuffle(spawnPoints);
+                //  체크 안 했을 때만 순서 섞기
+                if (!obstacleSet.useFixedLaneOrder)
+                {
+                    Helper.Shuffle(spawnPoints);
+                }
 
                 for (int i = 0; i < Mathf.Min(obstacleSet.obstacles.Length, 3); i++)
                 {

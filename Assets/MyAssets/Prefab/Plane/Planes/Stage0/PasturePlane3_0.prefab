@@ -1094,7 +1094,7 @@ MonoBehaviour:
   - {fileID: 4232076271226954576}
   frontObstacleSets: []
   backObstacleSets: []
-  speed: 5
+  speed: 10
   obstacleHeight: 1
 --- !u!1 &892476339539334635
 GameObject:

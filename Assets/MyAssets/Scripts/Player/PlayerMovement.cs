@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         if (playerInput.moveLeft && lane > minLane)
         {
             playerAnimator.SetTrigger("StrafeLeft");
-
+            SoundManager.instance.PlaySfx(0);
             lane -= 1;
             targetPosX = (float)laneInterval * lane;
         }
@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         if (playerInput.moveRight && lane < maxLane)
         {
             playerAnimator.SetTrigger("StrafeRight");
-
+            SoundManager.instance.PlaySfx(1);
             lane += 1;
             targetPosX = (float)laneInterval * lane;
         }
@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
     void Jump()
     {
         playerAnimator.SetTrigger("Jump");
-
+        SoundManager.instance.PlaySfx(2);
         jumpCount += 1;
         playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, 0f, 0f);
         playerRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator SlideRoutine()
     {
         playerAnimator.SetTrigger("Slide");
-
+        SoundManager.instance.PlaySfx(3);
         isSliding = true;
         playerCollider.height = colliderHeight / 4f;
         playerCollider.center = new Vector3(0f, colliderHeight / 8f, 0f);

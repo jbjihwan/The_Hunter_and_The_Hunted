@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 /// <summary>
 /// [SoundManager]
@@ -186,7 +187,18 @@ public class SoundManager : MonoBehaviour
         if (bgmPlayer != null)
             bgmPlayer.Stop();
     }
+    // === Pause & Resume BGM ===
+    public void PauseBgm()
+    {
+        if (bgmPlayer != null && bgmPlayer.isPlaying)
+            bgmPlayer.Pause();
+    }
 
+    public void ResumeBgm()
+    {
+        if (bgmPlayer != null && !bgmPlayer.isPlaying && bgmPlayer.clip != null)
+            bgmPlayer.UnPause();
+    }
     /// <summary>
     /// Sets the master BGM volume (0 to 1).
     /// Updates currently playing BGM immediately.
@@ -255,7 +267,18 @@ public class SoundManager : MonoBehaviour
         sfxPlayers[0].volume = finalVolume;
         sfxPlayers[0].Play();
     }
+    public void ChangeBgmAfter(float delay, int stageIndex)
+    {
+        StartCoroutine(ChangeBgmAfterRoutine(delay, stageIndex));
+    }
 
+    private IEnumerator ChangeBgmAfterRoutine(float delay, int stageIndex)
+    {
+        // Time.timeScale 영향을 받는 딜레이 (일시정지 시 같이 멈춤)
+        yield return new WaitForSeconds(delay);
+
+        PlayStageBgm(stageIndex);
+    }
     /// <summary>
     /// Sets the master SFX volume (0 to 1).
     /// Adjusts currently playing SFX proportionally.
