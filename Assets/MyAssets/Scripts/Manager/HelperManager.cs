@@ -63,7 +63,7 @@ public class HelperManager : MonoBehaviour
         {
             UIManager.Instance.timerUI = timerUI;
         }
-        // ★ 슬라이더 연결
+        //  슬라이더 연결
         if (runSlider != null)
         {
             UIManager.Instance.runSlider = runSlider;
@@ -84,6 +84,7 @@ public class HelperManager : MonoBehaviour
             GameManager.Instance.planeSpawner.Init();
             GameManager.Instance.obstacleSpawner.Init(GameManager.Instance.safePlaneCount);
             playerEvent.SetHP(GameManager.Instance.maxHP, GameManager.Instance.currentHP);
+            UIManager.Instance.OnRunSlider();   // 
         }
     }
 

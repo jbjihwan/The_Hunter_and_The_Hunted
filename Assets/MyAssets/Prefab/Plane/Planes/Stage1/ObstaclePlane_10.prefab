@@ -176,7 +176,7 @@ MonoBehaviour:
       heightIndex: 0
     - obstaclePrefab: {fileID: 3452934178019042881, guid: 6ca5df8d469266441b3da073cb98f8cd,
         type: 3}
-      spawnProb: 0
+      spawnProb: 1
       heightIndex: 0
     - obstaclePrefab: {fileID: 8762571167988920167, guid: d0d427c14f2244040a204cf605d8224f,
         type: 3}

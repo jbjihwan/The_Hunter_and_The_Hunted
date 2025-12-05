@@ -170,15 +170,15 @@ MonoBehaviour:
     useFixedLaneOrder: 0
   backObstacleSets:
   - obstacles:
-    - obstaclePrefab: {fileID: 2594777078550268669, guid: a9f71cd1600636f49a8eaadd22483a3b,
+    - obstaclePrefab: {fileID: 5798609256692414111, guid: afb51552960b095408570acf1d10fea5,
         type: 3}
       spawnProb: 1
       heightIndex: 0
-    - obstaclePrefab: {fileID: 2594777078550268669, guid: a9f71cd1600636f49a8eaadd22483a3b,
+    - obstaclePrefab: {fileID: 5798609256692414111, guid: afb51552960b095408570acf1d10fea5,
         type: 3}
       spawnProb: 1
       heightIndex: 0
-    - obstaclePrefab: {fileID: 2594777078550268669, guid: a9f71cd1600636f49a8eaadd22483a3b,
+    - obstaclePrefab: {fileID: 5798609256692414111, guid: afb51552960b095408570acf1d10fea5,
         type: 3}
       spawnProb: 1
       heightIndex: 0

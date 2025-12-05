@@ -32,6 +32,13 @@ public class PlayerEvent : MonoBehaviour
     [Header("UI")]
     public Slider hpSlider;   // 인스펙터에서 안 넣어도 Start에서 UIManager에서 가져옴
 
+    [Header("Trap Hit Effect")]
+    public GameObject HitStage12Effect;
+    public GameObject HitStage3Effect;
+
+    [Header("Quiz Correct Effect")]
+    public GameObject quizCorrectEffect;
+
     public bool isInvincible { get; private set; } = false;
     public bool isDead { get; private set; } = false;
     public int currentHP { get; private set; }
@@ -101,7 +108,9 @@ public class PlayerEvent : MonoBehaviour
     /// </summary>
     public void OnTrapHit(int baseDamage)
     {
-        Debug.Log("[PlayerEvent] Hit by trap");
+        if (isDead || isInvincible) return;
+
+        PlayTrapHitFeedback(transform.position);
         TakeDamage(baseDamage);
     }
 
@@ -200,4 +209,46 @@ public class PlayerEvent : MonoBehaviour
         UIManager.Instance.OffDifficultyLevelUI();
     }
 
+    void PlayTrapHitFeedback(Vector3 hitPosition)
+    {
+        if (GameManager.Instance == null) return;
+
+        int stage = GameManager.Instance.CurrentStage;
+
+        // 파티클 선택
+        GameObject prefab = (stage == 3) ? HitStage3Effect : HitStage12Effect;
+
+        if (prefab != null)
+            Instantiate(prefab, hitPosition, Quaternion.identity);
+
+        // 사운드 선택 (고정 인덱스 방식)
+        if (SoundManager.instance != null)
+        {
+            if (stage == 3)
+                SoundManager.instance.PlaySfx(5);   // 3스테이지용 SFX
+            else
+                SoundManager.instance.PlaySfx(4);   // 1·2스테이지용 SFX
+        }
+    }
+    public void OnQuizWrong(int damage)
+    {
+       
+        OnTrapHit(damage);    
+    }
+    public void OnQuizCorrect()
+    {
+        
+
+        // 이펙트
+        if (quizCorrectEffect != null)
+        {
+            Instantiate(quizCorrectEffect, transform.position, Quaternion.identity);
+        }
+
+        // 사운드
+        if (SoundManager.instance != null)
+        {
+            SoundManager.instance.PlaySfx(6);
+        }
+    }
 }

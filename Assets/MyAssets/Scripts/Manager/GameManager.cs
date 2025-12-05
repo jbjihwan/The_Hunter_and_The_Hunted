@@ -222,7 +222,7 @@ public class GameManager : MonoBehaviour
             // 데미지 트리거
             if(go.CompareTag("Player"))
             {
-                go.GetComponent<PlayerEvent>().TakeDamage(1);
+                go.GetComponent<PlayerEvent>().OnTrapHit(1);
             }
         }
     }

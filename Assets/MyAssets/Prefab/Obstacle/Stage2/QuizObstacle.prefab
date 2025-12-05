@@ -222,6 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1601779778703508687}
   - component: {fileID: 8816292830334978679}
+  - component: {fileID: 4275132123123239010}
   m_Layer: 0
   m_Name: QuizObstacle
   m_TagString: Untagged
@@ -263,6 +264,19 @@ MonoBehaviour:
   - {fileID: 5698168664117871075}
   - {fileID: 2522136101997127887}
   - {fileID: 4169439829384098670}
+--- !u!114 &4275132123123239010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2756299139333744228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 649bff6a9fa905c4b9d616c5f9143092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
 --- !u!1 &2838208067949275822
 GameObject:
   m_ObjectHideFlags: 0

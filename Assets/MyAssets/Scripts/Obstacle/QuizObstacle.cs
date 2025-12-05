@@ -50,7 +50,7 @@ public class QuizObstacle : MonoBehaviour
         else
         {
             // ¿À´ä
-            player.TakeDamage(1);
+            player.OnQuizWrong(1);
         }
     }
 }

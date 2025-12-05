@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 /// <summary>
 /// [RunBar]
-/// - GameManager의 진행 시간 / 스테이지 정보 기반으로
+/// - GameManager의 전체 진행 시간(1~3스테이지)을 기준으로
 ///   UIManager.Instance.runSlider 값을 0~1 사이로 갱신.
 /// </summary>
 public class RunBar : MonoBehaviour
@@ -15,10 +15,9 @@ public class RunBar : MonoBehaviour
 
     void Start()
     {
-        // GameManager, UIManager 싱글톤 참조
         gm = GameManager.Instance;
 
-        // runSlider를 인스펙터에서 안 넣었으면 UIManager에서 자동으로 가져온다.
+        // 인스펙터에서 안 넣어줬으면 UIManager 통해서 자동 연결
         if (runSlider == null && UIManager.Instance != null)
         {
             runSlider = UIManager.Instance.runSlider;
@@ -27,27 +26,20 @@ public class RunBar : MonoBehaviour
 
     void Update()
     {
-        if (gm == null || runSlider == null) return;
+        if (gm == null) return;
+
+        //  씬 전환 후 HelperManager가 늦게 세팅되는 경우 대비
+        if (runSlider == null && UIManager.Instance != null)
+        {
+            runSlider = UIManager.Instance.runSlider;
+        }
+
+        if (runSlider == null) return;
 
         float playTime = gm.PlayTime;
-        float value = 0f;
+        float totalEnd = gm.stage3PlayTime;   // 전체 게임 끝나는 시간(1+2+3)
 
-        // 1번째 사이클: Stage1 + Stage2 (safe + play)
-        // 0 ~ stage2PlayTime 를 0~1로 매핑
-        if (gm.CurrentStage < 3)
-        {
-            float end = gm.stage2PlayTime;
-            value = Mathf.InverseLerp(0f, end, playTime);
-        }
-        // 2번째 사이클: Stage3 (safe + play)
-        // stage2PlayTime ~ stage3PlayTime 를 0~1로 매핑
-        else
-        {
-            float start = gm.stage2PlayTime;
-            float end = gm.stage3PlayTime;
-            value = Mathf.InverseLerp(start, end, playTime);
-        }
-
+        float value = Mathf.InverseLerp(0f, totalEnd, playTime);
         runSlider.value = Mathf.Clamp01(value);
     }
 }
