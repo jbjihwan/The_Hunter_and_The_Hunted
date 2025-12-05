@@ -11,8 +11,18 @@ using UnityEngine.UI;
 /// </summary>
 public class PlayerEvent : MonoBehaviour
 {
+    public enum DifficultyLevel
+    {
+        EASY,
+        NORMAL,
+        HARD
+    }
+
     [Header("HP")]
     public int maxHP = 5;
+    public int easyHP;
+    public int normalHP;
+    public int hardHP;
 
     [Header("Invincible")]
     public float invincibleDuration = 3f;
@@ -163,4 +173,29 @@ public class PlayerEvent : MonoBehaviour
                 rend.enabled = visible;
         }
     }
+
+    public void ChangeDifficultyLevel(int level)
+    {
+        if (level == (int)DifficultyLevel.EASY)
+        {
+            maxHP = easyHP;
+            currentHP = maxHP;
+        }
+        else if(level == (int)DifficultyLevel.NORMAL)
+        {
+            maxHP = normalHP;
+            currentHP = maxHP;
+        }
+        else if (level == (int)DifficultyLevel.HARD)
+        {
+            maxHP = hardHP;
+            currentHP = maxHP;
+        }
+
+
+        hpSlider.maxValue = maxHP;
+        hpSlider.value = currentHP;
+        UIManager.Instance.OffDifficultyLevelUI();
+    }
+
 }
