@@ -247,7 +247,7 @@ MonoBehaviour:
       spawnProb: 1
       heightIndex: 1
     isMoving: 0
-    isHorizontal: 0
+    isHorizontal: 1
     useFixedLaneOrder: 0
   - obstacles:
     - obstaclePrefab: {fileID: 5790767406282742731, guid: eb76ab6c9fc0e7642981f9db929d66a1,

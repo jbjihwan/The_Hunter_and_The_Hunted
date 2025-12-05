@@ -57,4 +57,10 @@ MonoBehaviour:
     - 45
     - 46
     answerIndex: 1
+  - quiz: "\uAD50\uC218\uB2D8\uC758 \uC131\uD568\uC740?"
+    options:
+    - "\uC804\uC740\uC19C"
+    - "\uC2E0\uC6A9\uC900"
+    - "\uC774\uB3D9\uD638"
+    answerIndex: 0
   quizText: {fileID: 0}
