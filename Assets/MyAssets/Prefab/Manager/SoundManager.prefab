@@ -44,8 +44,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62eacff761d6ed54ab116d476e2039f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageBgmClips: []
+  stageBgms:
+  - clip: {fileID: 8300000, guid: 1f0318735aa506d43aaf9f37a8a64899, type: 3}
+    localVolume: 1
+  - clip: {fileID: 8300000, guid: 9a70fc7492cbabf46b178cca1eccdd64, type: 3}
+    localVolume: 1
+  - clip: {fileID: 8300000, guid: 1db64666ec887354d9254f8a3c91b970, type: 3}
+    localVolume: 1
   bgmVolume: 0.7
-  sfxClips: []
+  sfxList:
+  - clip: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
+    localVolume: 0.4
+  - clip: {fileID: 8300000, guid: bfc949e009d48694ea05092f535fc633, type: 3}
+    localVolume: 0.4
+  - clip: {fileID: 8300000, guid: 555573eb2decc7e47bd4ba049226c21e, type: 3}
+    localVolume: 0.4
+  - clip: {fileID: 8300000, guid: 18e60dfdb5e5f6a4b850664cda06eeff, type: 3}
+    localVolume: 0.4
   sfxVolume: 1
   sfxChannels: 8

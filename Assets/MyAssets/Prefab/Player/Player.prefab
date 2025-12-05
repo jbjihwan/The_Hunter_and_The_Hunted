@@ -2555,7 +2555,7 @@ MonoBehaviour:
   playerAnimator: {fileID: 7100673218941825776}
   smoothTime: 0.5
   jumpForce: 5
-  slideTime: 1.5
+  slideTime: 0.7
   groundCheckLength: 0.05
   groundCheckTime: 0.2
   minLane: -1
@@ -2575,7 +2575,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 5
-  currentHP: 5
+  invincibleDuration: 1.5
+  flickerInterval: 0.15
+  targetRenderers: []
+  hpSlider: {fileID: 0}
 --- !u!1 &8565081723350435916
 GameObject:
   m_ObjectHideFlags: 0

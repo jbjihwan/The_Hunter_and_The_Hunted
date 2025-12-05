@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 8467736027594343733}
   - component: {fileID: 8625338130678882482}
   m_Layer: 5
-  m_Name: Button
+  m_Name: main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: menu
+  m_text: main
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cc829469beb51524f9d551bbb8b95004, type: 2}
   m_sharedMaterial: {fileID: -5914323393830261560, guid: cc829469beb51524f9d551bbb8b95004,
