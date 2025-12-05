@@ -2553,7 +2553,7 @@ MonoBehaviour:
   playerRigidbody: {fileID: 1431932047480271639}
   playerCollider: {fileID: 1247826761262753733}
   playerAnimator: {fileID: 7100673218941825776}
-  smoothTime: 0.5
+  smoothTime: 0.3
   jumpForce: 5
   slideTime: 0.7
   groundCheckLength: 0.05
@@ -2575,6 +2575,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 5
+  easyHP: 7
+  normalHP: 5
+  hardHP: 3
   invincibleDuration: 1.5
   flickerInterval: 0.15
   targetRenderers: []
