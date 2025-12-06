@@ -2782,6 +2782,8 @@ PrefabInstance:
     - {fileID: 8524731701777047789, guid: 27e21267ae6b84c48944a046fad27b11, type: 3}
     - {fileID: 6522435175731910931, guid: 27e21267ae6b84c48944a046fad27b11, type: 3}
     - {fileID: 3342698596399006819, guid: 27e21267ae6b84c48944a046fad27b11, type: 3}
+    - {fileID: 7221362751932022950, guid: 27e21267ae6b84c48944a046fad27b11, type: 3}
+    - {fileID: 7196414961031997168, guid: 27e21267ae6b84c48944a046fad27b11, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6456361444011942618, guid: 27e21267ae6b84c48944a046fad27b11,
         type: 3}
@@ -2886,7 +2888,7 @@ Transform:
   m_GameObject: {fileID: 714796961}
   serializedVersion: 2
   m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 2.9, z: -5}
+  m_LocalPosition: {x: 0, y: 2.9, z: 1.5799999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8930,12 +8932,7 @@ Animator:
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'c_index3.r'\n\tTransform 'c_index2.l'\n\tTransform
-    'c_index3.l'\n\tTransform 'c_thumb1.l'\n\tTransform 'root'\n\tTransform 'spine_02.x'\n\tTransform
-    'spine_01.x'\n\tTransform 'toes_01.r'\n\tTransform 'thigh_stretch.r'\n\tTransform
-    'hand.r'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0

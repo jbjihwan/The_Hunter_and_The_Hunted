@@ -33,7 +33,7 @@ public class QuizObstacle : MonoBehaviour
         }
     }
 
-    public void Triggered(QuizCube cube, PlayerEvent player)
+    public void Triggered(int order, PlayerEvent player)
     {
         if (triggered)
         {
@@ -43,7 +43,7 @@ public class QuizObstacle : MonoBehaviour
         triggered = true;
         QuizManager.Instance.PopQuiz();
 
-        if (cube.order == answerCubeOrder)
+        if (order == answerCubeOrder)
         {
             // 정답
             player.OnQuizCorrect(); 
@@ -53,7 +53,5 @@ public class QuizObstacle : MonoBehaviour
             // 오답
             player.OnQuizWrong(1);
         }
-
-        Destroy(cube.gameObject);
     }
 }

@@ -45,23 +45,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizzes:
-  - quiz: 3 x 6 = ?
+  - quiz: 12 x 12 = ?
     options:
-    - 16
-    - 17
-    - 18
-    answerIndex: 2
-  - quiz: 5 x 9 = ?
+    - 143
+    - 144
+    - 145
+    answerIndex: 1
+  - quiz: 2 ^ 9 = ?
     options:
-    - 44
-    - 45
-    - 46
+    - 511
+    - 512
+    - 513
     answerIndex: 1
   - quiz: "\uAD50\uC218\uB2D8\uC758 \uC131\uD568\uC740?"
     options:
     - "\uC804\uC740\uC19C"
-    - "\uC774\uB3D9\uD638"
-    - "\uC2E0\uC6A9\uC900"
+    - "\uC804\uC740\uC190"
+    - "\uC804\uC740\uC20C"
     answerIndex: 0
   - quiz: "\uAC1C\uCC9C\uC808\uC758 \uB0A0\uC9DC\uB294?"
     options:
@@ -77,7 +77,7 @@ MonoBehaviour:
     answerIndex: 0
   - quiz: "\uD0DC\uC591\uACC4 6\uBC88\uC9F8 \uD589\uC131\uC740?"
     options:
-    - "\uD1A0\uC131\t"
+    - "\uD1A0\uC131"
     - "\uBAA9\uC131"
     - "\uCC9C\uC655\uC131"
     answerIndex: 0
@@ -87,5 +87,23 @@ MonoBehaviour:
     - "\uBC14\uD750"
     - "\uBAA8\uCC28\uB974\uD2B8"
     answerIndex: 1
+  - quiz: "\uC774 \uC218\uC5C5\uC744 \uB4E3\uB294 \uAC74\uBB3C\uC758 \uC774\uB984\uC740?"
+    options:
+    - "\uACF5\uD559\uAD00"
+    - "\uBBF8\uB798\uAD00"
+    - "\uD14C\uD06C\uB178\uD050\uBE0C\uAD00"
+    answerIndex: 1
+  - quiz: "Unity \uC2A4\uD06C\uB9BD\uD2B8 \uC5B8\uC5B4\uB294?"
+    options:
+    - C
+    - C#
+    - C++
+    answerIndex: 1
+  - quiz: "\uC804\uC740\uC19C \uAD50\uC218\uB2D8 \uC5F0\uAD6C\uC2E4\uC740 \uBA87\uD638\uC2E4\uC778\uAC00?"
+    options:
+    - "225\uD638"
+    - "230\uD638"
+    - "211\uD638"
+    answerIndex: 0
   quizText: {fileID: 0}
   quizDist: 40

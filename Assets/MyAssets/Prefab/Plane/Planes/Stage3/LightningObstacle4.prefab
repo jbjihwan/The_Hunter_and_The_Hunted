@@ -410,7 +410,7 @@ MonoBehaviour:
     isHorizontal: 0
     useFixedLaneOrder: 0
   speed: 10
-  obstacleHeight: 1.2
+  obstacleHeight: 1
 --- !u!1 &2993377883923532925
 GameObject:
   m_ObjectHideFlags: 0
