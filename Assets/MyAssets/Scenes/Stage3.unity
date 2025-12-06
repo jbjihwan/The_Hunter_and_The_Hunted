@@ -261,8 +261,8 @@ MonoBehaviour:
   - Scream
   - TailAttack
   animationChangeInterval: 2
-  randomAnimation: 1
-  enableAnimation: 1
+  randomAnimation: 0
+  enableAnimation: 0
 --- !u!54 &320157027
 Rigidbody:
   m_ObjectHideFlags: 0

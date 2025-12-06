@@ -34,7 +34,7 @@ public class DragonFollower : MonoBehaviour
     public Animator dragonAnimator;
 
     [Tooltip("재생할 애니메이션 트리거 이름 목록")]
-    public string[] animationTriggers = { "Run", "BasicAttack", "FireballShoot", "Scream", "TailAttack" };
+    public string[] animationTriggers = { "Run"/*, "BasicAttack", "FireballShoot", "Scream", "TailAttack"*/ };
 
     [Tooltip("애니메이션 전환 간격 (초)")]
     public float animationChangeInterval = 3f;
