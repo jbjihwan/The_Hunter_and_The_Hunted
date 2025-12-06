@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if ((IsPlaying() || gameState != GameState.CutScene) && gameState != GameState.Ending && Input.GetKeyDown(KeyCode.Escape))
+        if ((IsPlaying()) && Input.GetKeyDown(KeyCode.Escape))
         {
             GamePause();
         }

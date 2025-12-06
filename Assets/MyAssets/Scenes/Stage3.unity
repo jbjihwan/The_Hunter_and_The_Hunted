@@ -1003,6 +1003,12 @@ PrefabInstance:
       propertyPath: hpSlider
       value: 
       objectReference: {fileID: 1639278946}
+    - target: {fileID: 6362066284845510357, guid: 052d5e3436c154844a699bda46a09a17,
+        type: 3}
+      propertyPath: HitStage3Effect
+      value: 
+      objectReference: {fileID: 1329845292236604, guid: 23acf75ed6ddd2e44ba93facef965876,
+        type: 3}
     - target: {fileID: 7100673218941825776, guid: 052d5e3436c154844a699bda46a09a17,
         type: 3}
       propertyPath: m_Controller

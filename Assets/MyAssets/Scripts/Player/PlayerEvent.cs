@@ -219,7 +219,7 @@ public class PlayerEvent : MonoBehaviour
         GameObject prefab = (stage == 3) ? HitStage3Effect : HitStage12Effect;
 
         if (prefab != null)
-            Instantiate(prefab, hitPosition, Quaternion.identity);
+            Instantiate(prefab, hitPosition + Vector3.up, Quaternion.identity, transform);
 
         // 사운드 선택 (고정 인덱스 방식)
         if (SoundManager.instance != null)
@@ -242,7 +242,7 @@ public class PlayerEvent : MonoBehaviour
         // 이펙트
         if (quizCorrectEffect != null)
         {
-            Instantiate(quizCorrectEffect, transform.position, Quaternion.identity);
+            Instantiate(quizCorrectEffect, transform.position, Quaternion.identity, transform);
         }
 
         // 사운드
