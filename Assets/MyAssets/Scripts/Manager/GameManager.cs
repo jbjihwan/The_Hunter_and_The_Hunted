@@ -164,6 +164,8 @@ public class GameManager : MonoBehaviour
 
     public void GameRestart()
     {
+        InitGame();
+
         if (BlinkEffect.Instance != null)
         {
             BlinkEffect.Instance.PlayBlinkWithSceneTransition(0.5f, 0.5f, () =>
