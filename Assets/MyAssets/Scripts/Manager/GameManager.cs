@@ -31,10 +31,10 @@ public class GameManager : MonoBehaviour
 
     private GameState gameState;
     private float stage2SafeTime;
-    private float stage3SafeTime;
     private float playTime;
     private int stage;
     private bool stage2BgmStopped = false;  // BGM 정지 플래그 추가
+    private bool stage2Changed = false;
 
     private void Awake()
     {
@@ -53,7 +53,6 @@ public class GameManager : MonoBehaviour
     {
         stage2SafeTime = stage1PlayTime + 5f; // safe time -> 안정적으로 던전 입구 -> 통로로 변환하는데 필요한 시간
         stage2PlayTime = stage1PlayTime + stage2PlayTime;
-        stage3SafeTime = stage2PlayTime + 0f; // safe time -> 첫 전기 공격이 오지 않는 시간인데 이제 필요 없음
         stage3PlayTime = stage2PlayTime + stage3PlayTime;
     }
 
@@ -75,8 +74,9 @@ public class GameManager : MonoBehaviour
             Stage2();
         }
 
-        if (stage == 2 && IsPlaying() && playTime > stage2SafeTime)
+        if (stage == 2 && IsPlaying() && playTime > stage2SafeTime && !stage2Changed)
         {
+            stage2Changed = true;
             planeSpawner.ChangeCycle(2);
         }
 
@@ -92,11 +92,6 @@ public class GameManager : MonoBehaviour
         if (stage == 2 && IsPlaying() && playTime > stage2PlayTime)
         {
             PlayCutScene();
-        }
-
-        if (stage == 3 && IsPlaying() && playTime > stage3SafeTime)
-        {
-            obstacleSpawner.ChangeCycle(1);
         }
 
         if (stage == 3 && IsPlaying() && playTime > stage3PlayTime)

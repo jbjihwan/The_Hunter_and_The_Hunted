@@ -84,7 +84,7 @@ public class HelperManager : MonoBehaviour
             GameManager.Instance.planeSpawner.Init();
             GameManager.Instance.obstacleSpawner.Init(GameManager.Instance.safePlaneCount);
             playerEvent.SetHP(GameManager.Instance.maxHP, GameManager.Instance.currentHP);
-            UIManager.Instance.OnRunSlider();   // 
+            UIManager.Instance.OnRunSlider();
         }
     }
 

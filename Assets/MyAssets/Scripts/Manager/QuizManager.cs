@@ -7,8 +7,12 @@ public class QuizManager : MonoBehaviour
     [System.Serializable]
     public class Quiz
     {
+        [TextArea(1, 3)]
         public string quiz;
+
+        [TextArea(1, 4)]
         public string[] options;
+
         public int answerIndex;
     }
 

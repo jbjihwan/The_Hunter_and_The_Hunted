@@ -57,4 +57,35 @@ MonoBehaviour:
     - 45
     - 46
     answerIndex: 1
+  - quiz: "\uAD50\uC218\uB2D8\uC758 \uC131\uD568\uC740?"
+    options:
+    - "\uC804\uC740\uC19C"
+    - "\uC774\uB3D9\uD638"
+    - "\uC2E0\uC6A9\uC900"
+    answerIndex: 0
+  - quiz: "\uAC1C\uCC9C\uC808\uC758 \uB0A0\uC9DC\uB294?"
+    options:
+    - "10\uC6D4\n3\uC77C"
+    - "10\uC6D4\n10\uC77C"
+    - "10\uC6D4\n9\uC77C"
+    answerIndex: 0
+  - quiz: "\uD638\uC8FC\uC758 \uC218\uB3C4\uB294?"
+    options:
+    - "\uCE94\uBC84\uB77C"
+    - "\uC2DC\uB4DC\uB2C8"
+    - "\uBA5C\uBC84\uB978"
+    answerIndex: 0
+  - quiz: "\uD0DC\uC591\uACC4 6\uBC88\uC9F8 \uD589\uC131\uC740?"
+    options:
+    - "\uD1A0\uC131\t"
+    - "\uBAA9\uC131"
+    - "\uCC9C\uC655\uC131"
+    answerIndex: 0
+  - quiz: "\uC74C\uC545\uC758 \uC544\uBC84\uC9C0\uB294?"
+    options:
+    - "\uD5E8\uB378"
+    - "\uBC14\uD750"
+    - "\uBAA8\uCC28\uB974\uD2B8"
+    answerIndex: 1
   quizText: {fileID: 0}
+  quizDist: 40

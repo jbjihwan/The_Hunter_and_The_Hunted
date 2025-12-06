@@ -23,13 +23,12 @@ public class PlaneSpawner : MonoBehaviour
     void Awake()
     {
         childPlanes = new Queue<GameObject>();
+        cycleIndex = 0;
+        planeIndex = 0;
     }
 
     void Start()
     {
-        cycleIndex = 0;
-        planeIndex = 0;
-
         if (endQuad != null)
         {
             Instantiate(endQuad, transform.position +
