@@ -248,10 +248,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 349326100}
-  followDistanceZ: -20
+  followDistanceZ: -40
   offsetX: 0
   offsetY: 0
-  smoothSpeed: 5
+  smoothSpeed: 0.5
   instantFollow: 0
   dragonAnimator: {fileID: 742310219}
   animationTriggers:
@@ -626,7 +626,7 @@ PrefabInstance:
     - target: {fileID: 1299680602463779088, guid: 42054832857a80b4eb1126fe017e8e25,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 1299680602463779088, guid: 42054832857a80b4eb1126fe017e8e25,
         type: 3}
