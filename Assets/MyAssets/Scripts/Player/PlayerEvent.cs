@@ -232,8 +232,18 @@ public class PlayerEvent : MonoBehaviour
     }
     public void OnQuizWrong(int damage)
     {
-       
-        OnTrapHit(damage);    
+        if (isDead || isInvincible) return;
+
+        // 트랩 피격 이펙트는 그대로 사용
+        PlayTrapHitFeedback(transform.position);
+
+        // 퀴즈 오답 전용 사운드
+        if (SoundManager.instance != null)
+        {
+            SoundManager.instance.PlaySfx(7);
+        }
+
+        TakeDamage(damage);
     }
     public void OnQuizCorrect()
     {

@@ -4,6 +4,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -97,6 +98,7 @@ public class GameManager : MonoBehaviour
         if (stage == 3 && IsPlaying() && playTime > stage3PlayTime)
         {
             GameEnding();
+            
         }
     }
 
@@ -145,10 +147,11 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameState = GameState.GameOver;
-
+        SoundManager.instance.StopBgm();
+        StartCoroutine(PlaySfxDelay(8, 0.2f));
         if (BlinkEffect.Instance != null)
         {
-            BlinkEffect.Instance.PlayBlinkWithSceneTransition(0.5f, 0.5f, () =>
+            BlinkEffect.Instance.PlayBlinkWithSceneTransition(0.2f, 0.2f, () =>
             {
                 SceneManager.LoadScene("GameOver");
             });
@@ -207,7 +210,7 @@ public class GameManager : MonoBehaviour
     public void PlayCutScene()
     {
         gameState = GameState.CutScene;
-
+        SoundManager.instance.PlayStageBgm(3);
         if (BlinkEffect.Instance != null)
         {
             BlinkEffect.Instance.PlayBlinkWithSceneTransition(0.5f, 0.5f, () =>
@@ -236,7 +239,7 @@ public class GameManager : MonoBehaviour
     public void GameEnding()
     {
         gameState = GameState.Ending;
-
+        SoundManager.instance.StopBgm();
         if (BlinkEffect.Instance != null)
         {
             BlinkEffect.Instance.PlayBlinkWithSceneTransition(0.5f, 0.5f, () =>
@@ -276,4 +279,12 @@ public class GameManager : MonoBehaviour
     // RunBar에서 거리 계산에 사용
     public float PlayTime => playTime;
     public int CurrentStage => stage;
+
+    private IEnumerator PlaySfxDelay(int sfxIndex, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (SoundManager.instance != null)
+            SoundManager.instance.PlaySfx(sfxIndex);
+    }
 }

@@ -46,7 +46,7 @@ public class QuizObstacle : MonoBehaviour
         if (order == answerCubeOrder)
         {
             // Á¤´ä
-            return;
+            player.OnQuizCorrect(); 
         }
         else
         {
