@@ -106,4 +106,4 @@ MonoBehaviour:
     - "211\uD638"
     answerIndex: 0
   quizText: {fileID: 0}
-  quizDist: 40
+  quizDist: 60

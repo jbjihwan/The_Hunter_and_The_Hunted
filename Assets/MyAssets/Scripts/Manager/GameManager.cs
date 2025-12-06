@@ -2,9 +2,10 @@
 // 1. 게임의 흐름 제어 (일시 정지, 진행)
 // 2. 씬 관리
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
+using static UnityEngine.CullingGroup;
 
 public class GameManager : MonoBehaviour
 {
@@ -113,6 +114,7 @@ public class GameManager : MonoBehaviour
         playTime = 0f;
         stage = 0;
         stage2BgmStopped = false;
+        stage2Changed = false;
         Time.timeScale = 1f;
         // 시작하자마자 Stage0 BGM 재생
         SoundManager.instance.PlayStageBgm(0);
@@ -164,8 +166,6 @@ public class GameManager : MonoBehaviour
 
     public void GameRestart()
     {
-        InitGame();
-
         if (BlinkEffect.Instance != null)
         {
             BlinkEffect.Instance.PlayBlinkWithSceneTransition(0.5f, 0.5f, () =>
