@@ -2967,6 +2967,28 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4956818669790424409, guid: eee3ea52b63ed8f4386a5216b07f555c,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956818669790424409, guid: eee3ea52b63ed8f4386a5216b07f555c,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 5b7ddfec122585c4aaa0c0b415c3ba4b,
+        type: 2}
+    - target: {fileID: 4956818669790424409, guid: eee3ea52b63ed8f4386a5216b07f555c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3099384778312421895, guid: 5b7ddfec122585c4aaa0c0b415c3ba4b,
+        type: 2}
+    - target: {fileID: 4956818669790424409, guid: eee3ea52b63ed8f4386a5216b07f555c,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5027302815283695742, guid: eee3ea52b63ed8f4386a5216b07f555c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3859,7 +3881,7 @@ PrefabInstance:
     - target: {fileID: 4581367203106102089, guid: 35e94abfcc1833a40a4892dcfe64c2b1,
         type: 3}
       propertyPath: stage1PlayTime
-      value: 30
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4581367203106102089, guid: 35e94abfcc1833a40a4892dcfe64c2b1,
         type: 3}
@@ -4042,6 +4064,41 @@ PrefabInstance:
       propertyPath: quizText
       value: 
       objectReference: {fileID: 66086924337999175}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.data[2].quiz
+      value: "\uAD50\uC218\uB2D8\uC758 \uC131\uD568\uC740?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.data[2].answerIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.data[2].options.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[2].options.Array.data[0]'
+      value: "\uC804\uC740\uC19C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[2].options.Array.data[1]'
+      value: "\uC774\uB3D9\uD638"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[2].options.Array.data[2]'
+      value: "\uC2E0\uC6A9"
+      objectReference: {fileID: 0}
     - target: {fileID: 5831240121917615061, guid: c52fd1af002d04a4ab86dd16f596f339,
         type: 3}
       propertyPath: m_LocalPosition.x
