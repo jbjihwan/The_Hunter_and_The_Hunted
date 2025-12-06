@@ -18,7 +18,7 @@ public class QuizCube : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            parent.Triggered(order, other.gameObject.GetComponent<PlayerEvent>());
+            parent.Triggered(this, other.gameObject.GetComponent<PlayerEvent>());
         }
     }
 }
