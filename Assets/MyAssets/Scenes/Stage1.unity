@@ -4038,16 +4038,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4581367203106102089, guid: 35e94abfcc1833a40a4892dcfe64c2b1,
         type: 3}
-      propertyPath: stage2PlayTime
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 4581367203106102089, guid: 35e94abfcc1833a40a4892dcfe64c2b1,
-        type: 3}
-      propertyPath: stage3PlayTime
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 4581367203106102089, guid: 35e94abfcc1833a40a4892dcfe64c2b1,
-        type: 3}
       propertyPath: obstacleSpawner
       value: 
       objectReference: {fileID: 975449093}
