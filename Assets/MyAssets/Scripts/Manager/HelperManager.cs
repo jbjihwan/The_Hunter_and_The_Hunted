@@ -16,9 +16,15 @@ public class HelperManager : MonoBehaviour
     public TextMeshProUGUI timerUI;
     public Slider runSlider;   // RunBar 슬라이더
     public Slider hpSlider;    // HPBar 슬라이더
+    public TextMeshProUGUI scoreUI;
 
     private void Start()
     {
+        if(scoreUI != null)
+        {
+            UIManager.Instance.scoreUI = scoreUI;
+        }
+
         if (planeSpawner != null)
         {
             GameManager.Instance.planeSpawner = planeSpawner;
