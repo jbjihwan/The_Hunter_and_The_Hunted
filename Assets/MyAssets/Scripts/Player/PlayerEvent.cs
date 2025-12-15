@@ -1,13 +1,10 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 /// <summary>
 /// [PlayerEvent]
 /// - 플레이어 체력 및 데미지 처리
-/// - 함정/오답 등 모든 데미지 이벤트 처리
-/// - 피격 후 일정 시간 무적 + 깜빡임 효과 제공
-/// - UIManager.Instance.hpSlider 를 이용해 HP바 표시
+/// - 아이템 픽업 FX/SFX 처리
 /// </summary>
 public class PlayerEvent : MonoBehaviour
 {
@@ -18,20 +15,34 @@ public class PlayerEvent : MonoBehaviour
         HARD
     }
 
+    /* =======================
+     * HP
+     * ======================= */
     [Header("HP")]
     public int maxHP = 5;
     public int easyHP;
     public int normalHP;
     public int hardHP;
 
+    public int currentHP { get; private set; }
+
+    /* =======================
+     * Invincible
+     * ======================= */
     [Header("Invincible")]
     public float invincibleDuration = 3f;
     public float flickerInterval = 0.15f;
     public Renderer[] targetRenderers;
 
+    /* =======================
+     * UI
+     * ======================= */
     [Header("UI")]
-    public Slider hpSlider;   // 인스펙터에서 안 넣어도 Start에서 UIManager에서 가져옴
+    public CircleHpUI hpUI;
 
+    /* =======================
+     * Effects
+     * ======================= */
     [Header("Trap Hit Effect")]
     public GameObject HitStage12Effect;
     public GameObject HitStage3Effect;
@@ -39,69 +50,66 @@ public class PlayerEvent : MonoBehaviour
     [Header("Quiz Correct Effect")]
     public GameObject quizCorrectEffect;
 
-    public bool isInvincible { get; private set; } = false;
-    public bool isDead { get; private set; } = false;
-    public int currentHP { get; private set; }
+    /* =======================
+     * Pickup FX / SFX
+     * ======================= */
+    [Header("Pickup FX")]
+    public GameObject coinPickupFx;
+    public GameObject heartPickupFx;
+    public float pickupFxLifeTime = 1.2f;
+    public Vector3 pickupFxOffset = Vector3.up;
 
-    // 무적 코루틴 중복 방지
+    
+
+    public bool isInvincible { get; private set; }
+    public bool isDead { get; private set; }
+
     Coroutine invincibleCoroutine;
 
+    /* =======================
+     * Unity LifeCycle
+     * ======================= */
     void Awake()
     {
-        // 체력 초기화
         currentHP = maxHP;
 
-        // targetRenderers 자동 등록 (Inspector에서 설정 안 했을 때)
         if (targetRenderers == null || targetRenderers.Length == 0)
             targetRenderers = GetComponentsInChildren<Renderer>();
     }
 
     void Start()
     {
-        // HP 슬라이더를 인스펙터에서 안 넣었으면 UIManager에서 가져옴
-        if (hpSlider == null && UIManager.Instance != null)
-        {
-            hpSlider = UIManager.Instance.hpSlider;
-        }
+        if (hpUI == null && UIManager.Instance != null)
+            hpUI = UIManager.Instance.circleHpUI;
 
-        // HP 슬라이더 초기 세팅
-        if (hpSlider != null)
+        if (hpUI != null)
         {
-            hpSlider.minValue = 0;
-            hpSlider.maxValue = maxHP;
-            hpSlider.value = currentHP;
+            hpUI.SetMaxValue(maxHP);
+            hpUI.SetValue(currentHP);
         }
     }
 
-    /// <summary>
-    /// 공통 데미지 처리
-    /// </summary>
+    /* =======================
+     * Damage / Heal
+     * ======================= */
     public void TakeDamage(int damage)
     {
-        // 죽었거나 무적이면 데미지 무시
         if (isDead) return;
+        if (damage > 0 && isInvincible) return;
 
-        int finalDamage = Mathf.Clamp(damage, currentHP - maxHP, currentHP);
+        currentHP = Mathf.Clamp(currentHP - damage, 0, maxHP);
 
-        if (finalDamage > 0 && isInvincible) return;
+        if (hpUI != null)
+            hpUI.SetValue(currentHP);
 
-        currentHP -= finalDamage;
-
-        // HP UI 업데이트
-        if (hpSlider != null)
-            hpSlider.value = currentHP;
-
-        // 사망 처리
         if (currentHP <= 0)
         {
-            currentHP = 0;
             Die();
             return;
         }
 
         if (damage > 0)
         {
-            // 무적 + 깜빡임 시작
             if (invincibleCoroutine != null)
                 StopCoroutine(invincibleCoroutine);
 
@@ -109,52 +117,112 @@ public class PlayerEvent : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// 함정 충돌 시 호출
-    /// </summary>
-    public void OnTrapHit(int baseDamage)
+    public void Heal(int amount)
+    {
+        if (isDead) return;
+
+        currentHP = Mathf.Clamp(currentHP + amount, 0, maxHP);
+
+        if (hpUI != null)
+            hpUI.SetValue(currentHP);
+    }
+
+    public void SetHP(int max, int curr)
+    {
+        maxHP = max;
+        currentHP = Mathf.Clamp(curr, 0, maxHP);
+
+        if (hpUI != null)
+        {
+            hpUI.SetMaxValue(maxHP);
+            hpUI.SetValue(currentHP);
+        }
+    }
+
+    /* =======================
+     * Pickup Events
+     * ======================= */
+    public void OnPickupCoin(int points)
+    {
+        GameManager.Instance.AddScore(points);
+        PlayPickupFx(coinPickupFx);
+
+        if (SoundManager.instance != null)
+            SoundManager.instance.PlaySfx(9);
+    }
+
+    public void OnPickupHeart(int healAmount)
+    {
+        Heal(healAmount);
+        PlayPickupFx(heartPickupFx);
+
+        if (SoundManager.instance != null)
+            SoundManager.instance.PlaySfx(10);
+    }
+
+    void PlayPickupFx(GameObject fxPrefab)
+    {
+        if (fxPrefab == null) return;
+
+        GameObject fx = Instantiate(
+            fxPrefab,
+            transform.position ,
+            Quaternion.identity,transform
+        );
+
+        Destroy(fx, pickupFxLifeTime);
+    }
+
+    /* =======================
+     * Trap / Quiz
+     * ======================= */
+    public void OnTrapHit(int damage)
     {
         if (isDead || isInvincible) return;
 
         PlayTrapHitFeedback(transform.position);
-        TakeDamage(baseDamage);
+        TakeDamage(damage);
     }
 
-    /// <summary>
-    /// 오답으로 데미지를 받을 때 호출
-    /// </summary>
-    public void OnWrongAnswer(int baseDamage)
+    public void OnQuizWrong(int damage)
     {
-        Debug.Log("[PlayerEvent] Wrong answer damage");
-        TakeDamage(baseDamage);
+        if (isDead || isInvincible) return;
+
+        PlayTrapHitFeedback(transform.position);
+
+        if (SoundManager.instance != null)
+            SoundManager.instance.PlaySfx(7);
+
+        TakeDamage(damage);
     }
 
-    /// <summary>
-    /// 플레이어 사망 처리
-    /// </summary>
+    public void OnQuizCorrect()
+    {
+        if (quizCorrectEffect != null)
+            Instantiate(quizCorrectEffect, transform.position, Quaternion.identity, transform);
+
+        if (SoundManager.instance != null)
+            SoundManager.instance.PlaySfx(6);
+    }
+
+    /* =======================
+     * Death / Invincible
+     * ======================= */
     void Die()
     {
         if (isDead) return;
         isDead = true;
 
-        Debug.Log("[PlayerEvent] Player died");
-
-        // 깜빡임 종료 및 정상 표시
         if (invincibleCoroutine != null)
             StopCoroutine(invincibleCoroutine);
+
         SetRenderersVisible(true);
         isInvincible = false;
 
-        // GameManager GameOver 호출
         if (GameManager.Instance != null)
             GameManager.Instance.GameOver();
-        else
-            Debug.LogWarning("[PlayerEvent] GameManager not found");
     }
 
-    /// <summary>
-    /// 무적 + 깜빡임 코루틴
-    /// </summary>
     IEnumerator InvincibleRoutine()
     {
         isInvincible = true;
@@ -170,101 +238,27 @@ public class PlayerEvent : MonoBehaviour
             elapsed += flickerInterval;
         }
 
-        // 무적 종료
         SetRenderersVisible(true);
         isInvincible = false;
     }
 
-    /// <summary>
-    /// 깜빡임용 Renderer 보이기/숨기기 조절
-    /// </summary>
     void SetRenderersVisible(bool visible)
     {
-        if (targetRenderers == null) return;
-
-        foreach (Renderer rend in targetRenderers)
-        {
-            if (rend != null)
-                rend.enabled = visible;
-        }
+        foreach (Renderer r in targetRenderers)
+            if (r != null) r.enabled = visible;
     }
 
-    public void SetHP(int max, int curr)
-    {
-        maxHP = max;
-        currentHP = curr;
-        hpSlider.maxValue = max;
-        hpSlider.value = curr;
-    }
-
-    public void ChangeDifficultyLevel(int level)
-    {
-        if (level == (int)DifficultyLevel.EASY)
-        {
-            SetHP(easyHP, easyHP);
-        }
-        else if(level == (int)DifficultyLevel.NORMAL)
-        {
-            SetHP(normalHP, normalHP);
-        }
-        else if (level == (int)DifficultyLevel.HARD)
-        {
-            SetHP(hardHP, hardHP);
-        }
-        
-        UIManager.Instance.OffDifficultyLevelUI();
-    }
-
-    void PlayTrapHitFeedback(Vector3 hitPosition)
+    void PlayTrapHitFeedback(Vector3 pos)
     {
         if (GameManager.Instance == null) return;
 
         int stage = GameManager.Instance.CurrentStage;
-
-        // 파티클 선택
         GameObject prefab = (stage == 3) ? HitStage3Effect : HitStage12Effect;
 
         if (prefab != null)
-            Instantiate(prefab, hitPosition + Vector3.up, Quaternion.identity, transform);
+            Instantiate(prefab, pos + Vector3.up, Quaternion.identity, transform);
 
-        // 사운드 선택 (고정 인덱스 방식)
         if (SoundManager.instance != null)
-        {
-            if (stage == 3)
-                SoundManager.instance.PlaySfx(5);   // 3스테이지용 SFX
-            else
-                SoundManager.instance.PlaySfx(4);   // 1·2스테이지용 SFX
-        }
-    }
-    public void OnQuizWrong(int damage)
-    {
-        if (isDead || isInvincible) return;
-
-        // 트랩 피격 이펙트는 그대로 사용
-        PlayTrapHitFeedback(transform.position);
-
-        // 퀴즈 오답 전용 사운드
-        if (SoundManager.instance != null)
-        {
-            SoundManager.instance.PlaySfx(7);
-        }
-
-        TakeDamage(damage);
-    }
-    public void OnQuizCorrect()
-    {
-        
-
-        // 이펙트
-        if (quizCorrectEffect != null)
-        {
-            Instantiate(quizCorrectEffect, transform.position, Quaternion.identity, transform);
-        }
-
-        // 사운드
-        if (SoundManager.instance != null)
-        {
-            SoundManager.instance.PlaySfx(6);
-        }
+            SoundManager.instance.PlaySfx(stage == 3 ? 5 : 4);
     }
 }

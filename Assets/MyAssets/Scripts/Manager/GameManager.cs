@@ -204,6 +204,7 @@ public class GameManager : MonoBehaviour
         stage = 1;
 
         UIManager.Instance.OffMainMenuUI();
+        UIManager.Instance.OffDifficultyLevelUI();
         UIManager.Instance.OnRunSlider();
         UIManager.Instance.OnHpSlider();
         obstacleSpawner.Init(safePlaneCount);

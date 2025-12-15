@@ -280,6 +280,18 @@ public class SoundManager : MonoBehaviour
 
         PlayStageBgm(stageIndex);
     }
+    public void PlaySfxAfter(float delay, int sfxIndex)
+    {
+        StartCoroutine(PlaySfxAfterRoutine(delay, sfxIndex));
+    }
+
+    private IEnumerator PlaySfxAfterRoutine(float delay, int sfxIndex)
+    {
+        // Time.timeScale øµ«‚¿ª πﬁ¿Ω (Pause Ω√ ∞∞¿Ã ∏ÿ√„)
+        yield return new WaitForSeconds(delay);
+
+        PlaySfx(sfxIndex);
+    }
     /// <summary>
     /// Sets the master SFX volume (0 to 1).
     /// Adjusts currently playing SFX proportionally.
@@ -311,6 +323,7 @@ public class SoundManager : MonoBehaviour
                     src.volume = sfxVolume;
             }
         }
+
 
         lastSfxMasterVolume = sfxVolume;
     }
