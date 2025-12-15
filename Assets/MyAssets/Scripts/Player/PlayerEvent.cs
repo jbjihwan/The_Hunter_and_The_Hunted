@@ -79,9 +79,12 @@ public class PlayerEvent : MonoBehaviour
     public void TakeDamage(int damage)
     {
         // 죽었거나 무적이면 데미지 무시
-        if (isDead || isInvincible) return;
+        if (isDead) return;
 
-        int finalDamage = Mathf.Max(1, damage); // 최소 데미지 1
+        int finalDamage = Mathf.Clamp(damage, currentHP - maxHP, currentHP);
+
+        if (finalDamage > 0 && isInvincible) return;
+
         currentHP -= finalDamage;
 
         // HP UI 업데이트
@@ -96,11 +99,14 @@ public class PlayerEvent : MonoBehaviour
             return;
         }
 
-        // 무적 + 깜빡임 시작
-        if (invincibleCoroutine != null)
-            StopCoroutine(invincibleCoroutine);
+        if (damage > 0)
+        {
+            // 무적 + 깜빡임 시작
+            if (invincibleCoroutine != null)
+                StopCoroutine(invincibleCoroutine);
 
-        invincibleCoroutine = StartCoroutine(InvincibleRoutine());
+            invincibleCoroutine = StartCoroutine(InvincibleRoutine());
+        }
     }
 
     /// <summary>

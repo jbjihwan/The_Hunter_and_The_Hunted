@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     private int stage;
     private bool stage2BgmStopped = false;  // BGM 정지 플래그 추가
     private bool stage2Changed = false;
+    private int score;
 
     private void Awake()
     {
@@ -68,6 +69,7 @@ public class GameManager : MonoBehaviour
         if (IsPlaying())
         {
             playTime += Time.deltaTime;
+            UIManager.Instance.UpdateScore((int)playTime + score);
             // UIManager.Instance.UpdateTimer(playTime);
         }
 
@@ -103,6 +105,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void AddScore(int points)
+    {
+        score += points;
+    }
+
     public bool IsPlaying()
     {
         return gameState == GameState.Playing;
@@ -116,6 +123,7 @@ public class GameManager : MonoBehaviour
         stage2BgmStopped = false;
         stage2Changed = false;
         Time.timeScale = 1f;
+        score = 0;
         // 시작하자마자 Stage0 BGM 재생
         SoundManager.instance.PlayStageBgm(0);
         planeSpawner.Init();

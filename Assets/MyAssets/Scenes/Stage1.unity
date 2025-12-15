@@ -2599,31 +2599,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4749823912439553195, guid: a001aa273e237924c98263e9eb1afb9d,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4749823912439553195, guid: a001aa273e237924c98263e9eb1afb9d,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6706322092340617364, guid: a001aa273e237924c98263e9eb1afb9d,
         type: 3}
       propertyPath: m_Name
       value: HPSliderUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 6706322092340617364, guid: a001aa273e237924c98263e9eb1afb9d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a001aa273e237924c98263e9eb1afb9d, type: 3}
+--- !u!114 &1212802119 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 729688246043779139, guid: a001aa273e237924c98263e9eb1afb9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1212802118}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1288618232 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1017800457909082806, guid: 28e3a142454ba6d4e84f988d677fe523,
@@ -2954,6 +2951,11 @@ PrefabInstance:
       propertyPath: pauseUI
       value: 
       objectReference: {fileID: 1288618232}
+    - target: {fileID: 1343316164737686802, guid: 71cdebffa5e60c34b960eb8dc41d8f45,
+        type: 3}
+      propertyPath: scoreUI
+      value: 
+      objectReference: {fileID: 1212802119}
     - target: {fileID: 1343316164737686802, guid: 71cdebffa5e60c34b960eb8dc41d8f45,
         type: 3}
       propertyPath: hpSlider
