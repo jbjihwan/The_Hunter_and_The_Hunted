@@ -153,9 +153,9 @@ MonoBehaviour:
   - {fileID: 5403255976155197060}
   frontObstacleSets:
   - obstacles:
-    - obstaclePrefab: {fileID: 8762571167988920167, guid: d0d427c14f2244040a204cf605d8224f,
+    - obstaclePrefab: {fileID: 2619929515552652016, guid: bc79b5616f0b0514aa14f8b47cb6096a,
         type: 3}
-      spawnProb: 0
+      spawnProb: 1
       heightIndex: 0
     - obstaclePrefab: {fileID: 8762571167988920167, guid: d0d427c14f2244040a204cf605d8224f,
         type: 3}
