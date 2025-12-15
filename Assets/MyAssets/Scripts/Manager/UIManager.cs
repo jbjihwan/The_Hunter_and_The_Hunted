@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI timerUI;
     public Slider runSlider;   // 진행도 바
     public Slider hpSlider;    // 체력 바
+    public TextMeshProUGUI scoreUI;
 
     private void Awake()
     {
@@ -25,6 +26,14 @@ public class UIManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    public void UpdateScore(int score)
+    {
+        if(scoreUI != null)
+        {
+            scoreUI.text = "score: " + score;
         }
     }
 
