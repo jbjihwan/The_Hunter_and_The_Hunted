@@ -1292,7 +1292,7 @@ PrefabInstance:
     - target: {fileID: 7005686645613381059, guid: 41e9f6ffdec87594897c3ec0d207e92b,
         type: 3}
       propertyPath: bgmVolume
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7005686645613381059, guid: 41e9f6ffdec87594897c3ec0d207e92b,
         type: 3}
@@ -1694,7 +1694,7 @@ PrefabInstance:
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
       propertyPath: planeCycles.Array.data[2].planeCycle.Array.size
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
@@ -1848,7 +1848,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'planeCycles.Array.data[2].planeCycle.Array.data[8]'
       value: 
-      objectReference: {fileID: 1798646651917201561, guid: d85b39ed30b0fd049892c8b393beea54,
+      objectReference: {fileID: 1798646651917201561, guid: 9925b6d9a80a54244a02226488f76354,
         type: 3}
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
@@ -1986,19 +1986,19 @@ PrefabInstance:
         type: 3}
       propertyPath: 'planeCycles.Array.data[2].planeCycle.Array.data[10]'
       value: 
-      objectReference: {fileID: 1798646651917201561, guid: 4c782aabcc76df348a88b790f857357b,
+      objectReference: {fileID: 1798646651917201561, guid: 0ff81dfbd4815eb4b91ae32a3661fdd5,
         type: 3}
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
       propertyPath: 'planeCycles.Array.data[2].planeCycle.Array.data[11]'
       value: 
-      objectReference: {fileID: 1798646651917201561, guid: e5b5c14c0cef44843984911572ed6e6b,
+      objectReference: {fileID: 1798646651917201561, guid: 4c782aabcc76df348a88b790f857357b,
         type: 3}
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
       propertyPath: 'planeCycles.Array.data[2].planeCycle.Array.data[12]'
       value: 
-      objectReference: {fileID: 1798646651917201561, guid: 884305bc42722b34485aca5643606d23,
+      objectReference: {fileID: 1798646651917201561, guid: e5b5c14c0cef44843984911572ed6e6b,
         type: 3}
     - target: {fileID: 590220006387940619, guid: 3c419ad9b01e0fc4aa53e2b8997d964d,
         type: 3}
@@ -4117,12 +4117,12 @@ PrefabInstance:
     - target: {fileID: 4581367203106102089, guid: 35e94abfcc1833a40a4892dcfe64c2b1,
         type: 3}
       propertyPath: stage1PlayTime
-      value: 30
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4581367203106102089, guid: 35e94abfcc1833a40a4892dcfe64c2b1,
         type: 3}
       propertyPath: stage2PlayTime
-      value: 30
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4581367203106102089, guid: 35e94abfcc1833a40a4892dcfe64c2b1,
         type: 3}
@@ -4166,6 +4166,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 293252600590009699, guid: c0e1459517cf1b9418a30c692bca5d92,
+        type: 3}
+      propertyPath: m_text
+      value: "[ CONTROLS ]\r\n\r\u2191   JUMP\r\n\u2191\u2191  DOUBLE JUMP (press
+        UP twice)\r\n\u2193   SLIDE\r\n\u2190 / \u2192  MOVE left or right by one
+        lane\r\nESC  PAUSE the game\r\n\r[ ITEMS ]\r\n\rHEART\r\nRestore 1 HP when
+        collected.\r\n\rCOIN\r\nGain 100 points when collected.\r\n\r[ GOAL ]\r\n\rAvoid
+        obstacles, collect items,\r\nsurvive the hits, and reach the goal\r\nwithout
+        losing all your HP!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 293252600590009699, guid: c0e1459517cf1b9418a30c692bca5d92,
+        type: 3}
+      propertyPath: m_margin.w
+      value: 27.361145
+      objectReference: {fileID: 0}
+    - target: {fileID: 293252600590009699, guid: c0e1459517cf1b9418a30c692bca5d92,
+        type: 3}
+      propertyPath: m_margin.y
+      value: -16.883102
       objectReference: {fileID: 0}
     - target: {fileID: 4525975827209944332, guid: c0e1459517cf1b9418a30c692bca5d92,
         type: 3}

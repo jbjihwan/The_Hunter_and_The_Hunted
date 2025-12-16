@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public int maxHP;
     public int currentHP;
 
+
     private GameState gameState;
     private float stage2SafeTime;
     private float playTime;

@@ -164,15 +164,17 @@ public class PlayerEvent : MonoBehaviour
     {
         if (fxPrefab == null) return;
 
+        Vector3 spawnPos = transform.position + pickupFxOffset;
+
         GameObject fx = Instantiate(
             fxPrefab,
-            transform.position ,
-            Quaternion.identity,transform
+            spawnPos,
+            Quaternion.identity,
+            transform
         );
 
         Destroy(fx, pickupFxLifeTime);
     }
-
     /* =======================
      * Trap / Quiz
      * ======================= */

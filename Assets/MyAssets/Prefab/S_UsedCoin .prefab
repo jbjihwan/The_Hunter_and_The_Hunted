@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5669986371727628580}
   m_Layer: 0
   m_Name: GoldCoin
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,8 +128,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.01, y: 0.002, z: 0.01}
-  m_Center: {x: 0, y: 0.001, z: 0}
+  m_Size: {x: 0.016403336, y: 0.0019999999, z: 0.016654974}
+  m_Center: {x: -0.00049883727, y: 0.0010000003, z: 0.0003321048}
 --- !u!1 &9037230900072671893
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,8 +143,8 @@ GameObject:
   - component: {fileID: -8402769727195342803}
   - component: {fileID: 7810690041667182892}
   m_Layer: 0
-  m_Name: GoldCoin
-  m_TagString: Untagged
+  m_Name: 'S_UsedCoin '
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,7 +178,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 100
-  coinClip: {fileID: 8300000, guid: 47587b94b2f694c4fb5ffe45e290acf0, type: 3}
 --- !u!114 &-8402769727195342803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649bff6a9fa905c4b9d616c5f9143092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
 --- !u!54 &7810690041667182892
 Rigidbody:
   m_ObjectHideFlags: 0

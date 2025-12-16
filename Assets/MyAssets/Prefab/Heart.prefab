@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7128999847217735790}
   m_Layer: 0
   m_Name: Heart
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,8 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b374f64271b1020478a33ebbc4670bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 1
-  clip: {fileID: 8300000, guid: 30e99555eb42f9b4b986db5fd94e678a, type: 3}
+  healAmount: 1
 --- !u!114 &-7128999847217735790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +96,7 @@ GameObject:
   - component: {fileID: 6071840898717456407}
   m_Layer: 0
   m_Name: Heart
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

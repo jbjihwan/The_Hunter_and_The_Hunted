@@ -164,6 +164,8 @@ MonoBehaviour:
     isMoving: 0
     isHorizontal: 1
     useFixedLaneOrder: 0
+    useGroupLaneOrder: 0
+    groupLaneOrder: 000000000100000002000000
   - obstacles:
     - obstaclePrefab: {fileID: 5790767406282742731, guid: a9a1b2388f1bed7438b667c3b1322255,
         type: 3}
@@ -176,6 +178,8 @@ MonoBehaviour:
     isMoving: 0
     isHorizontal: 1
     useFixedLaneOrder: 0
+    useGroupLaneOrder: 0
+    groupLaneOrder: 000000000100000002000000
   - obstacles:
     - obstaclePrefab: {fileID: 5790767406282742731, guid: a9a1b2388f1bed7438b667c3b1322255,
         type: 3}
@@ -188,6 +192,8 @@ MonoBehaviour:
     isMoving: 0
     isHorizontal: 1
     useFixedLaneOrder: 0
+    useGroupLaneOrder: 0
+    groupLaneOrder: 000000000100000002000000
   backObstacleSets:
   - obstacles:
     - obstaclePrefab: {fileID: 5790767406282742731, guid: 31a288b4ac168464f8bb77433868f170,
@@ -201,6 +207,8 @@ MonoBehaviour:
     isMoving: 0
     isHorizontal: 0
     useFixedLaneOrder: 0
+    useGroupLaneOrder: 0
+    groupLaneOrder: 000000000100000002000000
   speed: 10
   obstacleHeight: 1
 --- !u!1 &2993377883923532925

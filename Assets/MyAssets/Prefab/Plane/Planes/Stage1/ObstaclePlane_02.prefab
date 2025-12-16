@@ -153,9 +153,9 @@ MonoBehaviour:
   - {fileID: 5403255976155197060}
   frontObstacleSets:
   - obstacles:
-    - obstaclePrefab: {fileID: 8762571167988920167, guid: d0d427c14f2244040a204cf605d8224f,
+    - obstaclePrefab: {fileID: 2619929515552652016, guid: bc79b5616f0b0514aa14f8b47cb6096a,
         type: 3}
-      spawnProb: 0
+      spawnProb: 1
       heightIndex: 0
     - obstaclePrefab: {fileID: 8762571167988920167, guid: d0d427c14f2244040a204cf605d8224f,
         type: 3}
@@ -168,6 +168,8 @@ MonoBehaviour:
     isMoving: 0
     isHorizontal: 0
     useFixedLaneOrder: 1
+    useGroupLaneOrder: 0
+    groupLaneOrder: 000000000100000002000000
   - obstacles:
     - obstaclePrefab: {fileID: 8762571167988920167, guid: d0d427c14f2244040a204cf605d8224f,
         type: 3}
@@ -177,22 +179,24 @@ MonoBehaviour:
         type: 3}
       spawnProb: 1
       heightIndex: 0
-    - obstaclePrefab: {fileID: 8762571167988920167, guid: d0d427c14f2244040a204cf605d8224f,
+    - obstaclePrefab: {fileID: 2619929515552652016, guid: bc79b5616f0b0514aa14f8b47cb6096a,
         type: 3}
-      spawnProb: 0
+      spawnProb: 1
       heightIndex: 0
     isMoving: 0
     isHorizontal: 0
     useFixedLaneOrder: 1
+    useGroupLaneOrder: 0
+    groupLaneOrder: 000000000100000002000000
   backObstacleSets:
   - obstacles:
     - obstaclePrefab: {fileID: 8762571167988920167, guid: d0d427c14f2244040a204cf605d8224f,
         type: 3}
       spawnProb: 1
       heightIndex: 0
-    - obstaclePrefab: {fileID: 8762571167988920167, guid: d0d427c14f2244040a204cf605d8224f,
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
         type: 3}
-      spawnProb: 0
+      spawnProb: 1
       heightIndex: 0
     - obstaclePrefab: {fileID: 8762571167988920167, guid: d0d427c14f2244040a204cf605d8224f,
         type: 3}
@@ -201,6 +205,8 @@ MonoBehaviour:
     isMoving: 0
     isHorizontal: 0
     useFixedLaneOrder: 1
+    useGroupLaneOrder: 0
+    groupLaneOrder: 000000000100000002000000
   speed: 10
   obstacleHeight: 1
 --- !u!1 &2993377883923532925
