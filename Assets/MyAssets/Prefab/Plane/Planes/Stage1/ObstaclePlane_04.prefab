@@ -157,34 +157,62 @@ MonoBehaviour:
         type: 3}
       spawnProb: 1
       heightIndex: 0
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 1
     - obstaclePrefab: {fileID: 5798609256692414111, guid: afb51552960b095408570acf1d10fea5,
         type: 3}
       spawnProb: 1
       heightIndex: 0
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 1
     - obstaclePrefab: {fileID: 5798609256692414111, guid: afb51552960b095408570acf1d10fea5,
         type: 3}
       spawnProb: 1
       heightIndex: 0
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 1
     isMoving: 0
     isHorizontal: 0
-    useFixedLaneOrder: 0
+    useFixedLaneOrder: 1
+    useGroupLaneOrder: 1
+    groupLaneOrder: 000000000100000002000000
   backObstacleSets:
   - obstacles:
     - obstaclePrefab: {fileID: 3452934178019042881, guid: 6ca5df8d469266441b3da073cb98f8cd,
         type: 3}
       spawnProb: 1
       heightIndex: 0
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 1
     - obstaclePrefab: {fileID: 3452934178019042881, guid: 6ca5df8d469266441b3da073cb98f8cd,
         type: 3}
       spawnProb: 1
       heightIndex: 0
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 1
     - obstaclePrefab: {fileID: 3452934178019042881, guid: 6ca5df8d469266441b3da073cb98f8cd,
         type: 3}
       spawnProb: 1
       heightIndex: 0
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 1
     isMoving: 0
     isHorizontal: 0
-    useFixedLaneOrder: 0
+    useFixedLaneOrder: 1
+    useGroupLaneOrder: 1
+    groupLaneOrder: 000000000100000002000000
   speed: 10
   obstacleHeight: 1
 --- !u!1 &2993377883923532925

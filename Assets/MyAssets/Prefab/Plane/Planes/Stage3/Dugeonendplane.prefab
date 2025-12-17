@@ -11616,8 +11616,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 0.026008861}
+  m_Center: {x: 0, y: 0, z: -0.14964207}
 --- !u!114 &2182383771585048923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13689,7 +13689,7 @@ GameObject:
   - component: {fileID: 8006331183573919035}
   - component: {fileID: 74088724057391576}
   m_Layer: 0
-  m_Name: DugeonStartPlane_2
+  m_Name: Dugeonendplane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -13,7 +13,8 @@ public class UIManager : MonoBehaviour
     public GameObject difficultyLevelUI;
     public TextMeshProUGUI timerUI;
     public Slider runSlider;   // 진행도 바
-    public Slider hpSlider;    // 체력 바
+    //public Slider hpSlider;    // 체력 바
+    public CircleHpUI circleHpUI;   // 원형 HP UI
     public TextMeshProUGUI scoreUI;
 
     private void Awake()
@@ -31,7 +32,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateScore(int score)
     {
-        if(scoreUI != null)
+        if (scoreUI != null)
         {
             scoreUI.text = "score: " + score;
         }
@@ -153,13 +154,14 @@ public class UIManager : MonoBehaviour
 
     public void OnHpSlider()
     {
-        if (hpSlider != null)
-            hpSlider.gameObject.SetActive(true);
+        if (circleHpUI != null)
+            circleHpUI.gameObject.SetActive(true);
     }
 
     public void OffHpSlider()
     {
-        if (hpSlider != null)
-            hpSlider.gameObject.SetActive(false);
+        if (circleHpUI != null)
+            circleHpUI.gameObject.SetActive(false);
     }
+
 }

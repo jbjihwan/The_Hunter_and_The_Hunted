@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public int maxHP;
     public int currentHP;
 
+
     private GameState gameState;
     private float stage2SafeTime;
     private float playTime;
@@ -204,6 +205,7 @@ public class GameManager : MonoBehaviour
         stage = 1;
 
         UIManager.Instance.OffMainMenuUI();
+        UIManager.Instance.OffDifficultyLevelUI();
         UIManager.Instance.OnRunSlider();
         UIManager.Instance.OnHpSlider();
         obstacleSpawner.Init(safePlaneCount);
