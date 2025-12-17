@@ -161,7 +161,7 @@ MonoBehaviour:
         type: 3}
       spawnProb: 0
       heightIndex: 1
-    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: afa605488417df741b9c3969c584cc1e,
         type: 3}
       spawnProb: 0
       heightIndex: 2
@@ -179,7 +179,7 @@ MonoBehaviour:
         type: 3}
       spawnProb: 0
       heightIndex: 2
-    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: afa605488417df741b9c3969c584cc1e,
         type: 3}
       spawnProb: 0
       heightIndex: 1
@@ -197,7 +197,7 @@ MonoBehaviour:
         type: 3}
       spawnProb: 0
       heightIndex: 2
-    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: afa605488417df741b9c3969c584cc1e,
         type: 3}
       spawnProb: 0
       heightIndex: 0
@@ -216,7 +216,7 @@ MonoBehaviour:
         type: 3}
       spawnProb: 1
       heightIndex: 0
-    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: afa605488417df741b9c3969c584cc1e,
         type: 3}
       spawnProb: 1
       heightIndex: 0

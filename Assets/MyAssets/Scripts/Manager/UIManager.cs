@@ -35,7 +35,6 @@ public class UIManager : MonoBehaviour
         if (scoreUI != null)
         {
             scoreUI.text = "score: " + score;
-            Debug.Log(scoreUI.text);
         }
     }
 
