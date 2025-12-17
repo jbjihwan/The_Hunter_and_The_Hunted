@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     private int stage;
     private bool stage2BgmStopped = false;  // BGM 정지 플래그 추가
     private bool stage2Changed = false;
-    private int score;
+    public int score;
 
     private void Awake()
     {

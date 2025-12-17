@@ -161,9 +161,15 @@ MonoBehaviour:
         type: 3}
       spawnProb: 0
       heightIndex: 1
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+        type: 3}
+      spawnProb: 0
+      heightIndex: 2
     isMoving: 0
     isHorizontal: 1
     useFixedLaneOrder: 0
+    useGroupLaneOrder: 0
+    groupLaneOrder: 000000000100000002000000
   - obstacles:
     - obstaclePrefab: {fileID: 5790767406282742731, guid: 7a47f4a633a2d124297530dad85c4f99,
         type: 3}
@@ -173,9 +179,15 @@ MonoBehaviour:
         type: 3}
       spawnProb: 0
       heightIndex: 2
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+        type: 3}
+      spawnProb: 0
+      heightIndex: 1
     isMoving: 0
     isHorizontal: 1
     useFixedLaneOrder: 0
+    useGroupLaneOrder: 0
+    groupLaneOrder: 000000000100000002000000
   - obstacles:
     - obstaclePrefab: {fileID: 5790767406282742731, guid: 7a47f4a633a2d124297530dad85c4f99,
         type: 3}
@@ -185,9 +197,15 @@ MonoBehaviour:
         type: 3}
       spawnProb: 0
       heightIndex: 2
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+        type: 3}
+      spawnProb: 0
+      heightIndex: 0
     isMoving: 0
     isHorizontal: 1
     useFixedLaneOrder: 0
+    useGroupLaneOrder: 0
+    groupLaneOrder: 000000000100000002000000
   backObstacleSets:
   - obstacles:
     - obstaclePrefab: {fileID: 5790767406282742731, guid: eb76ab6c9fc0e7642981f9db929d66a1,
@@ -198,9 +216,15 @@ MonoBehaviour:
         type: 3}
       spawnProb: 1
       heightIndex: 0
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 0
     isMoving: 0
     isHorizontal: 0
     useFixedLaneOrder: 0
+    useGroupLaneOrder: 0
+    groupLaneOrder: 000000000100000002000000
   speed: 10
   obstacleHeight: 1
 --- !u!1 &2993377883923532925

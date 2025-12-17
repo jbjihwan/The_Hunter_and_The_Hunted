@@ -263,4 +263,22 @@ public class PlayerEvent : MonoBehaviour
         if (SoundManager.instance != null)
             SoundManager.instance.PlaySfx(stage == 3 ? 5 : 4);
     }
+
+    public void ChangeDifficultyLevel(int level)
+    {
+        if (level == (int)DifficultyLevel.EASY)
+        {
+            SetHP(easyHP, easyHP);
+        }
+        else if (level == (int)DifficultyLevel.NORMAL)
+        {
+            SetHP(normalHP, normalHP);
+        }
+        else if (level == (int)DifficultyLevel.HARD)
+        {
+            SetHP(hardHP, hardHP);
+        }
+
+        UIManager.Instance.OffDifficultyLevelUI();
+    }
 }

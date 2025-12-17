@@ -95,6 +95,11 @@ public class HelperManager : MonoBehaviour
             UIManager.Instance.OnRunSlider();
             
         }
+
+        if(SceneManager.GetActiveScene().name == "Ending")
+        {
+            UIManager.Instance.UpdateScore((int)GameManager.Instance.PlayTime +  GameManager.Instance.score);
+        }
     }
 
     public void Stage1()
