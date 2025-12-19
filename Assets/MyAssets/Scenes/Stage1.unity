@@ -4315,6 +4315,181 @@ PrefabInstance:
       propertyPath: quizText
       value: 
       objectReference: {fileID: 66086924337999175}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.data[2].quiz
+      value: "\uAC1C\uCC9C\uC808\uC758 \uB0A0\uC9DC\uB294?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.data[3].quiz
+      value: "\uD638\uC8FC\uC758 \uC218\uB3C4\uB294?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.data[4].quiz
+      value: "\uD0DC\uC591\uACC4 6\uBC88\uC9F8 \uD589\uC131\uC740?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.data[5].quiz
+      value: "\uC74C\uC545\uC758 \uC544\uBC84\uC9C0\uB294?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.data[6].quiz
+      value: "\uC774 \uC218\uC5C5\uC744 \uB4E3\uB294 \uAC74\uBB3C\uC758 \uC774\uB984\uC740?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.data[7].quiz
+      value: "Unity \uC2A4\uD06C\uB9BD\uD2B8 \uC5B8\uC5B4\uB294?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.data[8].quiz
+      value: "\uC804\uC740\uC19C \uAD50\uC218\uB2D8 \uC5F0\uAD6C\uC2E4\uC740 \uBA87\uD638\uC2E4\uC778\uAC00?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.data[9].quiz
+      value: "\uAD50\uC218\uB2D8\uC758 \uC131\uD568\uC740?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.data[5].answerIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: quizzes.Array.data[8].answerIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[2].options.Array.data[0]'
+      value: "10\uC6D4\n3\uC77C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[2].options.Array.data[1]'
+      value: "10\uC6D4\n10\uC77C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[2].options.Array.data[2]'
+      value: "10\uC6D4\n9\uC77C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[3].options.Array.data[0]'
+      value: "\uCE94\uBC84\uB77C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[3].options.Array.data[1]'
+      value: "\uC2DC\uB4DC\uB2C8"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[3].options.Array.data[2]'
+      value: "\uBA5C\uBC84\uB978"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[4].options.Array.data[0]'
+      value: "\uD1A0\uC131"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[4].options.Array.data[1]'
+      value: "\uBAA9\uC131"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[4].options.Array.data[2]'
+      value: "\uCC9C\uC655\uC131"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[5].options.Array.data[0]'
+      value: "\uD5E8\uB378"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[5].options.Array.data[1]'
+      value: "\uBC14\uD750"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[5].options.Array.data[2]'
+      value: "\uBAA8\uCC28\uB974\uD2B8"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[6].options.Array.data[0]'
+      value: "\uACF5\uD559\uAD00"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[6].options.Array.data[1]'
+      value: "\uBBF8\uB798\uAD00"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[6].options.Array.data[2]'
+      value: "\uD14C\uD06C\uB178\uD050\uBE0C\uAD00"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[7].options.Array.data[0]'
+      value: C
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[7].options.Array.data[1]'
+      value: C#
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[7].options.Array.data[2]'
+      value: C++
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[8].options.Array.data[0]'
+      value: "225\uD638"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[8].options.Array.data[1]'
+      value: "230\uD638"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[8].options.Array.data[2]'
+      value: "211\uD638"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[9].options.Array.data[0]'
+      value: "\uC804\uC740\uC19C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[9].options.Array.data[1]'
+      value: "\uC804\uC740\uC190"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106849325044722305, guid: c52fd1af002d04a4ab86dd16f596f339,
+        type: 3}
+      propertyPath: 'quizzes.Array.data[9].options.Array.data[2]'
+      value: "\uC804\uC740\uC20C"
+      objectReference: {fileID: 0}
     - target: {fileID: 5831240121917615061, guid: c52fd1af002d04a4ab86dd16f596f339,
         type: 3}
       propertyPath: m_LocalPosition.x
