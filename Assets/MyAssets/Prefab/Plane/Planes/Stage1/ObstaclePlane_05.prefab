@@ -157,7 +157,15 @@ MonoBehaviour:
         type: 3}
       spawnProb: 1
       heightIndex: 0
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 0
     - obstaclePrefab: {fileID: 8762571167988920167, guid: d0d427c14f2244040a204cf605d8224f,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 0
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: b8ec5435c13c3db4e80f7445835f8f41,
         type: 3}
       spawnProb: 1
       heightIndex: 0
@@ -165,16 +173,30 @@ MonoBehaviour:
         type: 3}
       spawnProb: 1
       heightIndex: 0
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 0
     isMoving: 0
     isHorizontal: 0
     useFixedLaneOrder: 1
+    useGroupLaneOrder: 1
+    groupLaneOrder: 000000000100000002000000
   backObstacleSets:
   - obstacles:
     - obstaclePrefab: {fileID: 8762571167988920167, guid: d0d427c14f2244040a204cf605d8224f,
         type: 3}
       spawnProb: 1
       heightIndex: 0
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: b8ec5435c13c3db4e80f7445835f8f41,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 0
     - obstaclePrefab: {fileID: 4153369167366534120, guid: c64c7b4319aeef94baead192d328a018,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 0
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
         type: 3}
       spawnProb: 1
       heightIndex: 0
@@ -182,9 +204,15 @@ MonoBehaviour:
         type: 3}
       spawnProb: 1
       heightIndex: 0
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: b8ec5435c13c3db4e80f7445835f8f41,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 0
     isMoving: 0
     isHorizontal: 0
     useFixedLaneOrder: 1
+    useGroupLaneOrder: 1
+    groupLaneOrder: 000000000100000002000000
   speed: 10
   obstacleHeight: 1
 --- !u!1 &2993377883923532925

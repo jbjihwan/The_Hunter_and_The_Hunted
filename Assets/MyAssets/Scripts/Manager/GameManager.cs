@@ -31,12 +31,14 @@ public class GameManager : MonoBehaviour
     public int maxHP;
     public int currentHP;
 
+
     private GameState gameState;
     private float stage2SafeTime;
     private float playTime;
     private int stage;
     private bool stage2BgmStopped = false;  // BGM 정지 플래그 추가
     private bool stage2Changed = false;
+    public int score;
 
     private void Awake()
     {
@@ -68,6 +70,7 @@ public class GameManager : MonoBehaviour
         if (IsPlaying())
         {
             playTime += Time.deltaTime;
+            UIManager.Instance.UpdateScore((int)playTime + score);
             // UIManager.Instance.UpdateTimer(playTime);
         }
 
@@ -103,6 +106,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void AddScore(int points)
+    {
+        score += points;
+    }
+
     public bool IsPlaying()
     {
         return gameState == GameState.Playing;
@@ -116,6 +124,7 @@ public class GameManager : MonoBehaviour
         stage2BgmStopped = false;
         stage2Changed = false;
         Time.timeScale = 1f;
+        score = 0;
         // 시작하자마자 Stage0 BGM 재생
         SoundManager.instance.PlayStageBgm(0);
         planeSpawner.Init();
@@ -196,6 +205,7 @@ public class GameManager : MonoBehaviour
         stage = 1;
 
         UIManager.Instance.OffMainMenuUI();
+        UIManager.Instance.OffDifficultyLevelUI();
         UIManager.Instance.OnRunSlider();
         UIManager.Instance.OnHpSlider();
         obstacleSpawner.Init(safePlaneCount);

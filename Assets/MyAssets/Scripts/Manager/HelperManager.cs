@@ -15,10 +15,17 @@ public class HelperManager : MonoBehaviour
     public GameObject directionalLight;
     public TextMeshProUGUI timerUI;
     public Slider runSlider;   // RunBar 슬라이더
-    public Slider hpSlider;    // HPBar 슬라이더
+    //public Slider hpSlider;    // HPBar 슬라이더
+    public CircleHpUI circleHpUI;
+    public TextMeshProUGUI scoreUI;
 
     private void Start()
     {
+        if(scoreUI != null)
+        {
+            UIManager.Instance.scoreUI = scoreUI;
+        }
+
         if (planeSpawner != null)
         {
             GameManager.Instance.planeSpawner = planeSpawner;
@@ -69,9 +76,10 @@ public class HelperManager : MonoBehaviour
             UIManager.Instance.runSlider = runSlider;
         }
 
-        if (hpSlider != null)
+        
+        if (circleHpUI != null)
         {
-            UIManager.Instance.hpSlider = hpSlider;
+            UIManager.Instance.circleHpUI = circleHpUI;
         }
 
         if (SceneManager.GetActiveScene().name == "Stage1")
@@ -85,6 +93,12 @@ public class HelperManager : MonoBehaviour
             GameManager.Instance.obstacleSpawner.Init(GameManager.Instance.safePlaneCount);
             playerEvent.SetHP(GameManager.Instance.maxHP, GameManager.Instance.currentHP);
             UIManager.Instance.OnRunSlider();
+            
+        }
+
+        if(SceneManager.GetActiveScene().name == "Ending")
+        {
+            UIManager.Instance.UpdateScore((int)GameManager.Instance.PlayTime +  GameManager.Instance.score);
         }
     }
 

@@ -159,48 +159,90 @@ MonoBehaviour:
       heightIndex: 0
     - obstaclePrefab: {fileID: 7913449848553558586, guid: f24f6d67973a61c49a85c8e6109f2ccc,
         type: 3}
-      spawnProb: 1
+      spawnProb: 0
       heightIndex: 0
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 1
     - obstaclePrefab: {fileID: 4000883586250945439, guid: 8a3eac824ebbc5e4ca3fe15122266b40,
         type: 3}
       spawnProb: 1
       heightIndex: 0
+    - obstaclePrefab: {fileID: 7913449848553558586, guid: f24f6d67973a61c49a85c8e6109f2ccc,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 0
+    - obstaclePrefab: {fileID: 4000883586250945439, guid: 8a3eac824ebbc5e4ca3fe15122266b40,
+        type: 3}
+      spawnProb: 0
+      heightIndex: 0
     isMoving: 0
     isHorizontal: 0
     useFixedLaneOrder: 1
+    useGroupLaneOrder: 1
+    groupLaneOrder: 000000000100000002000000
   - obstacles:
     - obstaclePrefab: {fileID: 4000883586250945439, guid: 8a3eac824ebbc5e4ca3fe15122266b40,
         type: 3}
       spawnProb: 1
       heightIndex: 0
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+        type: 3}
+      spawnProb: 1
+      heightIndex: 1
     - obstaclePrefab: {fileID: 7913449848553558586, guid: f24f6d67973a61c49a85c8e6109f2ccc,
         type: 3}
       spawnProb: 1
       heightIndex: 0
     - obstaclePrefab: {fileID: 7913449848553558586, guid: f24f6d67973a61c49a85c8e6109f2ccc,
         type: 3}
+      spawnProb: 0
+      heightIndex: 0
+    - obstaclePrefab: {fileID: 7913449848553558586, guid: f24f6d67973a61c49a85c8e6109f2ccc,
+        type: 3}
       spawnProb: 1
+      heightIndex: 0
+    - obstaclePrefab: {fileID: 7913449848553558586, guid: f24f6d67973a61c49a85c8e6109f2ccc,
+        type: 3}
+      spawnProb: 0
       heightIndex: 0
     isMoving: 0
     isHorizontal: 0
     useFixedLaneOrder: 1
+    useGroupLaneOrder: 1
+    groupLaneOrder: 000000000100000002000000
   backObstacleSets:
   - obstacles:
     - obstaclePrefab: {fileID: 7913449848553558586, guid: f24f6d67973a61c49a85c8e6109f2ccc,
         type: 3}
       spawnProb: 1
       heightIndex: 0
+    - obstaclePrefab: {fileID: 7913449848553558586, guid: f24f6d67973a61c49a85c8e6109f2ccc,
+        type: 3}
+      spawnProb: 0
+      heightIndex: 0
     - obstaclePrefab: {fileID: 5802306722419414214, guid: b55aa2f8b547f794eb3f0e210cdef049,
         type: 3}
       spawnProb: 0
       heightIndex: 1
+    - obstaclePrefab: {fileID: 9037230900072671893, guid: 71e1b74af0957b44da8a17e93d5f954b,
+        type: 3}
+      spawnProb: 1
+      heightIndex: -0.5
     - obstaclePrefab: {fileID: 7913449848553558586, guid: f24f6d67973a61c49a85c8e6109f2ccc,
         type: 3}
       spawnProb: 1
       heightIndex: 0
+    - obstaclePrefab: {fileID: 7913449848553558586, guid: f24f6d67973a61c49a85c8e6109f2ccc,
+        type: 3}
+      spawnProb: 0
+      heightIndex: 0
     isMoving: 0
     isHorizontal: 0
     useFixedLaneOrder: 1
+    useGroupLaneOrder: 1
+    groupLaneOrder: 000000000100000002000000
   speed: 10
   obstacleHeight: 1
 --- !u!1 &2993377883923532925
